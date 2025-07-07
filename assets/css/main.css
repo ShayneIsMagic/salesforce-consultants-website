@@ -1990,3 +1990,290 @@ footer p {
             color: var(--light-text);
             line-height: 1.6;
         } 
+
+        /* Case Studies Page Styles */
+        .case-study-featured {
+            background: var(--white);
+            border-radius: 20px;
+            padding: var(--spacing-xxl);
+            box-shadow: var(--premium-shadow);
+            border: var(--subtle-border);
+            margin: var(--spacing-xxl) 0;
+        }
+
+        .case-study-header h3 {
+            font-size: 2rem;
+            margin-bottom: var(--spacing-sm);
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        .case-study-subtitle {
+            font-size: 1.1rem;
+            color: var(--light-text);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .case-study-overview {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-lg);
+            margin: var(--spacing-xl) 0;
+        }
+
+        .overview-item {
+            background: var(--background-light);
+            padding: var(--spacing-lg);
+            border-radius: 12px;
+            border: var(--subtle-border);
+        }
+
+        .overview-item h4 {
+            font-size: 1.25rem;
+            margin-bottom: var(--spacing-sm);
+            color: var(--text-color);
+            font-weight: 600;
+        }
+
+        .overview-item p {
+            color: var(--light-text);
+            line-height: 1.6;
+        }
+
+        .case-study-quote {
+            background: var(--background-light);
+            padding: var(--spacing-xl);
+            border-radius: 16px;
+            border-left: 6px solid var(--primary-color);
+            margin: var(--spacing-xl) 0;
+        }
+
+        .case-study-quote blockquote {
+            font-size: 1.25rem;
+            font-style: italic;
+            color: var(--text-color);
+            line-height: 1.7;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .case-study-quote cite {
+            font-weight: 600;
+            color: var(--primary-color);
+            font-size: 1.1rem;
+        }
+
+        .case-study-metrics {
+            margin: var(--spacing-xxl) 0;
+        }
+
+        .metric-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-lg);
+        }
+
+        .metric-item {
+            background: var(--white);
+            padding: var(--spacing-lg);
+            border-radius: 12px;
+            border: var(--subtle-border);
+            text-align: center;
+            box-shadow: var(--premium-shadow);
+        }
+
+        .metric-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--success);
+            display: block;
+            margin-bottom: var(--spacing-xs);
+            font-family: 'Inter', sans-serif;
+        }
+
+        .metric-label {
+            font-size: 1rem;
+            color: var(--text-color);
+            font-weight: 600;
+            display: block;
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .metric-change {
+            font-size: 0.9rem;
+            color: var(--light-text);
+            font-weight: 500;
+        }
+
+        .case-study-details {
+            margin: var(--spacing-xxl) 0;
+        }
+
+        .case-study-details h4 {
+            font-size: 1.5rem;
+            margin-bottom: var(--spacing-lg);
+            color: var(--text-color);
+            font-weight: 600;
+        }
+
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-lg);
+        }
+
+        .detail-item {
+            background: var(--background-light);
+            padding: var(--spacing-lg);
+            border-radius: 12px;
+            border: var(--subtle-border);
+        }
+
+        .detail-item h5 {
+            font-size: 1.1rem;
+            margin-bottom: var(--spacing-md);
+            color: var(--text-color);
+            font-weight: 600;
+        }
+
+        .detail-item ul {
+            list-style: none;
+            margin: 0;
+        }
+
+        .detail-item li {
+            padding: var(--spacing-xs) 0;
+            color: var(--light-text);
+            font-size: 0.95rem;
+            position: relative;
+            padding-left: var(--spacing-md);
+        }
+
+        .detail-item li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        .case-study-cta {
+            text-align: center;
+            margin-top: var(--spacing-xxl);
+        }
+
+        /* Success Stories Grid */
+        .success-stories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--spacing-lg);
+            margin: var(--spacing-xxl) 0;
+        }
+
+        .success-story-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: var(--spacing-xl);
+            box-shadow: var(--premium-shadow);
+            border: var(--subtle-border);
+            transition: var(--transition);
+        }
+
+        .success-story-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+        }
+
+        .story-card-header h3 {
+            font-size: 1.35rem;
+            margin-bottom: var(--spacing-xs);
+            color: var(--text-color);
+            font-weight: 600;
+        }
+
+        .story-type {
+            font-size: 0.9rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .story-card-content p {
+            color: var(--light-text);
+            line-height: 1.6;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .story-metrics {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-md);
+        }
+
+        .story-metric {
+            text-align: center;
+            padding: var(--spacing-md);
+            background: var(--background-light);
+            border-radius: 8px;
+            border: var(--subtle-border);
+        }
+
+        .metric-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--success);
+            display: block;
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .metric-desc {
+            font-size: 0.85rem;
+            color: var(--light-text);
+            font-weight: 500;
+        }
+
+        /* Results Summary */
+        .results-summary {
+            background: var(--white);
+            border-radius: 20px;
+            padding: var(--spacing-xxl);
+            box-shadow: var(--premium-shadow);
+            border: var(--subtle-border);
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-lg);
+            margin: var(--spacing-xxl) 0;
+        }
+
+        .result-summary-item {
+            text-align: center;
+            padding: var(--spacing-xl);
+        }
+
+        .result-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto var(--spacing-lg);
+            color: var(--white);
+        }
+
+        .result-summary-item h3 {
+            font-size: 1.35rem;
+            margin-bottom: var(--spacing-md);
+            color: var(--text-color);
+            font-weight: 600;
+        }
+
+        .result-summary-item p {
+            color: var(--light-text);
+            line-height: 1.6;
+        } 
