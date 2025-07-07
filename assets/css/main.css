@@ -2358,3 +2358,26 @@ footer p {
                 font-size: 0.85rem;
             }
         } 
+
+        /* Vision List Styles */
+        .vision-list {
+            list-style: none;
+            margin: var(--spacing-lg) 0;
+            padding: 0;
+        }
+
+        .vision-list li {
+            padding: var(--spacing-md) 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+
+        .vision-list li:last-child {
+            border-bottom: none;
+        }
+
+        .vision-list li strong {
+            color: var(--primary-color);
+            font-weight: 600;
+        } 
