@@ -1,0 +1,38 @@
+{
+  "name": "salesforce-consultants-website",
+  "version": "1.0.0",
+  "description": "Professional website for SalesforceConsultants.io - Expert Salesforce consulting for nonprofits and businesses",
+  "main": "index.html",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "dev": "python3 -m http.server 8000",
+    "build": "echo 'Static site - no build process required'",
+    "test": "echo 'No tests specified'",
+    "lint": "echo 'No linting configured'"
+  },
+  "keywords": [
+    "salesforce",
+    "consulting",
+    "NPSP",
+    "nonprofit",
+    "business",
+    "implementation",
+    "training",
+    "integrations"
+  ],
+  "author": "SalesforceConsultants.io",
+  "license": "PROPRIETARY",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/salesforce-consultants-website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/salesforce-consultants-website/issues"
+  },
+  "homepage": "https://salesforceconsultants.io",
+  "devDependencies": {},
+  "dependencies": {},
+  "engines": {
+    "node": ">=14.0.0"
+  }
+} 

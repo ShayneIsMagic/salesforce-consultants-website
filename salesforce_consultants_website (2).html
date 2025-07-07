@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salesforce Consultants | Expert Implementation & Development | 100% User Adoption</title>
+    <meta name="description" content="Expert Salesforce consultants specializing in nonprofit NPSP and business implementations. Trusted by LA Chamber of Commerce. 100% user adoption guaranteed.">
+    <meta name="keywords" content="salesforce consultants, salesforce implementation, NPSP consultant, salesforce for nonprofits, salesforce business consultant">
+    
+    <!-- Salesforce Sans Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Base Styles - Salesforce Typography with Crucial Learning Layout */
+        :root {
+            --primary-color: #3aafaa;
+            --secondary-color: #17252b;
+            --accent-color: #3aafaa;
+            --text-color: #17252b;
+            --light-text: #54698D;
+            --background-light: #f5f5f5;
+            --white: #FFFFFF;
+            --black: #000000;
+            --success: #3aafaa;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+            --premium-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+            --subtle-border: 1px solid rgba(0, 0, 0, 0.05);
+            
+            /* Salesforce-inspired spacing */
+            --spacing-xs: 8px;
+            --spacing-sm: 16px;
+            --spacing-md: 24px;
+            --spacing-lg: 32px;
+            --spacing-xl: 48px;
+            --spacing-xxl: 64px;
+            --spacing-xxxl: 96px;
+        }
+
+        /* Market-Specific Color Variations */
+        .nonprofit-section {
+            --primary-color: #2E8B8B;
+            --accent-color: #4ECDC4;
+        }
+
+        .business-section {
+            --primary-color: #1B7B7A;
+            --accent-color: #00A693;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--white);
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: -0.01em;
+        }
+
+        /* Salesforce-inspired Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: var(--spacing-sm);
+            letter-spacing: -0.025em;
+        }
+
+        h1 {
+            font-size: clamp(2.75rem, 5vw, 4rem);
+            font-weight: 800;
+            line-height: 1.1;
+        }
+
+        h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+        }
+
+        h3 {
+            font-size: clamp(1.5rem, 2.5vw, 2rem);
+            font-weight: 600;
+        }
+
+        h4 {
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        p {
+            line-height: 1.7;
+            margin-bottom: var(--spacing-sm);
+            font-weight: 400;
+        }
+
+        .lead-text {
+            font-size: 1.25rem;
+            line-height: 1.6;
+            color: var(--light-text);
+            font-weight: 400;
+            margin-bottom: var(--spacing-md);
+        }
+
+        /* Container System - Crucial Learning inspired */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+
+        .container-wide {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+
+        .container-narrow {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+
+        /* Header - Salesforce Clean Design */
+        header {
+            background: var(--white);
+            border-bottom: var(--subtle-border);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(20px);
+            background-color: rgba(255, 255, 255, 0.95);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--spacing-md) 0;
+            min-height: 80px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: var(--spacing-xl);
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            position: relative;
+            padding: var(--spacing-xs) 0;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background: var(--white);
+            min-width: 240px;
+            box-shadow: var(--premium-shadow);
+            border-radius: 12px;
+            z-index: 1001;
+            top: calc(100% + 12px);
+            left: 0;
+            padding: var(--spacing-sm) 0;
+            border: var(--subtle-border);
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 12px var(--spacing-md);
+            color: var(--text-color);
+            font-size: 0.9rem;
+            border-bottom: none;
+        }
+
+        .dropdown-content a:hover {
+            background-color: var(--background-light);
+            color: var(--primary-color);
+        }
+
+        /* Hero Section - Crucial Learning inspired with image space */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--white);
+            padding: var(--spacing-xxxl) 0;
+            position: relative;
+            overflow: hidden;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="white" fill-opacity="0.02"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-xxl);
+            align-items: center;
+            min-height: 500px;
+        }
+
+        .hero-text {
+            max-width: 600px;
+        }
+
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            min-height: 400px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .hero-image-placeholder {
+            color: rgba(255, 255, 255, 0.7);
+            text-align: center;
+            font-size: 1.1rem;
+            padding: var(--spacing-lg);
+        }
+
+        .hero h1 {
+            margin-bottom: var(--spacing-md);
+            font-weight: 800;
+        }
+
+        .hero .subheadline {
+            font-size: 1.25rem;
+            margin-bottom: var(--spacing-xl);
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--spacing-lg);
+            margin: var(--spacing-xl) 0;
+        }
+
+        .hero-stat {
+            text-align: center;
+            padding: var(--spacing-md);
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .hero-stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            display: block;
+            margin-bottom: var(--spacing-xs);
+            font-family: 'Inter', sans-serif;
+        }
+
+        .hero-stat-text {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            line-height: 1.4;
+        }
+
+        /* Section Layout - Crucial Learning style with image integration */
+        .section {
+            padding: var(--spacing-xxxl) 0;
+        }
+
+        .section-alt {
+            background: var(--background-light);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--spacing-xxl);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .section-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-xxl);
+            align-items: center;
+            margin-bottom: var(--spacing-xxl);
+        }
+
+        .section-content.reverse {
+            direction: rtl;
+        }
+
+        .section-content.reverse > * {
+            direction: ltr;
+        }
+
+        .content-text h2 {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .content-image {
+            background: var(--background-light);
+            border-radius: 16px;
+            min-height: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: var(--subtle-border);
+            box-shadow: var(--premium-shadow);
+        }
+
+        .image-placeholder {
+            color: var(--light-text);
+            text-align: center;
+            font-size: 1.1rem;
+            padding: var(--spacing-lg);
+        }
+
+        /* Dual CTA Section - Crucial Learning card style */
+        .dual-cta {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-lg);
+            margin: var(--spacing-xxl) 0;
+        }
+
+        .cta-card {
+            background: var(--white);
+            color: var(--text-color);
+            padding: var(--spacing-xl);
+            border-radius: 20px;
+            box-shadow: var(--premium-shadow);
+            border: var(--subtle-border);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .cta-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .cta-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .cta-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: var(--spacing-md);
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        .cta-list {
+            list-style: none;
+            margin: var(--spacing-md) 0;
+        }
+
+        .cta-list li {
+            margin: var(--spacing-sm) 0;
+            padding-left: var(--spacing-md);
+            position: relative;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .cta-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--success);
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        /* Buttons - Salesforce style */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: var(--spacing-sm) var(--spacing-lg);
+            background: var(--primary-color);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            letter-spacing: 0.01em;
+            min-height: 48px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .btn:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-color);
+            color: var(--white);
+        }
+
+        .btn-large {
+            padding: var(--spacing-md) var(--spacing-xl);
+            font-size: 1.1rem;
+            min-height: 56px;
+        }
+
+        /* Features Grid - Crucial Learning style with image spaces */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--spacing-lg);
+            margin: var(--spacing-xxl) 0;
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: var(--spacing-xl);
+            border-radius: 20px;
+            box-shadow: var(--premium-shadow);
+            border: var(--subtle-border);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+        }
+
+        .feature-image {
+            background: var(--background-light);
+            border-radius: 12px;
+            min-height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: var(--spacing-md);
+            border: var(--subtle-border);
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: var(--white);
+            margin: 0 auto;
+        }
+
+        .feature-card h3 {
+            font-size: 1.35rem;
+            margin-bottom: var(--spacing-sm);
+            color: var(--text-color);
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .feature-card p {
+            color: var(--light-text);
+            line-height: 1.7;
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        /* Testimonials - Crucial Learning quote style */
+        .testimonials {
+            background: var(--background-light);
+        }
+
+        .testimonial {
+            background: var(--white);
+            padding: var(--spacing-xl);
+            border-radius: 20px;
+            box-shadow: var(--premium-shadow);
+            border: var(--subtle-border);
+            margin: var(--spacing-lg) 0;
+            position: relative;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .testimonial::before {
+            content: '"';
+            font-size: 5rem;
+            color: var(--primary-color);
+            position: absolute;
+            top: var(--spacing-sm);
+            left: var(--spacing-lg);
+            line-height: 1;
+            font-family: serif;
+            opacity: 0.3;
+        }
+
+        .testimonial-content {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: var(--spacing-lg);
+            align-items: center;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            font-size: 1.2rem;
+            margin-bottom: var(--spacing-md);
+            padding-left: var(--spacing-xl);
+            line-height: 1.7;
+            color: var(--text-color);
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--primary-color);
+            font-size: 1rem;
+            padding-left: var(--spacing-xl);
+        }
+
+        .testimonial-image {
+            background: var(--background-light);
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: var(--subtle-border);
+        }
+
+        /* Results Grid - Salesforce metrics style */
+        .results-section {
+            text-align: center;
+            margin: var(--spacing-xxl) 0;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-lg);
+            margin: var(--spacing-xl) 0;
+        }
+
+        .result-item {
+            text-align: center;
+            padding: var(--spacing-lg);
+            background: var(--white);
+            border-radius: 16px;
+            box-shadow: var(--premium-shadow);
+            border: var(--subtle-border);
+        }
+
+        .result-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--success);
+            display: block;
+            margin-bottom: var(--spacing-xs);
+            font-family: 'Inter', sans-serif;
+        }
+
+        .result-text {
+            color: var(--light-text);
+            font-size: 0.95rem;
+            line-height: 1.4;
+            font-weight: 500;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: var(--secondary-color);
+            color: var(--white);
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-xxl);
+            align-items: center;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--spacing-lg);
+        }
+
+        .contact-item {
+            padding: var(--spacing-lg);
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .contact-item h3 {
+            color: var(--white);
+            margin-bottom: var(--spacing-xs);
+            font-size: 1.2rem;
+        }
+
+        .contact-item p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .contact-image {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-color);
+            color: rgba(255, 255, 255, 0.7);
+            text-align: center;
+            padding: var(--spacing-xl) 0;
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            margin-bottom: var(--spacing-xs);
+        }
+
+        /* Page Sections */
+        .page-hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+            padding: var(--spacing-xxxl) 0;
+            position: relative;
+            overflow: hidden;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .page-hero.nonprofit-section {
+            background: linear-gradient(135deg, #2E8B8B, var(--secondary-color));
+        }
+
+        .page-hero.business-section {
+            background: linear-gradient(135deg, #1B7B7A, var(--secondary-color));
+        }
+
+        /* Content Enhancement Sections */
+        .content-highlight {
+            background: var(--background-light);
+            padding: var(--spacing-xl);
+            border-radius: 20px;
+            border-left: 6px solid var(--primary-color);
+            margin: var(--spacing-xl) 0;
+            box-shadow: var(--premium-shadow);
+        }
+
+        .content-split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-xl);
+            align-items: start;
+            margin: var(--spacing-xl) 0;
+        }
+
+        .service-list {
+            list-style: none;
+            margin: var(--spacing-md) 0;
+        }
+
+        .service-list li {
+            padding: var(--spacing-sm) 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            font-size: 1rem;
+        }
+
+        .service-list li:last-child {
+            border-bottom: none;
+        }
+
+        .service-list li::before {
+            content: "→";
+            color: var(--primary-color);
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        /* Hidden sections for SPA navigation */
+        .page {
+            display: none;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        /* Responsive Design - Mobile-first approach */
+        @media (max-width: 1024px) {
+            .hero-content,
+            .section-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: var(--spacing-xl);
+            }
+
+            .hero-stats {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .content-split {
+                grid-template-columns: 1fr;
+                gap: var(--spacing-lg);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container,
+            .container-wide,
+            .container-narrow {
+                padding: 0 var(--spacing-sm);
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding: var(--spacing-xxl) 0;
+                min-height: auto;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .dual-cta {
+                grid-template-columns: 1fr;
+                gap: var(--spacing-md);
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: var(--spacing-md);
+            }
+
+            .hero-stats {
+                grid-template-columns: 1fr;
+                gap: var(--spacing-sm);
+            }
+
+            .results-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: var(--spacing-sm);
+            }
+
+            .section {
+                padding: var(--spacing-xxl) 0;
+            }
+
+            .testimonial-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .cta-card,
+            .feature-card,
+            .testimonial {
+                padding: var(--spacing-lg);
+            }
+
+            .hero-content {
+                gap: var(--spacing-lg);
+            }
+
+            .hero-image,
+            .content-image,
+            .contact-image {
+                min-height: 250px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-stats,
+            .results-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-info {
+                grid-template-columns: 1fr;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .dual-cta .btn {
+                width: auto;
+            }
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 4px;
+        }
+
+        .mobile-menu span {
+            width: 25px;
+            height: 3px;
+            background: var(--text-color);
+            transition: var(--transition);
+            border-radius: 2px;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <a href="#" class="logo" onclick="showPage('home')">SalesforceConsultants.io</a>
+            <ul class="nav-links">
+                <li class="dropdown">
+                    <a href="#">Solutions</a>
+                    <div class="dropdown-content">
+                        <a href="#" onclick="showPage('nonprofits')">For Nonprofits</a>
+                        <a href="#" onclick="showPage('business')">For Business</a>
+                        <a href="#" onclick="showPage('services')">All Services</a>
+                    </div>
+                </li>
+                <li><a href="#" onclick="showPage('success-stories')">Success Stories</a></li>
+                <li><a href="#" onclick="showPage('about')">About</a></li>
+                <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Homepage -->
+    <div id="home" class="page active">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>Expert Salesforce Consultants Delivering 100% User Adoption</h1>
+                        <p class="subheadline">Trusted by the LA Chamber of Commerce. We transform struggling implementations into success stories through our proven "train your team" methodology that builds capabilities, not dependencies.</p>
+                        
+                        <div
