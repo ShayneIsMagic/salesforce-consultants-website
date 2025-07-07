@@ -1,220 +1,213 @@
-# SalesforceConsultants.io - Complete Website Project
+# SalesforceConsultants.io - Professional Website
 
-A modern, responsive website for Salesforce consulting services specializing in nonprofit NPSP implementation and business automation solutions.
+A comprehensive Salesforce consulting website built with modern web technologies, featuring specialized solutions for nonprofits and businesses.
 
-## 🎯 Project Overview
+## 🚀 Quick Start
 
-This website serves as a comprehensive digital presence for SalesforceConsultants.io, featuring:
+### Local Development
+```bash
+# Start local server
+python3 -m http.server 8000
 
-- **Dual-Market Focus**: Specialized content for nonprofits and businesses
-- **Modern Design**: Salesforce-inspired design system with responsive layout
-- **Conversion Optimized**: Multiple CTAs and lead generation forms
-- **SEO Ready**: Optimized content structure and metadata
-- **Performance Focused**: Fast loading and mobile-first approach
+# Open in browser
+open http://localhost:8000
+```
+
+### Deployment
+This site is configured for Cloudflare Pages deployment with the following settings:
+- Build command: `echo "Static site - no build required"`
+- Build output directory: `/` (root)
+- Node.js version: 18
 
 ## 📁 Project Structure
 
 ```
 salesforce-consultants/
 ├── index.html                 # Homepage
-├── nonprofits/
-│   ├── index.html            # Nonprofit hub page
-│   ├── npsp-implementation/
-│   ├── donor-management/
-│   ├── grant-tracking/
-│   ├── fundraising-automation/
-│   ├── volunteer-coordination/
-│   └── nonprofit-case-studies/
-├── business/
-│   ├── index.html            # Business hub page
-│   ├── sales-automation/
-│   ├── revenue-operations/
-│   ├── customer-service/
-│   ├── marketing-automation/
-│   ├── enterprise-integration/
-│   └── business-case-studies/
-├── services/
-│   ├── implementation/
-│   ├── training/
-│   ├── integrations/
-│   ├── migration/
-│   └── ai-automation/
-├── success-stories/
-│   ├── la-chamber-commerce/
-│   ├── nonprofit-clients/
-│   └── business-clients/
-├── about/
-├── contact/
-├── resources/
-│   ├── nonprofit-resources/
-│   ├── business-resources/
-│   └── blog/
-├── assets/
-│   ├── css/
-│   ├── js/
-│   ├── images/
-│   └── fonts/
-├── docs/
-└── README.md
+├── css/                       # Stylesheets
+│   ├── main.css              # Main styles (consolidated)
+│   ├── nonprofit.css         # Nonprofit page styles
+│   ├── business.css          # Business page styles
+│   └── contact.css           # Contact page styles
+├── js/                        # JavaScript files
+│   └── main.js               # Main JavaScript (consolidated)
+├── assets/                    # Static assets
+│   └── images/               # Images and media
+├── templates/                 # Reusable components
+│   ├── header.html           # Header template
+│   └── footer.html           # Footer template
+├── nonprofits/               # Nonprofit solutions page
+│   └── index.html
+├── business/                 # Business solutions page
+│   └── index.html
+├── success-stories/          # Case studies page
+│   └── index.html
+├── about/                    # About us page
+│   └── index.html
+├── contact/                  # Contact page
+│   └── index.html
+├── services/                 # Services overview page
+│   └── index.html
+├── docs/                     # Documentation
+├── public/                   # Public assets for deployment
+├── wrangler.toml            # Cloudflare Pages config
+├── package.json             # Dependencies
+└── README.md               # This file
 ```
 
 ## 🎨 Design System
 
-### Color Palette
-- **Primary**: #3aafaa (Salesforce teal)
-- **Secondary**: #17252b (Dark navy)
-- **Accent**: #3aafaa (Brand teal)
-- **Text**: #17252b (Dark text)
-- **Light Text**: #54698D (Secondary text)
-- **Background**: #f5f5f5 (Light gray)
-- **White**: #FFFFFF
-- **Success**: #3aafaa
+### Colors
+- **Primary**: `#3aafaa` (Salesforce-inspired teal)
+- **Secondary**: `#17252b` (Dark blue-gray)
+- **Accent**: `#3aafaa` (Matching primary)
+- **Success**: `#3aafaa` (Teal)
+- **Background**: `#f5f5f5` (Light gray)
 
 ### Typography
-- **Primary Font**: Inter (Google Fonts)
+- **Primary Font**: Inter (Salesforce Sans alternative)
 - **Secondary Font**: Source Sans Pro
-- **Headings**: Inter, 700-800 weight
-- **Body**: Inter, 400 weight
+- **Weights**: 300, 400, 500, 600, 700, 800
 
-### Market-Specific Variations
-- **Nonprofit**: #2E8B8B (Warmer teal)
-- **Business**: #1B7B7A (Deeper teal)
+### Spacing System
+- **XS**: 8px
+- **SM**: 16px
+- **MD**: 24px
+- **LG**: 32px
+- **XL**: 48px
+- **XXL**: 64px
+- **XXXL**: 96px
 
-## 🚀 Key Features
+## 📄 Pages
 
-### Homepage
-- Hero section with dual-market CTAs
-- Credibility indicators (LA Chamber success)
-- Service overview with market-specific sections
-- Testimonials and results showcase
-- Contact forms and lead generation
+### Homepage (`index.html`)
+- Hero section with dual market entry points
+- Path selection for nonprofits vs businesses
+- Success story highlights
+- Service overview
+- Contact information
 
-### Nonprofit Section
+### Nonprofit Solutions (`nonprofits/index.html`)
 - NPSP implementation expertise
 - Donor management solutions
 - Grant tracking and reporting
 - Fundraising automation
-- Volunteer coordination systems
+- Volunteer management
 
-### Business Section
+### Business Solutions (`business/index.html`)
 - Sales process optimization
 - Revenue operations alignment
 - Customer service excellence
 - Marketing automation
-- Enterprise integrations
+- AI-powered solutions
 
-### Services Pages
-- Implementation methodology
+### Success Stories (`success-stories/index.html`)
+- LA Chamber of Commerce case study
+- Additional client success stories
+- Results and metrics
+- Testimonials
+
+### About Us (`about/index.html`)
+- Team story and mission
+- 20+ Salesforce certifications
+- Expertise areas
+- Partners and clients
+
+### Contact (`contact/index.html`)
+- Contact form
+- Service area information
+- Free assessment offer
+- Contact details
+
+### Services (`services/index.html`)
+- Comprehensive service catalog
+- Implementation phases
 - Training programs
 - Integration services
-- Migration support
-- AI automation solutions
 
-## 📱 Responsive Design
+## 🔧 Features
 
-- **Mobile-first approach**
-- **Breakpoints**: 480px, 768px, 1024px
-- **Flexible grid system**
-- **Touch-friendly navigation**
-- **Optimized images and assets**
+### Responsive Design
+- Mobile-first approach
+- Breakpoints: 480px, 768px, 1024px
+- Flexible grid system
+- Touch-friendly navigation
 
-## 🔧 Technical Stack
+### Interactive Elements
+- Dropdown navigation
+- Mobile menu
+- Form validation
+- Smooth scrolling
+- Hover effects
 
-- **HTML5**: Semantic markup
-- **CSS3**: Custom properties, Grid, Flexbox
-- **JavaScript**: Vanilla JS for interactions
-- **Fonts**: Google Fonts (Inter, Source Sans Pro)
-- **Icons**: Custom SVG icons
-- **Performance**: Optimized assets and loading
-
-## 📈 SEO Strategy
-
-### Keywords
-- **Primary**: Salesforce consultants, Salesforce implementation
-- **Nonprofit**: NPSP consultant, nonprofit Salesforce
-- **Business**: Salesforce business consultant, revenue operations
-- **Local**: California Salesforce consultants, LA Salesforce
-
-### Meta Tags
-- Optimized titles and descriptions
-- Open Graph tags for social sharing
-- Structured data markup
+### SEO Optimization
+- Semantic HTML structure
+- Meta tags and Open Graph
 - Canonical URLs
+- Structured data ready
 
-## 🎯 Conversion Optimization
+### Performance
+- Optimized CSS and JavaScript
+- Minimal dependencies
+- Fast loading times
+- CDN-ready structure
 
-### CTAs
-- Free assessment offers
-- Strategy consultation calls
-- Implementation rescue consultation
-- Training needs analysis
+## 🛠 Development Workflow
 
-### Lead Generation
-- Contact forms on all pages
-- Free resource downloads
-- Newsletter signup
-- Consultation booking
+### File Organization
+1. **HTML**: Each page in its own directory with `index.html`
+2. **CSS**: Consolidated styles in `css/main.css` with page-specific overrides
+3. **JavaScript**: Single `js/main.js` file with all functionality
+4. **Assets**: Images and media in `assets/images/`
+5. **Templates**: Reusable header/footer in `templates/`
+
+### Best Practices
+- DRY (Don't Repeat Yourself) principle
+- Consistent naming conventions
+- Modular CSS architecture
+- Progressive enhancement
+- Accessibility compliance
 
 ## 📊 Analytics & Tracking
 
-- Google Analytics 4 setup
+The site is prepared for:
+- Google Analytics integration
 - Conversion tracking
-- Form submission tracking
-- Page performance monitoring
-- A/B testing framework ready
+- Form submission monitoring
+- User behavior analysis
+
+## 🔒 Security
+
+- HTTPS ready
+- Form validation
+- XSS protection
+- Secure headers configuration
+
+## 📱 Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+- Mobile browsers
 
 ## 🚀 Deployment
 
-### Local Development
-1. Clone the repository
-2. Open `index.html` in a web browser
-3. Use a local server for full functionality
+### Cloudflare Pages
+1. Connect repository to Cloudflare Pages
+2. Configure build settings in `wrangler.toml`
+3. Deploy automatically on push to main branch
 
-### Production Deployment
-- Optimize images and assets
-- Minify CSS and JavaScript
-- Enable compression
-- Set up CDN for assets
-- Configure caching headers
+### Manual Deployment
+1. Upload files to web server
+2. Ensure proper file permissions
+3. Configure server for SPA routing if needed
 
-## 📝 Content Management
+## 📞 Support
 
-### Page Structure
-- Hero sections with clear value propositions
-- Body content with detailed service information
-- Testimonials and social proof
-- Contact information and CTAs
-
-### Content Updates
-- Easy-to-edit HTML structure
-- Modular CSS for consistent styling
-- Reusable components and patterns
-- Documentation for content updates
-
-## 🔒 Security & Performance
-
-### Security
-- HTTPS enforcement
-- Form validation
-- XSS protection
-- Secure contact forms
-
-### Performance
-- Optimized images
-- Minified assets
-- Efficient CSS and JavaScript
-- Fast loading times
-
-## 📞 Contact Information
-
-- **Phone**: 385-309-0807
+For technical support or questions about the website:
 - **Email**: info@salesforceconsultants.io
-- **Website**: www.salesforceconsultants.io
-- **Service Areas**: California, Utah, Nationwide Remote
-
-## 📄 License
-
-This project is proprietary and confidential. All rights reserved.
+- **Phone**: 385-309-0807
 
 ---
 
