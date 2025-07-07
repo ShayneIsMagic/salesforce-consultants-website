@@ -2277,3 +2277,84 @@ footer p {
             color: var(--light-text);
             line-height: 1.6;
         } 
+
+        /* Partners Section */
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-lg);
+            margin: var(--spacing-xxl) 0;
+        }
+
+        .partner-logo {
+            background: var(--white);
+            border-radius: 16px;
+            padding: var(--spacing-xl);
+            box-shadow: var(--premium-shadow);
+            border: var(--subtle-border);
+            transition: var(--transition);
+            text-align: center;
+            min-height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .partner-logo:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
+        }
+
+        .logo-placeholder {
+            color: var(--light-text);
+            text-align: center;
+        }
+
+        .logo-placeholder h4 {
+            font-size: 1.1rem;
+            margin-bottom: var(--spacing-xs);
+            color: var(--text-color);
+            font-weight: 600;
+        }
+
+        .logo-placeholder p {
+            font-size: 0.9rem;
+            color: var(--light-text);
+            margin: 0;
+        }
+
+        .partners-note {
+            text-align: center;
+            margin-top: var(--spacing-xl);
+            padding: var(--spacing-lg);
+            background: var(--background-light);
+            border-radius: 16px;
+            border: var(--subtle-border);
+        }
+
+        .partners-note p {
+            margin-bottom: var(--spacing-md);
+            color: var(--text-color);
+            font-size: 1.1rem;
+        }
+
+        /* Responsive adjustments for partners */
+        @media (max-width: 768px) {
+            .partners-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: var(--spacing-md);
+            }
+
+            .partner-logo {
+                padding: var(--spacing-lg);
+                min-height: 100px;
+            }
+
+            .logo-placeholder h4 {
+                font-size: 1rem;
+            }
+
+            .logo-placeholder p {
+                font-size: 0.85rem;
+            }
+        } 
