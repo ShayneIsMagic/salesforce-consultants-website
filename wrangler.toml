@@ -1,6 +1,9 @@
 name = "salesforce-consultants"
 compatibility_date = "2024-01-01"
 
+# Pages configuration
+pages_build_output_dir = "/"
+
 [env.production]
 name = "salesforce-consultants-production"
 route = "salesforceconsultants.io/*"
@@ -11,8 +14,4 @@ route = "staging.salesforceconsultants.io/*"
 
 [env.development]
 name = "salesforce-consultants-dev"
-route = "dev.salesforceconsultants.io/*"
-
-# Build configuration for static site
-[build]
-command = "echo 'Static site - no build required'" 
+route = "dev.salesforceconsultants.io/*" 
