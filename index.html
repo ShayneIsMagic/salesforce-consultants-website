@@ -26,9 +26,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
     
-    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
     <!-- Header -->
@@ -39,14 +39,14 @@
                 <li class="dropdown">
                     <a href="#">Solutions</a>
                     <div class="dropdown-content">
-                        <a href="/nonprofits/">For Nonprofits</a>
-                        <a href="/business/">For Business</a>
-                        <a href="/services/">All Services</a>
+                        <a href="nonprofits/">For Nonprofits</a>
+                        <a href="business/">For Business</a>
+                        <a href="services/">All Services</a>
                     </div>
                 </li>
-                <li><a href="/success-stories/">Success Stories</a></li>
-                <li><a href="/about/">About</a></li>
-                <li><a href="/contact/">Contact</a></li>
+                <li><a href="success-stories/">Success Stories</a></li>
+                <li><a href="about/">About</a></li>
+                <li><a href="contact/">Contact</a></li>
             </ul>
             <div class="mobile-menu">
                 <span></span>
@@ -56,15 +56,15 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- Hero Section - Full Width Impact -->
+    <section class="hero hero-full">
         <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>Expert Salesforce Consultants Delivering 100% User Adoption</h1>
-                    <p class="subheadline">Trusted by the LA Chamber of Commerce. We transform struggling implementations into success stories through our proven "train your team" methodology that builds capabilities, not dependencies.</p>
+            <div class="hero-content hero-centered">
+                <div class="hero-text text-center">
+                    <h1 class="hero-title">Transform Your Salesforce Investment with 100% User Adoption</h1>
+                    <p class="hero-subtitle">Expert Salesforce consultants trusted by the LA Chamber of Commerce. We rescue failed implementations and deliver measurable results through our proven "train your team" methodology.</p>
                     
-                    <div class="hero-stats">
+                    <div class="hero-stats-grid">
                         <div class="hero-stat">
                             <span class="hero-stat-number">100%</span>
                             <span class="hero-stat-text">User Adoption Success</span>
@@ -73,89 +73,101 @@
                             <span class="hero-stat-number">37.5%</span>
                             <span class="hero-stat-text">Efficiency Improvement</span>
                         </div>
+                        <div class="hero-stat">
+                            <span class="hero-stat-number">36</span>
+                            <span class="hero-stat-text">Employees Trained</span>
+                        </div>
                     </div>
                     
                     <div class="hero-ctas">
-                        <a href="/contact/" class="btn btn-large">Get Free Salesforce Audit</a>
-                        <a href="/contact/" class="btn btn-secondary btn-large">Book Strategy Call</a>
+                        <a href="contact/" class="btn btn-large btn-primary">Get Free Salesforce Audit</a>
+                        <a href="contact/" class="btn btn-large btn-secondary">Book Strategy Call</a>
                     </div>
                     
                     <p class="hero-note">Serving California nonprofits and businesses • Remote delivery nationwide</p>
                 </div>
-                <div class="hero-image">
-                    <div class="hero-image-placeholder">
-                        <h3>Transform Your Salesforce Investment</h3>
-                        <p>Proven methodology that delivers measurable results</p>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
 
-    <!-- Dual CTA Section -->
+    <!-- Value Proposition Cards -->
     <section class="section">
         <div class="container">
-            <div class="dual-cta">
-                <div class="cta-card nonprofit-section">
-                    <h3>For Nonprofits</h3>
-                    <p>Maximize your mission impact with expert NPSP implementation and donor management solutions.</p>
-                    <ul class="cta-list">
-                        <li>NPSP Implementation Experts</li>
-                        <li>Donor Management Excellence</li>
-                        <li>Grant Tracking & Reporting</li>
-                        <li>Fundraising Campaign Automation</li>
-                        <li>Volunteer Coordination Systems</li>
-                    </ul>
-                    <a href="/nonprofits/" class="btn">Nonprofit Solutions</a>
+            <div class="section-header text-center">
+                <h2>Why Organizations Choose SalesforceConsultants.io</h2>
+                <p class="lead-text">The DevPipeline Difference: Building Capabilities, Not Dependencies</p>
+            </div>
+            
+            <div class="value-cards">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                            <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>100% User Adoption Guarantee</h3>
+                    <p>Our proven methodology transforms struggling implementations into success stories. LA Chamber achieved 100% adoption from 62.5%.</p>
+                    <a href="success-stories/" class="read-more">Read More →</a>
                 </div>
-                <div class="cta-card business-section">
-                    <h3>For Business</h3>
-                    <p>Drive business growth with revenue-focused Salesforce solutions and operational efficiency.</p>
-                    <ul class="cta-list">
-                        <li>Sales Process Optimization</li>
-                        <li>Revenue Operations Alignment</li>
-                        <li>Customer Service Excellence</li>
-                        <li>Marketing Automation</li>
-                        <li>Enterprise Integrations</li>
-                    </ul>
-                    <a href="/business/" class="btn">Business Solutions</a>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Nonprofit NPSP Specialists</h3>
+                    <p>Expert NPSP implementation with donor management, grant tracking, and fundraising automation for mission-driven organizations.</p>
+                    <a href="nonprofits/" class="read-more">Read More →</a>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Business Revenue Growth</h3>
+                    <p>Salesforce consulting focused on revenue operations, sales automation, and customer service excellence for business growth.</p>
+                    <a href="business/" class="read-more">Read More →</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Why Choose Us Section -->
+    <!-- Success Story Highlight -->
     <section class="section section-alt">
         <div class="container">
-            <div class="section-header">
-                <h2>Why Organizations Choose SalesforceConsultants.io Over the Competition</h2>
-                <p class="lead-text">The DevPipeline Difference: "We Are the Team Until We Train Your Team"</p>
-            </div>
-            
-            <div class="section-content">
-                <div class="content-text">
-                    <p>Unlike traditional Salesforce consultants who create dependency, we build your internal capabilities. Our proven methodology transforms struggling Salesforce implementations into success stories with 100% user adoption.</p>
-                    
-                    <h3>Our Proven Track Record:</h3>
-                    <ul class="feature-list">
-                        <li><strong>LA Chamber of Commerce Success</strong>: 62.5% → 100% user adoption</li>
-                        <li><strong>36 employees</strong> fully trained and productive</li>
-                        <li><strong>11,327 community licenses</strong> successfully managed</li>
-                        <li><strong>Complex integrations</strong>: QuickBooks, Bizzabo, Blackthorn</li>
-                    </ul>
-                    
-                    <h3>Modern Salesforce with AI Integration:</h3>
-                    <ul class="feature-list">
-                        <li>Einstein AI implementation for predictive insights</li>
-                        <li>Agentforce deployment for autonomous operations</li>
-                        <li>Lightning Web Components for custom solutions</li>
-                        <li>API integrations that connect your entire tech stack</li>
-                    </ul>
-                </div>
-                <div class="content-image">
-                    <div class="image-placeholder">
-                        <h3>Proven Results</h3>
-                        <p>100% user adoption success rate</p>
+            <div class="success-highlight">
+                <div class="success-content">
+                    <div class="success-text">
+                        <h2>LA Chamber of Commerce Success Story</h2>
+                        <p class="success-quote">"DevPipeline was highly responsive & worked closely with various members of the Chamber Team to get a holistic look at what we were missing and implement fixes that work for all departments."</p>
+                        <div class="success-author">— Martin, Chief Operating Officer, LA Chamber of Commerce</div>
+                        
+                        <div class="success-metrics">
+                            <div class="metric">
+                                <span class="metric-number">100%</span>
+                                <span class="metric-label">User Adoption</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-number">36</span>
+                                <span class="metric-label">Employees Trained</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-number">3</span>
+                                <span class="metric-label">Integrations Completed</span>
+                            </div>
+                        </div>
+                        
+                        <a href="success-stories/" class="btn">View Full Case Study</a>
+                    </div>
+                    <div class="success-image">
+                        <div class="image-placeholder">
+                            <h3>Proven Results</h3>
+                            <p>LA Chamber Success Story</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -165,90 +177,81 @@
     <!-- Services Overview -->
     <section class="section">
         <div class="container">
-            <div class="section-header">
-                <h2>Specialized Expertise for Your Sector</h2>
-                <p class="lead-text">Tailored Salesforce solutions that address your unique challenges and opportunities</p>
+            <div class="section-header text-center">
+                <h2>Comprehensive Salesforce Consulting Services</h2>
+                <p class="lead-text">From implementation to optimization, we deliver measurable results</p>
             </div>
             
-            <div class="features-grid">
-                <div class="feature-card nonprofit-section">
-                    <div class="feature-icon">🏛️</div>
-                    <h3>Nonprofit Organizations</h3>
-                    <p>NPSP (Nonprofit Success Pack) specialists with donor management, grant tracking, and fundraising automation expertise.</p>
+            <div class="services-grid">
+                <div class="service-item">
+                    <h3>Salesforce Implementation</h3>
+                    <p>Expert implementation with guaranteed user adoption. Multi-cloud expertise including Sales, Service, Marketing, and Experience Clouds.</p>
+                    <ul class="service-features">
+                        <li>Custom solution design</li>
+                        <li>Data architecture planning</li>
+                        <li>Integration strategy</li>
+                        <li>AI and automation roadmap</li>
+                    </ul>
+                    <a href="services/implementation/" class="read-more">Learn More →</a>
                 </div>
-                <div class="feature-card business-section">
-                    <div class="feature-icon">🏢</div>
-                    <h3>Growing Businesses</h3>
-                    <p>Revenue operations optimization, sales process automation, and customer service excellence for business growth.</p>
+                
+                <div class="service-item">
+                    <h3>Salesforce Training</h3>
+                    <p>"Train your team" methodology that builds self-sufficient organizations. Administrator and end-user training programs.</p>
+                    <ul class="service-features">
+                        <li>Administrator certification</li>
+                        <li>Role-based training</li>
+                        <li>AI tools proficiency</li>
+                        <li>Ongoing mentorship</li>
+                    </ul>
+                    <a href="services/training/" class="read-more">Learn More →</a>
+                </div>
+                
+                <div class="service-item">
+                    <h3>Salesforce Integrations</h3>
+                    <p>Seamless integrations with QuickBooks, Mailchimp, Bizzabo, and custom APIs. Real-time data sync across your tech stack.</p>
+                    <ul class="service-features">
+                        <li>Popular platform connections</li>
+                        <li>Custom API development</li>
+                        <li>Real-time synchronization</li>
+                        <li>Error handling & monitoring</li>
+                    </ul>
+                    <a href="services/integrations/" class="read-more">Learn More →</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="section section-alt testimonials">
+    <!-- Market-Specific CTAs -->
+    <section class="section section-alt">
         <div class="container">
-            <div class="section-header">
-                <h2>What Our Clients Say About Our Salesforce Consulting</h2>
-            </div>
-            
-            <div class="testimonial">
-                <div class="testimonial-content">
-                    <div class="testimonial-text">
-                        <p>"DevPipeline was highly responsive & worked closely with various members of the Chamber Team to get a holistic look at what we were missing and implement fixes that work for all departments. DevPipeline also helped train the in-house SF Admin and worked closely with them on handling projects that required technical skills beyond their expertise. We needed DevPipeline because the previous Salesforce consultants were not highly responsive to our needs and didn't collaborate with us on our fixes."</p>
-                        <div class="testimonial-author">— Martin, Chief Operating Officer, LA Chamber of Commerce</div>
-                    </div>
-                    <div class="testimonial-image">
-                        <div class="image-placeholder">👤</div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="testimonial">
-                <div class="testimonial-content">
-                    <div class="testimonial-text">
-                        <p>"More employees now utilize the Salesforce platform. We all have more understanding of the Salesforce platform. We are experiencing shorter troubleshooting durations."</p>
-                        <div class="testimonial-author">— Brian, Membership Director, LA Chamber of Commerce</div>
-                    </div>
-                    <div class="testimonial-image">
-                        <div class="image-placeholder">👤</div>
+            <div class="market-ctas">
+                <div class="market-cta nonprofit-section">
+                    <div class="market-content">
+                        <h2>Nonprofit Salesforce Solutions</h2>
+                        <p>Maximize your mission impact with expert NPSP implementation, donor management, and fundraising automation.</p>
+                        <ul class="market-features">
+                            <li>NPSP Implementation Experts</li>
+                            <li>Donor Management Excellence</li>
+                            <li>Grant Tracking & Reporting</li>
+                            <li>Fundraising Campaign Automation</li>
+                        </ul>
+                        <a href="nonprofits/" class="btn btn-large">Nonprofit Solutions</a>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Results Section -->
-    <section class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Verified Results from LA Chamber of Commerce</h2>
-            </div>
-            
-            <div class="results-grid">
-                <div class="result-item">
-                    <span class="result-number">100%</span>
-                    <span class="result-text">Salesforce Utilization (up from 62.5%)</span>
-                </div>
-                <div class="result-item">
-                    <span class="result-number">36</span>
-                    <span class="result-text">Employees Successfully Trained</span>
-                </div>
-                <div class="result-item">
-                    <span class="result-number">33</span>
-                    <span class="result-text">Salesforce Licenses Optimized</span>
-                </div>
-                <div class="result-item">
-                    <span class="result-number">57</span>
-                    <span class="result-text">Customer Community Licenses Deployed</span>
-                </div>
-                <div class="result-item">
-                    <span class="result-number">11,327</span>
-                    <span class="result-text">Community Login Licenses Managed</span>
-                </div>
-                <div class="result-item">
-                    <span class="result-number">3</span>
-                    <span class="result-text">Critical Integrations Completed</span>
+                
+                <div class="market-cta business-section">
+                    <div class="market-content">
+                        <h2>Business Growth Solutions</h2>
+                        <p>Drive revenue growth with sales automation, customer service excellence, and marketing operations optimization.</p>
+                        <ul class="market-features">
+                            <li>Sales Process Optimization</li>
+                            <li>Revenue Operations Alignment</li>
+                            <li>Customer Service Excellence</li>
+                            <li>Marketing Automation</li>
+                        </ul>
+                        <a href="business/" class="btn btn-large">Business Solutions</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -260,10 +263,14 @@
             <div class="contact-content">
                 <div class="contact-info">
                     <div class="contact-item">
-                        <div class="contact-icon">📞</div>
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
                         <h3>Ready to Transform Your Salesforce Investment?</h3>
                         <p>Get started with a free Salesforce assessment and discover how our proven methodology can transform your organization's efficiency and revenue growth.</p>
-                        <a href="/contact/" class="btn btn-large">Schedule Your Free Assessment</a>
+                        <a href="contact/" class="btn btn-large">Schedule Your Free Assessment</a>
                     </div>
                     
                     <div class="contact-item">
@@ -291,6 +298,6 @@
         </div>
     </footer>
 
-    <script src="/assets/js/main.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html> 
