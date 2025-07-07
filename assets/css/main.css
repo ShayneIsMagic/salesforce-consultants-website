@@ -884,6 +884,11 @@ footer p {
                 grid-template-columns: 1fr;
                 gap: var(--spacing-sm);
             }
+            
+            .expertise-grid {
+                grid-template-columns: 1fr;
+                gap: var(--spacing-md);
+            }
 
     .mobile-menu {
         display: flex;
@@ -1919,4 +1924,69 @@ footer p {
             font-size: 0.95rem;
             line-height: 1.4;
             font-weight: 500;
+        } 
+
+        /* Expertise Grid */
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-lg);
+            margin: var(--spacing-xxl) 0;
+        }
+
+        .expertise-item {
+            background: var(--white);
+            padding: var(--spacing-xl);
+            border-radius: 20px;
+            box-shadow: var(--premium-shadow);
+            border: var(--subtle-border);
+            text-align: center;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .expertise-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .expertise-item:hover::before {
+            transform: scaleX(1);
+        }
+
+        .expertise-item:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+        }
+
+        .expertise-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto var(--spacing-lg);
+            color: var(--white);
+        }
+
+        .expertise-item h3 {
+            font-size: 1.35rem;
+            margin-bottom: var(--spacing-md);
+            color: var(--text-color);
+            font-weight: 600;
+        }
+
+        .expertise-item p {
+            color: var(--light-text);
+            line-height: 1.6;
         } 
