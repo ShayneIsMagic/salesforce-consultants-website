@@ -1,0 +1,71 @@
+{
+  "projectName": "Salesforce Consultants",
+  "siteUrl": "https://salesforceconsultants.io",
+  "brandColors": {
+    "primary": "#3aafaa",
+    "secondary": "#17252b",
+    "accent": "#3aafaa",
+    "text": "#17252b",
+    "lightText": "#54698D",
+    "background": "#f5f5f5",
+    "white": "#FFFFFF"
+  },
+  "fonts": {
+    "primary": "Inter",
+    "secondary": "Source Sans Pro",
+    "fallback": "-apple-system, BlinkMacSystemFont, sans-serif"
+  },
+  "breakpoints": {
+    "mobile": "768px",
+    "tablet": "1024px",
+    "desktop": "1200px"
+  },
+  "seo": {
+    "siteName": "Salesforce Consultants",
+    "defaultDescription": "Expert Salesforce consultants specializing in nonprofit NPSP and business implementations. Trusted by LA Chamber of Commerce. 100% user adoption guaranteed.",
+    "keywords": [
+      "salesforce consultants",
+      "salesforce implementation",
+      "NPSP consultant",
+      "salesforce for nonprofits",
+      "salesforce business consultant",
+      "salesforce training",
+      "salesforce integrations"
+    ]
+  },
+  "competitors": [
+    {
+      "name": "Simplus",
+      "url": "https://www.simplus.com/",
+      "focus": "Salesforce consulting and implementation"
+    },
+    {
+      "name": "Eide Bailly",
+      "url": "https://www.eidebailly.com/landing/campaigns/salesforce-consulting",
+      "focus": "Salesforce consulting services"
+    },
+    {
+      "name": "STG Consulting",
+      "url": "https://stgconsulting.com/",
+      "focus": "Salesforce consulting and development"
+    }
+  ],
+  "pages": [
+    "/",
+    "/about/",
+    "/services/",
+    "/nonprofits/",
+    "/business/",
+    "/success-stories/",
+    "/contact/"
+  ],
+  "targetMetrics": {
+    "performance": 90,
+    "accessibility": 95,
+    "bestPractices": 90,
+    "seo": 95,
+    "loadTime": 3000,
+    "firstContentfulPaint": 1500,
+    "largestContentfulPaint": 2500
+  }
+} 

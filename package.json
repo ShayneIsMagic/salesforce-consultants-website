@@ -7,8 +7,20 @@
     "start": "python3 -m http.server 8000",
     "dev": "python3 -m http.server 8000",
     "build": "echo 'Static site - no build process required'",
-    "test": "echo 'No tests specified'",
-    "lint": "echo 'No linting configured'"
+    "test": "npm run qa:all",
+    "lint": "echo 'No linting configured'",
+    "qa:all": "node tools/qa-runner.js --all",
+    "qa:content": "node tools/qa-runner.js --content",
+    "qa:perf": "node tools/qa-runner.js --performance",
+    "qa:a11y": "node tools/qa-runner.js --accessibility",
+    "qa:visual": "node tools/qa-runner.js --visual",
+    "qa:competitor": "node tools/competitor-analysis.js",
+    "qa:seo-research": "node tools/seo-research.js",
+    "qa:generate-site": "node tools/alternative-site-generator.js",
+    "qa:research-generate": "node tools/research-and-generate.js",
+    "lighthouse": "node tools/lighthouse-audit.js",
+    "puppeteer": "node tools/puppeteer-tests.js",
+    "deploy:check": "node tools/deployment-checker.js"
   },
   "keywords": [
     "salesforce",
@@ -30,7 +42,24 @@
     "url": "https://github.com/your-username/salesforce-consultants-website/issues"
   },
   "homepage": "https://salesforceconsultants.io",
-  "devDependencies": {},
+  "devDependencies": {
+    "puppeteer": "^21.0.0",
+    "lighthouse": "^11.0.0",
+    "chrome-launcher": "^1.0.0",
+    "axe-core": "^4.7.0",
+
+    "jest": "^29.0.0",
+    "jest-puppeteer": "^10.0.0",
+    "pixelmatch": "^5.3.0",
+    "pngjs": "^7.0.0",
+    "cheerio": "^1.0.0",
+    "axios": "^1.5.0",
+    "commander": "^11.0.0",
+    "chalk": "^5.0.0",
+    "ora": "^7.0.0",
+    "table": "^6.8.0",
+    "fs-extra": "^11.0.0"
+  },
   "dependencies": {},
   "engines": {
     "node": ">=14.0.0"

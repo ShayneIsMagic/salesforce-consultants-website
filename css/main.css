@@ -2631,4 +2631,365 @@ footer {
         .vision-list li strong {
             color: var(--primary-color);
             font-weight: 600;
+        }
+
+        /* Local Market Focus Styles */
+        .markets-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-xl);
+        }
+
+        .market-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            padding: var(--spacing-xl);
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            border: var(--subtle-border);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .market-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+        }
+
+        .market-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--premium-shadow);
+        }
+
+        .market-icon {
+            font-size: 3rem;
+            margin-bottom: var(--spacing-md);
+            display: block;
+        }
+
+        .market-card h3 {
+            color: var(--text-color);
+            margin-bottom: var(--spacing-sm);
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .market-card p {
+            color: var(--light-text);
+            margin-bottom: var(--spacing-lg);
+            line-height: 1.6;
+        }
+
+        .market-features {
+            list-style: none;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .market-features li {
+            padding: var(--spacing-xs) 0;
+            color: var(--text-color);
+            font-weight: 500;
+            position: relative;
+            padding-left: var(--spacing-md);
+        }
+
+        .market-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--success);
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        /* Stats Grid Styles */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-xl);
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: var(--spacing-lg);
+            background: var(--white);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+
+        .stat-item:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--premium-shadow);
+        }
+
+        .stat-number {
+            display: block;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            line-height: 1;
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--light-text);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Partners Grid Styles */
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-xl);
+        }
+
+        .partner-item {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            padding: var(--spacing-xl);
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            border: var(--subtle-border);
+        }
+
+        .partner-item:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--premium-shadow);
+        }
+
+        .partner-item h3 {
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-sm);
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        .partner-item p {
+            color: var(--light-text);
+            margin-bottom: var(--spacing-md);
+            line-height: 1.6;
+        }
+
+        .partner-benefits {
+            list-style: none;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .partner-benefits li {
+            padding: var(--spacing-xs) 0;
+            color: var(--text-color);
+            font-weight: 500;
+            position: relative;
+            padding-left: var(--spacing-md);
+        }
+
+        .partner-benefits li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        .partner-stats {
+            display: flex;
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-md);
+        }
+
+        .partner-stat {
+            text-align: center;
+            flex: 1;
+        }
+
+        .partner-stat-number {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            line-height: 1;
+        }
+
+        .partner-stat-label {
+            font-size: 0.8rem;
+            color: var(--light-text);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Benefits Grid Styles */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-xl);
+        }
+
+        .benefit-item {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            padding: var(--spacing-xl);
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            border: var(--subtle-border);
+        }
+
+        .benefit-item:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--premium-shadow);
+        }
+
+        .benefit-item h3 {
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-sm);
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        .benefit-item p {
+            color: var(--light-text);
+            margin-bottom: var(--spacing-md);
+            line-height: 1.6;
+        }
+
+        .benefit-features {
+            list-style: none;
+        }
+
+        .benefit-features li {
+            padding: var(--spacing-xs) 0;
+            color: var(--text-color);
+            font-weight: 500;
+            position: relative;
+            padding-left: var(--spacing-md);
+        }
+
+        .benefit-features li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        /* Testimonials Grid Styles */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-xl);
+        }
+
+        .testimonial-item {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            padding: var(--spacing-xl);
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            border: var(--subtle-border);
+            position: relative;
+        }
+
+        .testimonial-item::before {
+            content: '"';
+            position: absolute;
+            top: var(--spacing-md);
+            left: var(--spacing-md);
+            font-size: 4rem;
+            color: var(--primary-color);
+            opacity: 0.1;
+            font-family: serif;
+            line-height: 1;
+        }
+
+        .testimonial-item:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--premium-shadow);
+        }
+
+        .testimonial-item blockquote {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: var(--text-color);
+            margin-bottom: var(--spacing-md);
+            font-style: italic;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-item cite {
+            display: block;
+            color: var(--light-text);
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .testimonial-item cite strong {
+            color: var(--text-color);
+            font-weight: 700;
+        }
+
+        /* Responsive Design for Local Market Sections */
+        @media (max-width: 768px) {
+            .markets-grid {
+                grid-template-columns: 1fr;
+                gap: var(--spacing-md);
+            }
+            
+            .market-card {
+                padding: var(--spacing-lg);
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: var(--spacing-md);
+            }
+            
+            .partners-grid {
+                grid-template-columns: 1fr;
+                gap: var(--spacing-md);
+            }
+            
+            .benefits-grid {
+                grid-template-columns: 1fr;
+                gap: var(--spacing-md);
+            }
+            
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+                gap: var(--spacing-md);
+            }
+            
+            .partner-stats {
+                flex-direction: column;
+                gap: var(--spacing-sm);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stat-number {
+                font-size: 2rem;
+            }
+            
+            .market-icon {
+                font-size: 2.5rem;
+            }
         } 

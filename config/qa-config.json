@@ -1,0 +1,94 @@
+{
+  "puppeteer": {
+    "headless": true,
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "timeout": 30000,
+    "waitUntil": "networkidle2"
+  },
+  "lighthouse": {
+    "performance": 90,
+    "accessibility": 95,
+    "bestPractices": 90,
+    "seo": 95,
+    "categories": ["performance", "accessibility", "best-practices", "seo"]
+  },
+  "accessibility": {
+    "standard": "WCAG21AA",
+    "tags": ["wcag2a", "wcag2aa", "wcag21aa"],
+    "rules": {
+      "color-contrast": "error",
+      "document-title": "error",
+      "html-has-lang": "error",
+      "image-alt": "error",
+      "link-name": "error"
+    }
+  },
+  "visual": {
+    "screenshotDir": "./tests/visual/screenshots",
+    "baselineDir": "./tests/visual/baseline",
+    "threshold": 0.1,
+    "devices": [
+      {
+        "name": "desktop",
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "name": "tablet",
+        "width": 768,
+        "height": 1024
+      },
+      {
+        "name": "mobile",
+        "width": 375,
+        "height": 667
+      }
+    ]
+  },
+  "content": {
+    "requiredElements": [
+      "h1",
+      "meta[name='description']",
+      "meta[name='keywords']",
+      "link[rel='canonical']",
+      "img[alt]"
+    ],
+    "forbiddenElements": [
+      "marquee",
+      "blink",
+      "font"
+    ],
+    "minContentLength": 300,
+    "maxTitleLength": 60,
+    "maxDescriptionLength": 160
+  },
+  "performance": {
+    "maxLoadTime": 3000,
+    "maxFirstContentfulPaint": 1500,
+    "maxLargestContentfulPaint": 2500,
+    "maxCumulativeLayoutShift": 0.1,
+    "maxFirstInputDelay": 100
+  },
+  "seo": {
+    "requiredMetaTags": [
+      "title",
+      "description",
+      "viewport",
+      "charset"
+    ],
+    "requiredOpenGraph": [
+      "og:title",
+      "og:description",
+      "og:type",
+      "og:url"
+    ],
+    "requiredTwitter": [
+      "twitter:card",
+      "twitter:title",
+      "twitter:description"
+    ]
+  }
+} 
