@@ -1,71 +1,573 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <!-- SEO Meta Tags -->
-    <title>Salesforce Consultants - Professional Salesforce Consulting Services</title>
-    <meta name="description" content="Expert Salesforce consulting services. We help businesses maximize their Salesforce investment with custom solutions, implementation, and optimization." />
-    <meta name="keywords" content="Salesforce, consulting, CRM, implementation, customization, optimization, business solutions" />
-    <meta name="author" content="Salesforce Consultants" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expert Salesforce Consulting Services | Certified Salesforce Consultants | SalesforceConsultants.io</title>
+    <meta name="description" content="Transform your business with expert Salesforce consulting. 15+ certified Salesforce consultants specializing in Sales Cloud, Service Cloud, Nonprofit Cloud implementation. Get your free Salesforce assessment today.">
+    <meta name="keywords" content="Salesforce consulting, Salesforce consultant, Salesforce implementation, Sales Cloud consultant, Service Cloud implementation, Nonprofit Salesforce consultant, Salesforce training, Salesforce integration, Salesforce developer, CRM consultant">
     
     <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://salesforceconsultants.io/" />
-    <meta property="og:title" content="Salesforce Consultants - Professional Salesforce Consulting Services" />
-    <meta property="og:description" content="Expert Salesforce consulting services. We help businesses maximize their Salesforce investment with custom solutions, implementation, and optimization." />
-    <meta property="og:image" content="https://salesforceconsultants.io/og-image.jpg" />
-    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://salesforceconsultants.io/">
+    <meta property="og:title" content="Expert Salesforce Consulting Services | SalesforceConsultants.io">
+    <meta property="og:description" content="Transform your business with expert Salesforce consulting. 15+ certified consultants specializing in implementation, training, and optimization.">
+    <meta property="og:image" content="https://salesforceconsultants.io/images/og-image.jpg">
+
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://salesforceconsultants.io/" />
-    <meta property="twitter:title" content="Salesforce Consultants - Professional Salesforce Consulting Services" />
-    <meta property="twitter:description" content="Expert Salesforce consulting services. We help businesses maximize their Salesforce investment with custom solutions, implementation, and optimization." />
-    <meta property="twitter:image" content="https://salesforceconsultants.io/og-image.jpg" />
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://salesforceconsultants.io/">
+    <meta property="twitter:title" content="Expert Salesforce Consulting Services | SalesforceConsultants.io">
+    <meta property="twitter:description" content="Transform your business with expert Salesforce consulting. 15+ certified consultants specializing in implementation, training, and optimization.">
+    <meta property="twitter:image" content="https://salesforceconsultants.io/images/twitter-image.jpg">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://salesforceconsultants.io/">
     
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
     
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
     
-    <!-- Preload critical resources -->
-    <link rel="preload" href="/src/styles/main.css" as="style" />
-    
-    <!-- Structured Data -->
+    <!-- Schema.org structured data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Salesforce Consultants",
+      "@type": "ProfessionalService",
+      "name": "SalesforceConsultants.io",
+      "description": "Expert Salesforce consulting services specializing in implementation, training, and optimization",
       "url": "https://salesforceconsultants.io",
-      "logo": "https://salesforceconsultants.io/logo.png",
-      "description": "Professional Salesforce consulting services",
+      "telephone": "(385) 309-0807",
+      "email": "marketing@salesforceconsultants.io",
       "address": {
         "@type": "PostalAddress",
+        "addressLocality": "Salt Lake City",
+        "addressRegion": "UT",
         "addressCountry": "US"
       },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "contactType": "customer service",
-        "email": "contact@salesforceconsultants.io"
+      "serviceArea": {
+        "@type": "Country",
+        "name": "United States"
       },
-      "sameAs": [
-        "https://linkedin.com/company/salesforce-consultants",
-        "https://twitter.com/sfconsultants"
-      ]
+      "priceRange": "$$$",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "25"
+      }
     }
     </script>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">
+                    SalesforceConsultants.io
+                    <span class="division">A DevPipeline Division</span>
+                </a>
+                <nav>
+                    <ul id="nav-menu">
+                        <li><a href="#services">Salesforce Services</a></li>
+                        <li><a href="#case-study">Success Stories</a></li>
+                        <li><a href="#certifications">Salesforce Expertise</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+                <a href="#contact" class="cta-header">Free Salesforce Assessment</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <!-- Hero Image Container - Replace src with actual image -->
+        <div class="hero-image" style="background-image: url('images/hero-salesforce-team.jpg');"></div>
+        
+        <!-- Hero Image Placeholder (remove when image added) -->
+        <div class="hero-image-placeholder">
+            <span>Hero Image:<br>Salesforce Team/Office<br>(300x200px)</span>
+        </div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="fade-in-up">Transform Your <span class="hero-highlight">Salesforce Investment</span> Into Measurable Impact</h1>
+                <p class="hero-subtitle fade-in-up">Expert Salesforce consulting that lifts people, advances careers, and strengthens communities</p>
+                <p class="hero-description fade-in-up">
+                    SalesforceConsultants.io delivers comprehensive Salesforce implementation, Salesforce consulting services, and Salesforce training for businesses and nonprofits. Our certified Salesforce consultants combine 15+ years of platform expertise with a mission-driven approach that creates lasting value for everyone involved.
+                </p>
+                <div class="cta-buttons fade-in-up">
+                    <a href="#contact" class="btn-primary">🚀 Get Free Salesforce Assessment</a>
+                    <a href="#case-study" class="btn-secondary">📊 View Success Stories</a>
+                </div>
+                <div class="hero-stats fade-in-up">
+                    <div class="stat">
+                        <span class="stat-number">15+</span>
+                        <span class="stat-label">Salesforce Certifications</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">40%</span>
+                        <span class="stat-label">Average Efficiency Improvement</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">15+</span>
+                        <span class="stat-label">Years Salesforce Experience</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Divider -->
+    <div class="section-divider"></div>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Complete Salesforce Consulting Services</h2>
+                <p class="section-subtitle">From Salesforce implementation to ongoing optimization - we own every aspect of your Salesforce success</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <span class="service-icon">🎯</span>
+                    <h3>Salesforce Implementation Services</h3>
+                    <p>Proven Salesforce implementation methodologies with focus on sustainable adoption and measurable outcomes across Sales Cloud, Service Cloud, and Marketing Cloud</p>
+                    <ul class="service-features">
+                        <li>Multi-cloud Salesforce implementations (Sales Cloud, Service Cloud, Marketing Cloud)</li>
+                        <li>Cross-departmental workflow integration</li>
+                        <li>Salesforce change management and user adoption</li>
+                        <li>ROI-focused Salesforce project delivery</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <span class="service-icon">⚡</span>
+                    <h3>Custom Salesforce Development</h3>
+                    <p>Advanced Apex development, Lightning Components, and Salesforce API development beyond standard Salesforce configuration</p>
+                    <ul class="service-features">
+                        <li>Salesforce Lightning Component development</li>
+                        <li>Custom Apex programming and Salesforce automation</li>
+                        <li>Salesforce API integrations and data migration</li>
+                        <li>Salesforce enterprise architecture design</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <span class="service-icon">🎓</span>
+                    <h3>Salesforce Training & Certification</h3>
+                    <p>Build internal Salesforce capabilities that ensure long-term success and platform mastery with our certified Salesforce training programs</p>
+                    <ul class="service-features">
+                        <li>Salesforce Administrator certification preparation</li>
+                        <li>Role-based Salesforce user training programs</li>
+                        <li>Salesforce train-the-trainer certifications</li>
+                        <li>Ongoing Salesforce mentorship and support</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <span class="service-icon">🔗</span>
+                    <h3>Salesforce System Integration</h3>
+                    <p>Connect Salesforce with your essential business systems for unified data visibility and seamless workflow automation</p>
+                    <ul class="service-features">
+                        <li>Financial systems integration (QuickBooks, Sage, NetSuite)</li>
+                        <li>Marketing platform integration (Mailchimp, HubSpot)</li>
+                        <li>Communication tools integration (Slack, Teams)</li>
+                        <li>Real-time Salesforce data synchronization</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <span class="service-icon">🤖</span>
+                    <h3>Salesforce AI & Automation</h3>
+                    <p>Leverage Salesforce Einstein AI and custom automation for intelligent process optimization and predictive analytics</p>
+                    <ul class="service-features">
+                        <li>Salesforce Einstein implementation and configuration</li>
+                        <li>Advanced Salesforce workflow automation</li>
+                        <li>Salesforce predictive analytics setup</li>
+                        <li>Custom Salesforce AI solutions</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <span class="service-icon">📊</span>
+                    <h3>Nonprofit Salesforce Solutions</h3>
+                    <p>Specialized expertise in Nonprofit Cloud, NPSP, and mission-driven organizations with proven nonprofit Salesforce consulting experience</p>
+                    <ul class="service-features">
+                        <li>Salesforce Nonprofit Cloud & NPSP implementation</li>
+                        <li>Donor management and fundraising automation</li>
+                        <li>Grant tracking and nonprofit program management</li>
+                        <li>Volunteer coordination systems in Salesforce</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study Section -->
+    <section id="case-study" class="case-study">
+        <div class="container">
+            <div class="case-study-content">
+                <div class="case-study-text">
+                    <h2>Salesforce Success Story: LA Chamber of Commerce</h2>
+                    <p>How our Salesforce consulting team transformed a complex multi-department organization with advanced Salesforce solutions and comprehensive Salesforce training.</p>
+                    
+                    <div class="challenge">
+                        <h4>The Salesforce Challenge</h4>
+                        <p>The LA Chamber needed a unified Salesforce CRM solution that could serve multiple departments while building internal Salesforce technical capabilities for long-term sustainability.</p>
+                    </div>
+                    
+                    <div class="solution">
+                        <h4>Our Salesforce Solution</h4>
+                        <p>We implemented a comprehensive Salesforce solution with cross-departmental integration, advanced Salesforce customizations, and extensive Salesforce training programs for their internal team.</p>
+                    </div>
+                    
+                    <div class="results">
+                        <h4>The Salesforce Results</h4>
+                        <ul class="results-list">
+                            <li>Increased Salesforce platform adoption across all departments</li>
+                            <li>Enhanced internal Salesforce capabilities and expertise</li>
+                            <li>Significantly reduced Salesforce troubleshooting times</li>
+                            <li>Improved cross-departmental collaboration through Salesforce</li>
+                            <li>Sustainable Salesforce technical skills development</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="case-study-highlight">
+                    <!-- Case Study Image Placeholder -->
+                    <div class="image-placeholder case-study-image-placeholder">
+                        Case Study Image:<br>LA Chamber Office/Team<br>(500x250px)
+                    </div>
+                    
+                    <div class="testimonial">
+                        <div class="testimonial-text">
+                            "SalesforceConsultants.io was highly responsive & worked closely with our team to implement fixes that work for all departments. They also trained our in-house Salesforce Admin to handle technical projects beyond their expertise."
+                        </div>
+                        <div class="testimonial-author">Martin, Chief Operating Officer</div>
+                        <div class="testimonial-title">LA Chamber of Commerce</div>
+                    </div>
+                    
+                    <div class="testimonial">
+                        <div class="testimonial-text">
+                            "More employees now utilize the Salesforce platform. We have a greater understanding of Salesforce and experience shorter troubleshooting times."
+                        </div>
+                        <div class="testimonial-author">Brian, Membership Director</div>
+                        <div class="testimonial-title">LA Chamber of Commerce</div>
+                    </div>
+                    
+                    <a href="#contact" class="btn-primary" style="margin-top: 2rem;">Get Your Salesforce Success Story</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" style="color: white;">15 Unique Salesforce Certifications</h2>
+                <p class="section-subtitle" style="color: rgba(255,255,255,0.9);">Our certified Salesforce consultants hold the industry's most comprehensive Salesforce certification portfolio</p>
+            </div>
+            <div class="cert-grid">
+                <div class="cert-category">
+                    <h3>Salesforce Administration & Platform</h3>
+                    <ul class="cert-list">
+                        <li>Salesforce Certified Administrator</li>
+                        <li>Salesforce Certified Advanced Administrator</li>
+                        <li>Salesforce Certified Platform App Builder</li>
+                        <li>Salesforce Certified Business Analyst</li>
+                    </ul>
+                </div>
+                
+                <div class="cert-category">
+                    <h3>Salesforce Development & Architecture</h3>
+                    <ul class="cert-list">
+                        <li>Salesforce Platform Developer I & II</li>
+                        <li>Salesforce JavaScript Developer I</li>
+                        <li>Salesforce Application Architect</li>
+                        <li>Salesforce Data Architect</li>
+                        <li>Salesforce Sharing and Visibility Architect</li>
+                        <li>Salesforce Development Lifecycle Architect</li>
+                    </ul>
+                </div>
+                
+                <div class="cert-category">
+                    <h3>Salesforce Cloud Consulting</h3>
+                    <ul class="cert-list">
+                        <li>Salesforce Sales Cloud Consultant</li>
+                        <li>Salesforce Service Cloud Consultant</li>
+                        <li>Salesforce Community Cloud Consultant</li>
+                    </ul>
+                </div>
+                
+                <div class="cert-category">
+                    <h3>Salesforce Marketing & Analytics</h3>
+                    <ul class="cert-list">
+                        <li>Salesforce Marketing Cloud Email Specialist</li>
+                        <li>Salesforce Marketing Cloud Administrator</li>
+                        <li>Certified Tableau Desktop Specialist</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose Our Salesforce Consulting Services?</h2>
+                <p class="section-subtitle">We deliver measurable Salesforce results through collaborative partnerships and proven expertise</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="feature-icon">🏆</span>
+                    <h3>Comprehensive Salesforce Expertise</h3>
+                    <p>15 unique Salesforce certifications covering every aspect of the Salesforce ecosystem - from basic Salesforce administration to enterprise Salesforce architecture.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon">📈</span>
+                    <h3>Proven Salesforce Results</h3>
+                    <p>Average 40% efficiency improvement with documented Salesforce success stories across nonprofits, chambers of commerce, and businesses.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon">🤝</span>
+                    <h3>True Salesforce Partnership</h3>
+                    <p>We work as an extension of your team, providing responsive Salesforce collaboration and knowledge transfer for long-term Salesforce success.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon">🌱</span>
+                    <h3>Mission-Driven Salesforce Consulting</h3>
+                    <p>Our Salesforce approach lifts people, advances careers, and strengthens communities - creating positive impact beyond technology implementation.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon">🔧</span>
+                    <h3>Complete Salesforce Solutions</h3>
+                    <p>From Salesforce strategy to implementation to training - we own every aspect of your Salesforce transformation and optimization.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon">⚡</span>
+                    <h3>Rapid Salesforce Response</h3>
+                    <p>Quick Salesforce problem-solving, iterative development, and immediate Salesforce support when you need it most.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Transform Your Salesforce Experience?</h2>
+            <p>Whether you're implementing Salesforce for the first time, optimizing an existing Salesforce system, or planning a complex Salesforce migration, our certified Salesforce consultants are ready to help you achieve measurable success.</p>
+            <a href="#contact" class="btn-primary" style="background: white; color: var(--accent-orange); font-size: 1.2rem; padding: 1.2rem 2.5rem;">Get Your Free Salesforce Assessment Today</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get Your Free Salesforce Assessment</h2>
+                <p class="section-subtitle">Discover how our Salesforce consulting services can transform your Salesforce investment into measurable impact</p>
+            </div>
+            
+            <div class="contact-form">
+                <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="organization">Organization Name *</label>
+                            <input type="text" id="organization" name="organization" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="org-type">Organization Type *</label>
+                            <select id="org-type" name="org-type" required>
+                                <option value="">Select Organization Type</option>
+                                <option value="nonprofit">Nonprofit Organization</option>
+                                <option value="chamber">Chamber of Commerce</option>
+                                <option value="association">Professional Association</option>
+                                <option value="business">Business/For-Profit</option>
+                                <option value="government">Government Agency</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="current-salesforce">Current Salesforce Usage *</label>
+                            <select id="current-salesforce" name="current-salesforce" required>
+                                <option value="">Select Current Salesforce Status</option>
+                                <option value="no-salesforce">Not using Salesforce</option>
+                                <option value="basic-setup">Basic Salesforce setup</option>
+                                <option value="partial-implementation">Partially implemented Salesforce</option>
+                                <option value="full-implementation">Fully implemented but need Salesforce optimization</option>
+                                <option value="migration-needed">Need to migrate to Salesforce from another system</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="primary-need">Primary Salesforce Need *</label>
+                            <select id="primary-need" name="primary-need" required>
+                                <option value="">Select Primary Salesforce Need</option>
+                                <option value="new-implementation">New Salesforce Implementation</option>
+                                <option value="system-optimization">Optimize Existing Salesforce System</option>
+                                <option value="custom-development">Custom Salesforce Development</option>
+                                <option value="training">Salesforce Training & Certification</option>
+                                <option value="integration">Salesforce System Integration</option>
+                                <option value="migration">Salesforce Data Migration</option>
+                                <option value="ai-automation">Salesforce AI & Automation</option>
+                                <option value="consulting">Strategic Salesforce Consulting</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="timeline">Desired Salesforce Timeline</label>
+                            <select id="timeline" name="timeline">
+                                <option value="">Select Timeline</option>
+                                <option value="asap">As soon as possible</option>
+                                <option value="1-3-months">1-3 months</option>
+                                <option value="3-6-months">3-6 months</option>
+                                <option value="6-12-months">6-12 months</option>
+                                <option value="exploring">Just exploring Salesforce options</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Tell us about your specific Salesforce needs and challenges</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Describe your current Salesforce situation, specific challenges, or goals you'd like to achieve with Salesforce consulting services..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">🚀 Get My Free Salesforce Assessment</button>
+                </form>
+                
+                <div class="contact-info">
+                    <h3 style="color: var(--primary-dark); margin-bottom: 1rem;">Prefer to Talk Directly About Your Salesforce Needs?</h3>
+                    <p style="margin-bottom: 1rem; color: var(--medium-gray);">Schedule a 30-minute Salesforce consultation to discuss your specific requirements</p>
+                    <div class="contact-methods">
+                        <a href="tel:385-309-0807" class="contact-method">📞 (385) 309-0807</a>
+                        <a href="mailto:marketing@salesforceconsultants.io" class="contact-method">📧 marketing@salesforceconsultants.io</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section class="social-section">
+        <div class="container">
+            <h3>Connect with Our Salesforce Consulting Team</h3>
+            <p>Follow us for Salesforce tips, best practices, and industry insights</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/profile.php?id=61566535995457" target="_blank" class="social-link" title="Follow us on Facebook">📘</a>
+                <a href="https://www.instagram.com/salesforceconsultants/" target="_blank" class="social-link" title="Follow us on Instagram">📷</a>
+                <a href="https://www.linkedin.com/company/salesforce-consultants-io/" target="_blank" class="social-link" title="Connect on LinkedIn">💼</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SalesforceConsultants.io</h3>
+                    <p style="margin-bottom: 1rem;">A DevPipeline Division</p>
+                    <p>Expert Salesforce consulting services that lift people, advance careers, and strengthen communities through proven Salesforce implementation and optimization.</p>
+                    <div style="margin-top: 1rem;">
+                        <p>📞 (385) 309-0807</p>
+                        <p>📧 marketing@salesforceconsultants.io</p>
+                        <p>🌐 www.salesforceconsultants.io</p>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Salesforce Services</h3>
+                    <ul>
+                        <li><a href="#services">Salesforce Implementation</a></li>
+                        <li><a href="#services">Custom Salesforce Development</a></li>
+                        <li><a href="#services">Salesforce Training & Certification</a></li>
+                        <li><a href="#services">Salesforce System Integration</a></li>
+                        <li><a href="#services">Salesforce AI & Automation</a></li>
+                        <li><a href="#services">Nonprofit Salesforce Solutions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Industries We Serve</h3>
+                    <ul>
+                        <li>Nonprofit Organizations</li>
+                        <li>Chambers of Commerce</li>
+                        <li>Professional Associations</li>
+                        <li>Membership Organizations</li>
+                        <li>Professional Services</li>
+                        <li>B2B Service Companies</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Our Salesforce Expertise</h3>
+                    <ul>
+                        <li>15+ Salesforce Certifications</li>
+                        <li>Salesforce Sales Cloud Implementation</li>
+                        <li>Salesforce Service Cloud Optimization</li>
+                        <li>Salesforce Marketing Cloud Setup</li>
+                        <li>Salesforce Nonprofit Cloud & NPSP</li>
+                        <li>Salesforce Enterprise Architecture</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 DevPipeline | SalesforceConsultants.io. All rights reserved. | 
+                <a href="#" style="color: var(--accent-orange);">Privacy Policy</a> | 
+                <a href="#" style="color: var(--accent-orange);">Terms of Service</a></p>
+                <p style="margin-top: 1rem; font-size: 0.9rem;">
+                    Salesforce, Sales Cloud, Service Cloud, Marketing Cloud, and other Salesforce products are trademarks of Salesforce.com, Inc. SalesforceConsultants.io is an independent Salesforce consulting firm.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    
+    <!-- Google Analytics (replace YOUR_GA_ID with actual tracking ID) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_GA_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'YOUR_GA_ID');
+    </script>
+</body>
 </html> 
