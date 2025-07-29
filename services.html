@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salesforce Services | Implementation, Training & Consulting | SalesforceConsultants.io</title>
+    <meta name="description" content="Complete Salesforce services including implementation, custom development, training, integration, AI automation, and nonprofit solutions. Expert Salesforce consulting for all business needs.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Additional styles for services page -->
+    <style>
+        .services-hero {
+            background: linear-gradient(135deg, var(--primary-teal) 0%, var(--primary-dark) 100%);
+            color: var(--white);
+            padding: 120px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .services-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background-image: url('assets/Business Solutions.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.1;
+            z-index: 1;
+        }
+        
+        .services-hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+        }
+        
+        .services-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--white);
+        }
+        
+        .services-hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            color: rgba(255,255,255,0.9);
+        }
+        
+        .service-detail {
+            padding: 4rem 0;
+        }
+        
+        .service-detail:nth-child(even) {
+            background: var(--light-gray);
+        }
+        
+        .service-detail-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .service-detail-text h2 {
+            color: var(--text-dark);
+            margin-bottom: 1.5rem;
+            font-size: 2.5rem;
+        }
+        
+        .service-detail-text p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            color: var(--text-light);
+        }
+        
+        .service-features-list {
+            list-style: none;
+            margin-top: 2rem;
+        }
+        
+        .service-features-list li {
+            padding: 0.8rem 0;
+            color: var(--text-light);
+            position: relative;
+            padding-left: 2rem;
+            font-size: 1.1rem;
+        }
+        
+        .service-features-list li::before {
+            content: "✓";
+            color: var(--accent-green);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            font-size: 1.2rem;
+        }
+        
+        .service-image {
+            text-align: center;
+        }
+        
+        .service-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-medium);
+        }
+        
+        .process-section {
+            background: var(--gradient-accent);
+            color: var(--white);
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .process-step {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            backdrop-filter: blur(10px);
+        }
+        
+        .process-step-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .services-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .service-detail-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .service-detail-text h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <img src="assets/Salesforce Consultants Logo.png" alt="SalesforceConsultants.io" style="height: 40px; margin-right: 10px;">
+                    SalesforceConsultants.io
+                    <span class="division">A DevPipeline Division</span>
+                </a>
+                <nav class="nav-menu">
+                    <ul id="nav-menu">
+                        <li><a href="services.html">Salesforce Services</a></li>
+                        <li><a href="success-stories.html">Success Stories</a></li>
+                        <li><a href="expertise.html">Salesforce Expertise</a></li>
+                        <li><a href="clients.html">Our Clients</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                <a href="contact.html" class="cta-header">Free Salesforce Assessment</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services Hero Section -->
+    <section class="services-hero">
+        <div class="container">
+            <div class="services-hero-content">
+                <h1>Complete Salesforce Services</h1>
+                <p>From initial implementation to ongoing optimization, we provide comprehensive Salesforce solutions that drive measurable business results.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn-primary">🚀 Get Started Today</a>
+                    <a href="#process" class="btn-secondary">📋 Our Process</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Salesforce Implementation -->
+    <section class="service-detail">
+        <div class="container">
+            <div class="service-detail-content">
+                <div class="service-detail-text">
+                    <h2>Salesforce Implementation Services</h2>
+                    <p>Proven Salesforce implementation methodologies with focus on sustainable adoption and measurable outcomes across Sales Cloud, Service Cloud, and Marketing Cloud.</p>
+                    <ul class="service-features-list">
+                        <li>Multi-cloud Salesforce implementations (Sales Cloud, Service Cloud, Marketing Cloud)</li>
+                        <li>Cross-departmental workflow integration</li>
+                        <li>Salesforce change management and user adoption</li>
+                        <li>ROI-focused Salesforce project delivery</li>
+                        <li>Custom Salesforce configuration and setup</li>
+                        <li>Data migration and system integration</li>
+                    </ul>
+                </div>
+                <div class="service-image">
+                    <img src="assets/Salesforce.jpg" alt="Salesforce Implementation">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Custom Development -->
+    <section class="service-detail">
+        <div class="container">
+            <div class="service-detail-content">
+                <div class="service-image">
+                    <img src="assets/SalesforceConsultants-Graphic.png" alt="Custom Salesforce Development">
+                </div>
+                <div class="service-detail-text">
+                    <h2>Custom Salesforce Development</h2>
+                    <p>Advanced Apex development, Lightning Components, and Salesforce API development beyond standard Salesforce configuration.</p>
+                    <ul class="service-features-list">
+                        <li>Salesforce Lightning Component development</li>
+                        <li>Custom Apex programming and Salesforce automation</li>
+                        <li>Salesforce API integrations and data migration</li>
+                        <li>Salesforce enterprise architecture design</li>
+                        <li>Custom Salesforce workflows and processes</li>
+                        <li>Advanced Salesforce reporting and analytics</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Training & Certification -->
+    <section class="service-detail">
+        <div class="container">
+            <div class="service-detail-content">
+                <div class="service-detail-text">
+                    <h2>Salesforce Training & Certification</h2>
+                    <p>Build internal Salesforce capabilities that ensure long-term success and platform mastery with our certified Salesforce training programs.</p>
+                    <ul class="service-features-list">
+                        <li>Salesforce Administrator certification preparation</li>
+                        <li>Role-based Salesforce user training programs</li>
+                        <li>Salesforce train-the-trainer certifications</li>
+                        <li>Ongoing Salesforce mentorship and support</li>
+                        <li>Custom Salesforce training materials</li>
+                        <li>Salesforce best practices workshops</li>
+                    </ul>
+                </div>
+                <div class="service-image">
+                    <img src="assets/Reports - Access jpg.jpg" alt="Salesforce Training">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- System Integration -->
+    <section class="service-detail">
+        <div class="container">
+            <div class="service-detail-content">
+                <div class="service-image">
+                    <img src="assets/Business Solutions.jpg" alt="Salesforce System Integration">
+                </div>
+                <div class="service-detail-text">
+                    <h2>Salesforce System Integration</h2>
+                    <p>Connect Salesforce with your essential business systems for unified data visibility and seamless workflow automation.</p>
+                    <ul class="service-features-list">
+                        <li>Financial systems integration (QuickBooks, Sage, NetSuite)</li>
+                        <li>Marketing platform integration (Mailchimp, HubSpot)</li>
+                        <li>Communication tools integration (Slack, Teams)</li>
+                        <li>Real-time Salesforce data synchronization</li>
+                        <li>Custom API development and integration</li>
+                        <li>Third-party application connectors</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI & Automation -->
+    <section class="service-detail">
+        <div class="container">
+            <div class="service-detail-content">
+                <div class="service-detail-text">
+                    <h2>Salesforce AI & Automation</h2>
+                    <p>Leverage Salesforce Einstein AI and custom automation for intelligent process optimization and predictive analytics.</p>
+                    <ul class="service-features-list">
+                        <li>Salesforce Einstein implementation and configuration</li>
+                        <li>Advanced Salesforce workflow automation</li>
+                        <li>Salesforce predictive analytics setup</li>
+                        <li>Custom Salesforce AI solutions</li>
+                        <li>Intelligent lead scoring and routing</li>
+                        <li>Automated customer service workflows</li>
+                    </ul>
+                </div>
+                <div class="service-image">
+                    <img src="assets/piclumen-1734992590187.png" alt="Salesforce AI & Automation">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nonprofit Solutions -->
+    <section class="service-detail">
+        <div class="container">
+            <div class="service-detail-content">
+                <div class="service-image">
+                    <img src="assets/logos/la-chamber-logo.png" alt="Nonprofit Salesforce Solutions">
+                </div>
+                <div class="service-detail-text">
+                    <h2>Nonprofit Salesforce Solutions</h2>
+                    <p>Specialized expertise in Nonprofit Cloud, NPSP, and mission-driven organizations with proven nonprofit Salesforce consulting experience.</p>
+                    <ul class="service-features-list">
+                        <li>Salesforce Nonprofit Cloud & NPSP implementation</li>
+                        <li>Donor management and fundraising automation</li>
+                        <li>Grant tracking and nonprofit program management</li>
+                        <li>Volunteer coordination systems in Salesforce</li>
+                        <li>Nonprofit reporting and compliance</li>
+                        <li>Mission-driven Salesforce customization</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Process -->
+    <section id="process" class="process-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" style="color: white;">Our Proven Salesforce Process</h2>
+                <p class="section-subtitle" style="color: rgba(255,255,255,0.9);">A systematic approach to Salesforce success that ensures measurable results</p>
+            </div>
+            
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="process-step-number">1</div>
+                    <h3>Assessment & Strategy</h3>
+                    <p>Comprehensive analysis of your current systems and Salesforce strategy development</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-step-number">2</div>
+                    <h3>Design & Planning</h3>
+                    <p>Detailed Salesforce architecture design and implementation planning</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-step-number">3</div>
+                    <h3>Implementation</h3>
+                    <p>Expert Salesforce configuration, development, and system integration</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-step-number">4</div>
+                    <h3>Training & Adoption</h3>
+                    <p>Comprehensive user training and change management support</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-step-number">5</div>
+                    <h3>Optimization</h3>
+                    <p>Ongoing Salesforce optimization and performance monitoring</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Transform Your Business with Salesforce?</h2>
+            <p>Let our expert team guide you through every step of your Salesforce journey</p>
+            <a href="contact.html" class="btn-primary" style="background: white; color: var(--accent-orange); font-size: 1.2rem; padding: 1.2rem 2.5rem;">Get Your Free Salesforce Assessment</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SalesforceConsultants.io</h3>
+                    <p style="margin-bottom: 1rem;">A DevPipeline Division</p>
+                    <p>Expert Salesforce consulting services that lift people, advance careers, and strengthen communities through proven Salesforce implementation and optimization.</p>
+                    <div style="margin-top: 1rem;">
+                        <p>📞 (385) 309-0807</p>
+                        <p>📧 marketing@salesforceconsultants.io</p>
+                        <p>🌐 www.salesforceconsultants.io</p>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Salesforce Services</h3>
+                    <ul>
+                        <li><a href="services.html">Salesforce Implementation</a></li>
+                        <li><a href="services.html">Custom Salesforce Development</a></li>
+                        <li><a href="services.html">Salesforce Training & Certification</a></li>
+                        <li><a href="services.html">Salesforce System Integration</a></li>
+                        <li><a href="services.html">Salesforce AI & Automation</a></li>
+                        <li><a href="services.html">Nonprofit Salesforce Solutions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Industries We Serve</h3>
+                    <ul>
+                        <li>Nonprofit Organizations</li>
+                        <li>Chambers of Commerce</li>
+                        <li>Professional Associations</li>
+                        <li>Membership Organizations</li>
+                        <li>Professional Services</li>
+                        <li>B2B Service Companies</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Our Salesforce Expertise</h3>
+                    <ul>
+                        <li>15+ Salesforce Certifications</li>
+                        <li>Salesforce Sales Cloud Implementation</li>
+                        <li>Salesforce Service Cloud Optimization</li>
+                        <li>Salesforce Marketing Cloud Setup</li>
+                        <li>Salesforce Nonprofit Cloud & NPSP</li>
+                        <li>Salesforce Enterprise Architecture</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 DevPipeline | SalesforceConsultants.io. All rights reserved. | 
+                <a href="#" style="color: var(--accent-orange);">Privacy Policy</a> | 
+                <a href="#" style="color: var(--accent-orange);">Terms of Service</a></p>
+                <p style="margin-top: 1rem; font-size: 0.9rem;">
+                    Salesforce, Sales Cloud, Service Cloud, Marketing Cloud, and other Salesforce products are trademarks of Salesforce.com, Inc. SalesforceConsultants.io is an independent Salesforce consulting firm.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html> 

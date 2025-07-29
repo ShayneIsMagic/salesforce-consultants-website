@@ -7,10 +7,10 @@ function toggleMobileMenu() {
     
     if (navMenu.style.display === 'flex') {
         navMenu.style.display = 'none';
-        mobileBtn.textContent = '☰';
+        mobileBtn.classList.remove('active');
     } else {
         navMenu.style.display = 'flex';
-        mobileBtn.textContent = '✕';
+        mobileBtn.classList.add('active');
     }
 }
 
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const mobileBtn = document.querySelector('.mobile-menu-btn');
                 if (navMenu.style.display === 'flex') {
                     navMenu.style.display = 'none';
-                    mobileBtn.textContent = '☰';
+                    mobileBtn.classList.remove('active');
                 }
             }
         });

@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Free Salesforce Assessment | SalesforceConsultants.io</title>
+    <meta name="description" content="Get your free Salesforce assessment today. Contact our expert Salesforce consultants for implementation, training, and consulting services.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Additional styles for contact page -->
+    <style>
+        .contact-hero {
+            background: linear-gradient(135deg, var(--accent-orange) 0%, #ff8c42 100%);
+            color: var(--white);
+            padding: 120px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background-image: url('assets/SalesforceConsultants-Graphic.png');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.1;
+            z-index: 1;
+        }
+        
+        .contact-hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+        }
+        
+        .contact-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--white);
+        }
+        
+        .contact-hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            color: rgba(255,255,255,0.9);
+        }
+        
+        .contact-section {
+            padding: 4rem 0;
+            background: var(--light-gray);
+        }
+        
+        .contact-form {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        form {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-light);
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid var(--light-gray);
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-teal);
+            box-shadow: 0 0 0 3px rgba(58, 175, 170, 0.1);
+        }
+        
+        .submit-btn {
+            width: 100%;
+            background: var(--gradient-primary);
+            color: var(--white);
+            padding: 1rem;
+            border: none;
+            border-radius: var(--border-radius);
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+        }
+        
+        .contact-info {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-light);
+            height: fit-content;
+        }
+        
+        .contact-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .contact-method {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            color: var(--primary-teal);
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        
+        .contact-method:hover {
+            color: var(--primary-dark);
+        }
+        
+        .contact-details {
+            background: var(--white);
+            padding: 4rem 0;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .contact-card {
+            text-align: center;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-medium);
+        }
+        
+        .contact-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .contact-card h3 {
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+        
+        .contact-card p {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+        
+        .contact-card a {
+            color: var(--primary-teal);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .contact-card a:hover {
+            color: var(--primary-dark);
+        }
+        
+        .faq-section {
+            background: var(--light-gray);
+            padding: 4rem 0;
+        }
+        
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .faq-item {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-light);
+        }
+        
+        .faq-item h3 {
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .faq-item p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .contact-form {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <img src="assets/Salesforce Consultants Logo.png" alt="SalesforceConsultants.io" style="height: 40px; margin-right: 10px;">
+                    SalesforceConsultants.io
+                    <span class="division">A DevPipeline Division</span>
+                </a>
+                <nav class="nav-menu">
+                    <ul id="nav-menu">
+                        <li><a href="services.html">Salesforce Services</a></li>
+                        <li><a href="success-stories.html">Success Stories</a></li>
+                        <li><a href="expertise.html">Salesforce Expertise</a></li>
+                        <li><a href="clients.html">Our Clients</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                <a href="contact.html" class="cta-header">Free Salesforce Assessment</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contact Hero Section -->
+    <section class="contact-hero">
+        <div class="container">
+            <div class="contact-hero-content">
+                <h1>Get Your Free Salesforce Assessment</h1>
+                <p>Discover how our Salesforce consulting services can transform your business. Get expert insights and a customized roadmap for your Salesforce success.</p>
+                <div class="cta-buttons">
+                    <a href="#contact-form" class="btn-primary">🚀 Start Your Assessment</a>
+                    <a href="#contact-info" class="btn-secondary">📞 Contact Directly</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact-form" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get Your Free Salesforce Assessment</h2>
+                <p class="section-subtitle">Discover how our Salesforce consulting services can transform your Salesforce investment into measurable impact</p>
+            </div>
+            
+            <div class="contact-form">
+                <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="organization">Organization Name *</label>
+                            <input type="text" id="organization" name="organization" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="org-type">Organization Type *</label>
+                            <select id="org-type" name="org-type" required>
+                                <option value="">Select Organization Type</option>
+                                <option value="nonprofit">Nonprofit Organization</option>
+                                <option value="chamber">Chamber of Commerce</option>
+                                <option value="association">Professional Association</option>
+                                <option value="business">Business/For-Profit</option>
+                                <option value="government">Government Agency</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="current-salesforce">Current Salesforce Usage *</label>
+                            <select id="current-salesforce" name="current-salesforce" required>
+                                <option value="">Select Current Salesforce Status</option>
+                                <option value="no-salesforce">Not using Salesforce</option>
+                                <option value="basic-setup">Basic Salesforce setup</option>
+                                <option value="partial-implementation">Partially implemented Salesforce</option>
+                                <option value="full-implementation">Fully implemented but need Salesforce optimization</option>
+                                <option value="migration-needed">Need to migrate to Salesforce from another system</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="primary-need">Primary Salesforce Need *</label>
+                            <select id="primary-need" name="primary-need" required>
+                                <option value="">Select Primary Salesforce Need</option>
+                                <option value="new-implementation">New Salesforce Implementation</option>
+                                <option value="system-optimization">Optimize Existing Salesforce System</option>
+                                <option value="custom-development">Custom Salesforce Development</option>
+                                <option value="training">Salesforce Training & Certification</option>
+                                <option value="integration">Salesforce System Integration</option>
+                                <option value="migration">Salesforce Data Migration</option>
+                                <option value="ai-automation">Salesforce AI & Automation</option>
+                                <option value="consulting">Strategic Salesforce Consulting</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="timeline">Desired Salesforce Timeline</label>
+                            <select id="timeline" name="timeline">
+                                <option value="">Select Timeline</option>
+                                <option value="asap">As soon as possible</option>
+                                <option value="1-3-months">1-3 months</option>
+                                <option value="3-6-months">3-6 months</option>
+                                <option value="6-12-months">6-12 months</option>
+                                <option value="exploring">Just exploring Salesforce options</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Tell us about your specific Salesforce needs and challenges</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Describe your current Salesforce situation, specific challenges, or goals you'd like to achieve with Salesforce consulting services..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">🚀 Get My Free Salesforce Assessment</button>
+                </form>
+                
+                <div class="contact-info">
+                    <h3 style="color: var(--primary-dark); margin-bottom: 1rem;">Prefer to Talk Directly About Your Salesforce Needs?</h3>
+                    <p style="margin-bottom: 1rem; color: var(--medium-gray);">Schedule a 30-minute Salesforce consultation to discuss your specific requirements</p>
+                    <div class="contact-methods">
+                        <a href="tel:385-309-0807" class="contact-method">📞 (385) 309-0807</a>
+                        <a href="mailto:marketing@salesforceconsultants.io" class="contact-method">📧 marketing@salesforceconsultants.io</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Details Section -->
+    <section id="contact-info" class="contact-details">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Multiple Ways to Connect</h2>
+                <p class="section-subtitle">Choose the contact method that works best for you</p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <span class="contact-icon">📞</span>
+                    <h3>Phone Consultation</h3>
+                    <p>Speak directly with our Salesforce experts</p>
+                    <a href="tel:385-309-0807">(385) 309-0807</a>
+                </div>
+                
+                <div class="contact-card">
+                    <span class="contact-icon">📧</span>
+                    <h3>Email Inquiry</h3>
+                    <p>Send us a detailed message about your needs</p>
+                    <a href="mailto:marketing@salesforceconsultants.io">marketing@salesforceconsultants.io</a>
+                </div>
+                
+                <div class="contact-card">
+                    <span class="contact-icon">💼</span>
+                    <h3>LinkedIn</h3>
+                    <p>Connect with us on LinkedIn for updates and insights</p>
+                    <a href="https://www.linkedin.com/company/salesforce-consultants-io/" target="_blank">Connect on LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Get answers to common questions about our Salesforce consulting services</p>
+            </div>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>What is included in the free Salesforce assessment?</h3>
+                    <p>Our free assessment includes a comprehensive analysis of your current Salesforce setup, identification of improvement opportunities, and a customized roadmap for optimization or implementation.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>How long does a typical Salesforce implementation take?</h3>
+                    <p>Implementation timelines vary based on complexity, but typically range from 4-12 weeks for standard implementations. Complex enterprise solutions may take 3-6 months.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Do you provide ongoing support after implementation?</h3>
+                    <p>Yes, we offer ongoing support, training, and optimization services to ensure your Salesforce investment continues to deliver value long after implementation.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>What industries do you specialize in?</h3>
+                    <p>We specialize in nonprofits, chambers of commerce, professional associations, and B2B service companies, with particular expertise in mission-driven organizations.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Can you help with Salesforce training for our team?</h3>
+                    <p>Absolutely! We provide comprehensive Salesforce training programs, including administrator certification preparation and role-based user training.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>What makes your Salesforce consulting different?</h3>
+                    <p>Our 15+ certifications, 15+ years of experience, and mission-driven approach set us apart. We focus on sustainable adoption and measurable business impact.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Transform Your Salesforce Experience?</h2>
+            <p>Take the first step toward Salesforce success with our expert team</p>
+            <a href="#contact-form" class="btn-primary" style="background: white; color: var(--accent-orange); font-size: 1.2rem; padding: 1.2rem 2.5rem;">Get Your Free Assessment Today</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SalesforceConsultants.io</h3>
+                    <p style="margin-bottom: 1rem;">A DevPipeline Division</p>
+                    <p>Expert Salesforce consulting services that lift people, advance careers, and strengthen communities through proven Salesforce implementation and optimization.</p>
+                    <div style="margin-top: 1rem;">
+                        <p>📞 (385) 309-0807</p>
+                        <p>📧 marketing@salesforceconsultants.io</p>
+                        <p>🌐 www.salesforceconsultants.io</p>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Salesforce Services</h3>
+                    <ul>
+                        <li><a href="services.html">Salesforce Implementation</a></li>
+                        <li><a href="services.html">Custom Salesforce Development</a></li>
+                        <li><a href="services.html">Salesforce Training & Certification</a></li>
+                        <li><a href="services.html">Salesforce System Integration</a></li>
+                        <li><a href="services.html">Salesforce AI & Automation</a></li>
+                        <li><a href="services.html">Nonprofit Salesforce Solutions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Industries We Serve</h3>
+                    <ul>
+                        <li>Nonprofit Organizations</li>
+                        <li>Chambers of Commerce</li>
+                        <li>Professional Associations</li>
+                        <li>Membership Organizations</li>
+                        <li>Professional Services</li>
+                        <li>B2B Service Companies</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Our Salesforce Expertise</h3>
+                    <ul>
+                        <li>15+ Salesforce Certifications</li>
+                        <li>Salesforce Sales Cloud Implementation</li>
+                        <li>Salesforce Service Cloud Optimization</li>
+                        <li>Salesforce Marketing Cloud Setup</li>
+                        <li>Salesforce Nonprofit Cloud & NPSP</li>
+                        <li>Salesforce Enterprise Architecture</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 DevPipeline | SalesforceConsultants.io. All rights reserved. | 
+                <a href="#" style="color: var(--accent-orange);">Privacy Policy</a> | 
+                <a href="#" style="color: var(--accent-orange);">Terms of Service</a></p>
+                <p style="margin-top: 1rem; font-size: 0.9rem;">
+                    Salesforce, Sales Cloud, Service Cloud, Marketing Cloud, and other Salesforce products are trademarks of Salesforce.com, Inc. SalesforceConsultants.io is an independent Salesforce consulting firm.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html> 
