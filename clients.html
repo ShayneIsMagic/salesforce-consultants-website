@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Clients | Trusted by Leading Organizations | SalesforceConsultants.io</title>
+    <meta name="description" content="See the organizations that trust SalesforceConsultants.io for their Salesforce implementation, training, and consulting needs. From nonprofits to Fortune 500 companies.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Additional styles for logo collage -->
+    <style>
+        .clients-hero {
+            background: var(--gradient-primary);
+            color: var(--white);
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+        
+        .clients-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--white);
+        }
+        
+        .clients-hero p {
+            font-size: 1.3rem;
+            color: rgba(255,255,255,0.9);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+        
+        .logo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            padding: 4rem 0;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .logo-item {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-light);
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 150px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .logo-item:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-medium);
+        }
+        
+        .logo-item img {
+            max-width: 100%;
+            max-height: 100px;
+            object-fit: contain;
+            transition: var(--transition);
+        }
+        
+        .logo-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .logo-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(58, 175, 170, 0.1), transparent);
+            transition: left 0.5s;
+        }
+        
+        .logo-item:hover::before {
+            left: 100%;
+        }
+        
+        .floating-logos {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+            background: var(--light-gray);
+            margin: 2rem 0;
+        }
+        
+        .floating-logo {
+            position: absolute;
+            opacity: 0.7;
+            animation: float 20s infinite linear;
+            transition: var(--transition);
+        }
+        
+        .floating-logo:hover {
+            opacity: 1;
+            transform: scale(1.2);
+            z-index: 10;
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+            }
+        }
+        
+        .logo-item:nth-child(1) { animation-delay: 0s; }
+        .logo-item:nth-child(2) { animation-delay: 0.5s; }
+        .logo-item:nth-child(3) { animation-delay: 1s; }
+        .logo-item:nth-child(4) { animation-delay: 1.5s; }
+        .logo-item:nth-child(5) { animation-delay: 2s; }
+        .logo-item:nth-child(6) { animation-delay: 2.5s; }
+        .logo-item:nth-child(7) { animation-delay: 3s; }
+        .logo-item:nth-child(8) { animation-delay: 3.5s; }
+        .logo-item:nth-child(9) { animation-delay: 4s; }
+        .logo-item:nth-child(10) { animation-delay: 4.5s; }
+        .logo-item:nth-child(11) { animation-delay: 5s; }
+        .logo-item:nth-child(12) { animation-delay: 5.5s; }
+        
+        .client-testimonials {
+            background: var(--white);
+            padding: 4rem 0;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .testimonial-card {
+            background: var(--light-gray);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--primary-teal);
+        }
+        
+        .testimonial-logo {
+            width: 80px;
+            height: 60px;
+            object-fit: contain;
+            margin-bottom: 1rem;
+        }
+        
+        .industries-section {
+            background: var(--gradient-accent);
+            color: var(--white);
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .industry-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .industry-card {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            backdrop-filter: blur(10px);
+        }
+        
+        @media (max-width: 768px) {
+            .clients-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .logo-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 1rem;
+                padding: 2rem 0;
+            }
+            
+            .logo-item {
+                padding: 1rem;
+                min-height: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <img src="assets/Salesforce Consultants Logo.png" alt="SalesforceConsultants.io" style="height: 40px; margin-right: 10px;">
+                    SalesforceConsultants.io
+                    <span class="division">A DevPipeline Division</span>
+                </a>
+                <nav>
+                    <ul id="nav-menu">
+                        <li><a href="index.html#services">Salesforce Services</a></li>
+                        <li><a href="index.html#case-study">Success Stories</a></li>
+                        <li><a href="index.html#certifications">Salesforce Expertise</a></li>
+                        <li><a href="clients.html">Our Clients</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+                <a href="index.html#contact" class="cta-header">Free Salesforce Assessment</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="clients-hero">
+        <div class="container">
+            <h1>Trusted by Leading Organizations</h1>
+            <p>From nonprofits to Fortune 500 companies, organizations across industries choose SalesforceConsultants.io for their Salesforce success</p>
+            
+            <!-- Floating Logo Animation -->
+            <div class="floating-logos">
+                <img src="assets/logos/la-chamber-logo.png" alt="LA Chamber" class="floating-logo" style="top: 10%; left: 10%; width: 80px;">
+                <img src="assets/logos/devpipeline-white-logo.png" alt="DevPipeline" class="floating-logo" style="top: 20%; left: 80%; width: 100px;">
+                <img src="assets/logos/nuskin-logo.webp" alt="NuSkin" class="floating-logo" style="top: 60%; left: 5%; width: 90px;">
+                <img src="assets/logos/polaris-logo.png" alt="Polaris" class="floating-logo" style="top: 30%; left: 70%; width: 85px;">
+                <img src="assets/logos/solution-reach-logo.jpeg" alt="SolutionReach" class="floating-logo" style="top: 70%; left: 75%; width: 95px;">
+                <img src="assets/logos/vernal-city-logo.png" alt="Vernal City" class="floating-logo" style="top: 50%; left: 20%; width: 75px;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Logos Grid -->
+    <section class="clients-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Valued Clients</h2>
+                <p class="section-subtitle">Organizations that trust us with their Salesforce transformation</p>
+            </div>
+            
+            <div class="logo-grid">
+                <div class="logo-item">
+                    <img src="assets/logos/la-chamber-logo.png" alt="LA Chamber of Commerce">
+                </div>
+                <div class="logo-item">
+                    <img src="assets/logos/devpipeline-white-logo.png" alt="DevPipeline">
+                </div>
+                <div class="logo-item">
+                    <img src="assets/logos/nuskin-logo.webp" alt="NuSkin">
+                </div>
+                <div class="logo-item">
+                    <img src="assets/logos/polaris-logo.png" alt="Polaris">
+                </div>
+                <div class="logo-item">
+                    <img src="assets/logos/solution-reach-logo.jpeg" alt="SolutionReach">
+                </div>
+                <div class="logo-item">
+                    <img src="assets/logos/vernal-city-logo.png" alt="Vernal City">
+                </div>
+                <div class="logo-item">
+                    <img src="assets/logos/basin-i&e-4.png" alt="Basin I&E">
+                </div>
+                <div class="logo-item">
+                    <img src="assets/logos/alpine-100-logo.png" alt="Alpine 100">
+                </div>
+                <div class="logo-item">
+                    <img src="assets/logos/bhi-logo.png" alt="BHI">
+                </div>
+                <div class="logo-item">
+                    <img src="assets/logos/ctl-logo.svg" alt="CTL">
+                </div>
+                <div class="logo-item">
+                    <img src="assets/logos/dol-logo.png" alt="Department of Labor">
+                </div>
+                <div class="logo-item">
+                    <img src="assets/logos/famlinc-logo.png" alt="FAMLINC">
+                </div>
+                <div class="logo-item">
+                    <img src="assets/logos/hub-logo.png" alt="Hub">
+                </div>
+                <div class="logo-item">
+                    <img src="assets/logos/intellipay-logo.png" alt="IntelliPay">
+                </div>
+                <div class="logo-item">
+                    <img src="assets/logos/midlera-logo.jpeg" alt="Midlera">
+                </div>
+                <div class="logo-item">
+                    <img src="assets/logos/snow-college-logo.png" alt="Snow College">
+                </div>
+                <div class="logo-item">
+                    <img src="assets/logos/wodobo-logo.png" alt="Wodobo">
+                </div>
+                <div class="logo-item">
+                    <img src="assets/logos/zblogo.png" alt="Zero Barriers">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries We Serve -->
+    <section class="industries-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" style="color: white;">Industries We Serve</h2>
+                <p class="section-subtitle" style="color: rgba(255,255,255,0.9);">Our Salesforce expertise spans across diverse industries and organization types</p>
+            </div>
+            
+            <div class="industry-grid">
+                <div class="industry-card">
+                    <h3>Nonprofit Organizations</h3>
+                    <p>Specialized Salesforce Nonprofit Cloud and NPSP implementation for mission-driven organizations</p>
+                </div>
+                <div class="industry-card">
+                    <h3>Chambers of Commerce</h3>
+                    <p>Multi-departmental Salesforce solutions for membership management and business development</p>
+                </div>
+                <div class="industry-card">
+                    <h3>Higher Education</h3>
+                    <p>Salesforce solutions for student management, alumni relations, and institutional advancement</p>
+                </div>
+                <div class="industry-card">
+                    <h3>Healthcare & Life Sciences</h3>
+                    <p>Compliant Salesforce implementations for healthcare providers and life sciences companies</p>
+                </div>
+                <div class="industry-card">
+                    <h3>Financial Services</h3>
+                    <p>Secure Salesforce solutions for banking, insurance, and financial technology companies</p>
+                </div>
+                <div class="industry-card">
+                    <h3>Government Agencies</h3>
+                    <p>Public sector Salesforce implementations with security and compliance requirements</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Testimonials -->
+    <section class="client-testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What Our Clients Say</h2>
+                <p class="section-subtitle">Real feedback from organizations we've helped transform with Salesforce</p>
+            </div>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <img src="assets/logos/la-chamber-logo.png" alt="LA Chamber" class="testimonial-logo">
+                    <div class="testimonial-text">
+                        "SalesforceConsultants.io was highly responsive & worked closely with our team to implement fixes that work for all departments. They also trained our in-house Salesforce Admin to handle technical projects beyond their expertise."
+                    </div>
+                    <div class="testimonial-author">Martin, Chief Operating Officer</div>
+                    <div class="testimonial-title">LA Chamber of Commerce</div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <img src="assets/logos/devpipeline-white-logo.png" alt="DevPipeline" class="testimonial-logo">
+                    <div class="testimonial-text">
+                        "More employees now utilize the Salesforce platform. We have a greater understanding of Salesforce and experience shorter troubleshooting times."
+                    </div>
+                    <div class="testimonial-author">Brian, Membership Director</div>
+                    <div class="testimonial-title">LA Chamber of Commerce</div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <img src="assets/logos/nuskin-logo.webp" alt="NuSkin" class="testimonial-logo">
+                    <div class="testimonial-text">
+                        "The Salesforce implementation exceeded our expectations. The team's expertise in enterprise architecture and custom development delivered exactly what we needed."
+                    </div>
+                    <div class="testimonial-author">Sarah, IT Director</div>
+                    <div class="testimonial-title">NuSkin</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Join Our Success Stories?</h2>
+            <p>Transform your organization with expert Salesforce consulting. Get your free assessment and join the ranks of satisfied clients.</p>
+            <a href="index.html#contact" class="btn-primary" style="background: white; color: var(--accent-orange); font-size: 1.2rem; padding: 1.2rem 2.5rem;">Get Your Free Salesforce Assessment</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SalesforceConsultants.io</h3>
+                    <p style="margin-bottom: 1rem;">A DevPipeline Division</p>
+                    <p>Expert Salesforce consulting services that lift people, advance careers, and strengthen communities through proven Salesforce implementation and optimization.</p>
+                    <div style="margin-top: 1rem;">
+                        <p>📞 (385) 309-0807</p>
+                        <p>📧 marketing@salesforceconsultants.io</p>
+                        <p>🌐 www.salesforceconsultants.io</p>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Salesforce Services</h3>
+                    <ul>
+                        <li><a href="index.html#services">Salesforce Implementation</a></li>
+                        <li><a href="index.html#services">Custom Salesforce Development</a></li>
+                        <li><a href="index.html#services">Salesforce Training & Certification</a></li>
+                        <li><a href="index.html#services">Salesforce System Integration</a></li>
+                        <li><a href="index.html#services">Salesforce AI & Automation</a></li>
+                        <li><a href="index.html#services">Nonprofit Salesforce Solutions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Industries We Serve</h3>
+                    <ul>
+                        <li>Nonprofit Organizations</li>
+                        <li>Chambers of Commerce</li>
+                        <li>Professional Associations</li>
+                        <li>Membership Organizations</li>
+                        <li>Professional Services</li>
+                        <li>B2B Service Companies</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Our Salesforce Expertise</h3>
+                    <ul>
+                        <li>15+ Salesforce Certifications</li>
+                        <li>Salesforce Sales Cloud Implementation</li>
+                        <li>Salesforce Service Cloud Optimization</li>
+                        <li>Salesforce Marketing Cloud Setup</li>
+                        <li>Salesforce Nonprofit Cloud & NPSP</li>
+                        <li>Salesforce Enterprise Architecture</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 DevPipeline | SalesforceConsultants.io. All rights reserved. | 
+                <a href="#" style="color: var(--accent-orange);">Privacy Policy</a> | 
+                <a href="#" style="color: var(--accent-orange);">Terms of Service</a></p>
+                <p style="margin-top: 1rem; font-size: 0.9rem;">
+                    Salesforce, Sales Cloud, Service Cloud, Marketing Cloud, and other Salesforce products are trademarks of Salesforce.com, Inc. SalesforceConsultants.io is an independent Salesforce consulting firm.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html> 
