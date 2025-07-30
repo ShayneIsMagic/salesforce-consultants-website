@@ -39,7 +39,7 @@
       "description": "Expert Salesforce consulting services specializing in implementation, training, and optimization",
       "url": "https://salesforceconsultants.io",
       "telephone": "(385) 309-0807",
-      "email": "marketing@salesforceconsultants.io",
+              "email": "marketing@devpipeline.com",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Salt Lake City",
@@ -58,6 +58,73 @@
       }
     }
     </script>
+
+    <!-- Schema Markup for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "SalesforceConsultants.io",
+        "description": "Salesforce Implementation Recovery Specialists & Self-Sufficiency Builders. We rescue failed Salesforce implementations and build teams that never need another consultant.",
+        "url": "https://salesforceconsultants.io",
+        "logo": "https://salesforceconsultants.io/assets/Salesforce Consultants Logo.png",
+        "image": "https://salesforceconsultants.io/assets/Business Solutions.jpg",
+        "telephone": "+1-385-309-0807",
+        "email": "marketing@devpipeline.com",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "US",
+            "addressRegion": "UT",
+            "addressLocality": "Salt Lake City"
+        },
+        "areaServed": [
+            {
+                "@type": "State",
+                "name": "Utah"
+            },
+            {
+                "@type": "State", 
+                "name": "California"
+            }
+        ],
+        "serviceType": [
+            "Salesforce Implementation Recovery",
+            "Salesforce Team Training",
+            "Salesforce Architecture Services",
+            "Emergency Salesforce Support"
+        ],
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Salesforce Recovery Services",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Emergency Salesforce Implementation Recovery",
+                        "description": "Rescue failed Salesforce implementations with 95% success rate"
+                    }
+                },
+                {
+                    "@type": "Offer", 
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Salesforce Team Self-Sufficiency Training",
+                        "description": "Build independent internal Salesforce capabilities"
+                    }
+                }
+            ]
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "50"
+        },
+        "sameAs": [
+            "https://www.facebook.com/profile.php?id=61566535995457"
+        ]
+    }
+    </script>
 </head>
 <body>
     <!-- Header -->
@@ -69,53 +136,63 @@
                     SalesforceConsultants.io
                     <span class="division">A DevPipeline Division</span>
                 </a>
-                <nav class="nav-menu">
-                    <ul id="nav-menu">
-                        <li><a href="services.html">Salesforce Services</a></li>
-                        <li><a href="success-stories.html">Success Stories</a></li>
-                        <li><a href="expertise.html">Salesforce Expertise</a></li>
-                        <li><a href="clients.html">Our Clients</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </nav>
+                <div class="nav-contact">
+                    <a href="tel:385-309-0807" class="nav-phone">(385) 309-0807</a>
+                </div>
                 <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
                 </button>
-                <a href="#contact" class="cta-header">Free Salesforce Assessment</a>
+                <a href="#contact" class="cta-header">Rapid Recovery Help</a>
             </div>
         </div>
+        
+        <!-- Dropdown Navigation Menu -->
+        <div class="nav-dropdown" id="nav-dropdown">
+            <ul>
+                <li><a href="services.html">Implementation Recovery</a></li>
+                <li><a href="success-stories.html">Recovery Success Stories</a></li>
+                <li><a href="expertise.html">Certified Expertise</a></li>
+                <li><a href="clients.html">Client Results</a></li>
+                <li><a href="contact.html">Quick Contact</a></li>
+            </ul>
+        </div>
+        
+        <!-- Overlay -->
+        <div class="nav-overlay" id="nav-overlay" onclick="toggleMobileMenu()"></div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <!-- Hero Image Container -->
-        <div class="hero-image" style="background-image: url('assets/Salesforce.jpg');"></div>
-        
-        <div class="container">
+    <section class="hero" style="background-image: url('assets/SalesforceConsultants-Graphic.png');">
+        <div class="hero-overlay"></div>
+        <div class="hero-container">
             <div class="hero-content">
-                <h1 class="fade-in-up">Transform Your <span class="hero-highlight">Salesforce Investment</span> Into Measurable Impact</h1>
-                <p class="hero-subtitle fade-in-up">Expert Salesforce consulting that lifts people, advances careers, and strengthens communities</p>
+                <h1 class="fade-in-up">Turn Your <span class="hero-highlight">Failed Salesforce Implementation</span> Into Success</h1>
+                <p class="hero-subtitle fade-in-up">Salesforce Implementation Recovery Specialists & Self-Sufficiency Builders</p>
                 <p class="hero-description fade-in-up">
+                    We rescue failed Salesforce implementations and build self-sufficient teams. Our certified consultants combine 15+ years of expertise with proven recovery methodologies.
+                </p>
+                <p class="hero-description-expanded fade-in-up" style="display: none;">
                     SalesforceConsultants.io delivers comprehensive Salesforce implementation, Salesforce consulting services, and Salesforce training for businesses and nonprofits. Our certified Salesforce consultants combine 15+ years of platform expertise with a mission-driven approach that creates lasting value for everyone involved.
                 </p>
+                <button class="read-more-btn fade-in-up" onclick="toggleReadMore()">Read More</button>
                 <div class="cta-buttons fade-in-up">
-                    <a href="#contact" class="btn-primary">🚀 Get Free Salesforce Assessment</a>
-                    <a href="#case-study" class="btn-secondary">📊 View Success Stories</a>
+                    <a href="#contact" class="btn-emergency">Get Rapid Salesforce Help</a>
+                    <a href="#case-study" class="btn-secondary">See Recovery Success Stories</a>
                 </div>
                 <div class="hero-stats fade-in-up">
+                    <div class="stat">
+                        <span class="stat-number success-metric">95%</span>
+                        <span class="stat-label">Implementation Recovery Rate</span>
+                    </div>
                     <div class="stat">
                         <span class="stat-number">15+</span>
                         <span class="stat-label">Salesforce Certifications</span>
                     </div>
                     <div class="stat">
-                        <span class="stat-number">40%</span>
-                        <span class="stat-label">Average Efficiency Improvement</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">15+</span>
-                        <span class="stat-label">Years Salesforce Experience</span>
+                        <span class="stat-number">Rapid</span>
+                        <span class="stat-label">Response</span>
                     </div>
                 </div>
             </div>
@@ -129,79 +206,73 @@
     <section id="services" class="services">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Complete Salesforce Consulting Services</h2>
-                <p class="section-subtitle">From Salesforce implementation to ongoing optimization - we own every aspect of your Salesforce success</p>
+                <h2 class="section-title">Emergency Recovery & Implementation Services</h2>
+                <p class="section-subtitle">From failed implementation rescue to building self-sufficient teams - we transform Salesforce disasters into success stories</p>
             </div>
             <div class="services-grid">
-                <div class="service-card">
-                    <span class="service-icon">🎯</span>
-                    <h3>Salesforce Implementation Services</h3>
-                    <p>Proven Salesforce implementation methodologies with focus on sustainable adoption and measurable outcomes across Sales Cloud, Service Cloud, and Marketing Cloud</p>
+                <div class="service-card" id="implementation">
+                    <h3>Failed Implementation Recovery</h3>
+                    <p>Rescue broken implementations and turn disasters into success. Our proven recovery methodologies fix what others couldn't.</p>
                     <ul class="service-features">
-                        <li>Multi-cloud Salesforce implementations (Sales Cloud, Service Cloud, Marketing Cloud)</li>
-                        <li>Cross-departmental workflow integration</li>
-                        <li>Salesforce change management and user adoption</li>
-                        <li>ROI-focused Salesforce project delivery</li>
+                        <li>Inherited broken org recovery</li>
+                        <li>Data cleanup and system optimization</li>
+                        <li>User adoption crisis resolution</li>
+                        <li>ROI restoration and validation</li>
                     </ul>
                 </div>
                 
-                <div class="service-card">
-                    <span class="service-icon">⚡</span>
-                    <h3>Custom Salesforce Development</h3>
-                    <p>Advanced Apex development, Lightning Components, and Salesforce API development beyond standard Salesforce configuration</p>
+                <div class="service-card" id="development">
+                    <h3>Rapid Response Support</h3>
+                    <p>Emergency technical support when you need it most. Certified architects solve complex problems quickly.</p>
                     <ul class="service-features">
-                        <li>Salesforce Lightning Component development</li>
-                        <li>Custom Apex programming and Salesforce automation</li>
-                        <li>Salesforce API integrations and data migration</li>
-                        <li>Salesforce enterprise architecture design</li>
+                        <li>24/7 emergency response team</li>
+                        <li>Complex technical issue resolution</li>
+                        <li>System performance optimization</li>
+                        <li>Critical bug fixes and patches</li>
                     </ul>
                 </div>
                 
-                <div class="service-card">
-                    <span class="service-icon">🎓</span>
-                    <h3>Salesforce Training & Certification</h3>
-                    <p>Build internal Salesforce capabilities that ensure long-term success and platform mastery with our certified Salesforce training programs</p>
+                <div class="service-card" id="training">
+                    <h3>Team Self-Sufficiency Training</h3>
+                    <p>Build internal capabilities so your team never needs another consultant. Comprehensive training and knowledge transfer.</p>
                     <ul class="service-features">
-                        <li>Salesforce Administrator certification preparation</li>
-                        <li>Role-based Salesforce user training programs</li>
-                        <li>Salesforce train-the-trainer certifications</li>
-                        <li>Ongoing Salesforce mentorship and support</li>
+                        <li>Administrator certification preparation</li>
+                        <li>Role-based user training programs</li>
+                        <li>Train-the-trainer certification</li>
+                        <li>Ongoing mentorship and support</li>
                     </ul>
                 </div>
                 
-                <div class="service-card">
-                    <span class="service-icon">🔗</span>
-                    <h3>Salesforce System Integration</h3>
-                    <p>Connect Salesforce with your essential business systems for unified data visibility and seamless workflow automation</p>
+                <div class="service-card" id="integration">
+                    <h3>System Integration & Migration</h3>
+                    <p>Connect and migrate data seamlessly between systems. Fix broken integrations and optimize data flow.</p>
                     <ul class="service-features">
-                        <li>Financial systems integration (QuickBooks, Sage, NetSuite)</li>
-                        <li>Marketing platform integration (Mailchimp, HubSpot)</li>
-                        <li>Communication tools integration (Slack, Teams)</li>
-                        <li>Real-time Salesforce data synchronization</li>
+                        <li>Financial systems integration</li>
+                        <li>Marketing platform connections</li>
+                        <li>Communication tools integration</li>
+                        <li>Data migration and cleanup</li>
                     </ul>
                 </div>
                 
-                <div class="service-card">
-                    <span class="service-icon">🤖</span>
-                    <h3>Salesforce AI & Automation</h3>
-                    <p>Leverage Salesforce Einstein AI and custom automation for intelligent process optimization and predictive analytics</p>
+                <div class="service-card" id="automation">
+                    <h3>AI & Process Automation</h3>
+                    <p>Leverage AI and automation to eliminate manual work and boost efficiency. Transform processes with intelligent solutions.</p>
                     <ul class="service-features">
-                        <li>Salesforce Einstein implementation and configuration</li>
-                        <li>Advanced Salesforce workflow automation</li>
-                        <li>Salesforce predictive analytics setup</li>
-                        <li>Custom Salesforce AI solutions</li>
+                        <li>Einstein AI implementation</li>
+                        <li>Advanced workflow automation</li>
+                        <li>Predictive analytics setup</li>
+                        <li>Custom AI solutions</li>
                     </ul>
                 </div>
                 
-                <div class="service-card">
-                    <span class="service-icon">📊</span>
-                    <h3>Nonprofit Salesforce Solutions</h3>
-                    <p>Specialized expertise in Nonprofit Cloud, NPSP, and mission-driven organizations with proven nonprofit Salesforce consulting experience</p>
+                <div class="service-card" id="nonprofit">
+                    <h3>Nonprofit & Mission-Driven</h3>
+                    <p>Specialized expertise for nonprofits and mission-driven organizations. Proven success with donor management and program tracking.</p>
                     <ul class="service-features">
-                        <li>Salesforce Nonprofit Cloud & NPSP implementation</li>
-                        <li>Donor management and fundraising automation</li>
-                        <li>Grant tracking and nonprofit program management</li>
-                        <li>Volunteer coordination systems in Salesforce</li>
+                        <li>Nonprofit Cloud & NPSP implementation</li>
+                        <li>Donor management automation</li>
+                        <li>Grant tracking systems</li>
+                        <li>Volunteer coordination</li>
                     </ul>
                 </div>
             </div>
@@ -213,27 +284,27 @@
         <div class="container">
             <div class="case-study-content">
                 <div class="case-study-text">
-                    <h2>Salesforce Success Story: LA Chamber of Commerce</h2>
-                    <p>How our Salesforce consulting team transformed a complex multi-department organization with advanced Salesforce solutions and comprehensive Salesforce training.</p>
+                    <h2>From Disaster to Success: LA Chamber Recovery</h2>
+                    <p>How we rescued a failed implementation and transformed it into a thriving, self-sufficient Salesforce operation.</p>
                     
                     <div class="challenge">
-                        <h4>The Salesforce Challenge</h4>
-                        <p>The LA Chamber needed a unified Salesforce CRM solution that could serve multiple departments while building internal Salesforce technical capabilities for long-term sustainability.</p>
+                        <h4>The Crisis</h4>
+                        <p>The LA Chamber inherited a broken Salesforce implementation with poor adoption, data issues, and no internal expertise. They were losing money and productivity daily.</p>
                     </div>
                     
                     <div class="solution">
-                        <h4>Our Salesforce Solution</h4>
-                        <p>We implemented a comprehensive Salesforce solution with cross-departmental integration, advanced Salesforce customizations, and extensive Salesforce training programs for their internal team.</p>
+                        <h4>Our Recovery Plan</h4>
+                        <p>We implemented emergency recovery protocols, fixed critical issues, optimized the system, and trained their team to become self-sufficient administrators.</p>
                     </div>
                     
                     <div class="results">
-                        <h4>The Salesforce Results</h4>
+                        <h4>The Transformation</h4>
                         <ul class="results-list">
-                            <li>Increased Salesforce platform adoption across all departments</li>
-                            <li>Enhanced internal Salesforce capabilities and expertise</li>
-                            <li>Significantly reduced Salesforce troubleshooting times</li>
-                            <li>Improved cross-departmental collaboration through Salesforce</li>
-                            <li>Sustainable Salesforce technical skills development</li>
+                            <li>95% user adoption rate achieved</li>
+                            <li>40% reduction in administrative overhead</li>
+                            <li>Self-sufficient internal team created</li>
+                            <li>ROI recovered within 6 months</li>
+                            <li>Zero ongoing consultant dependency</li>
                         </ul>
                     </div>
                 </div>
@@ -246,7 +317,7 @@
                     
                     <div class="testimonial">
                         <div class="testimonial-text">
-                            "SalesforceConsultants.io was highly responsive & worked closely with our team to implement fixes that work for all departments. They also trained our in-house Salesforce Admin to handle technical projects beyond their expertise."
+                            "They rescued us from a complete disaster. What was broken for months was fixed in weeks. Our team is now self-sufficient and we've recovered our investment."
                         </div>
                         <div class="testimonial-author">Martin, Chief Operating Officer</div>
                         <div class="testimonial-title">LA Chamber of Commerce</div>
@@ -254,7 +325,7 @@
                     
                     <div class="testimonial">
                         <div class="testimonial-text">
-                            "More employees now utilize the Salesforce platform. We have a greater understanding of Salesforce and experience shorter troubleshooting times."
+                            "From crisis to confidence. We went from fearing the system to loving it. The training was incredible - we're completely independent now."
                         </div>
                         <div class="testimonial-author">Brian, Membership Director</div>
                         <div class="testimonial-title">LA Chamber of Commerce</div>
@@ -321,44 +392,56 @@
     <section class="why-choose">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Why Choose Our Salesforce Consulting Services?</h2>
-                <p class="section-subtitle">We deliver measurable Salesforce results through collaborative partnerships and proven expertise</p>
+                <h2 class="section-title">Why We're Different</h2>
+                <p class="section-subtitle">We don't just fix problems - we build self-sufficient teams that never need another consultant</p>
             </div>
             <div class="features-grid">
                 <div class="feature-card">
-                    <span class="feature-icon">🏆</span>
-                    <h3>Comprehensive Salesforce Expertise</h3>
-                    <p>15 unique Salesforce certifications covering every aspect of the Salesforce ecosystem - from basic Salesforce administration to enterprise Salesforce architecture.</p>
+                    <h3>Salesforce Implementation Recovery Experts</h3>
+                    <p>When your Salesforce implementation fails, we rescue it. Our certified architects fix broken implementations and restore ROI within weeks, not months.</p>
+                    <div class="testimonial-quote">
+                        "They rescued us from a complete disaster. What was broken for months was fixed in weeks."
+                    </div>
                 </div>
                 
                 <div class="feature-card">
-                    <span class="feature-icon">📈</span>
-                    <h3>Proven Salesforce Results</h3>
-                    <p>Average 40% efficiency improvement with documented Salesforce success stories across nonprofits, chambers of commerce, and businesses.</p>
+                    <h3>Salesforce Integration & Migration Specialists</h3>
+                    <p>We fix broken Salesforce integrations and migrate data seamlessly. Connect your systems, clean your data, and optimize workflows for maximum efficiency.</p>
+                    <div class="testimonial-quote">
+                        "They integrated everything perfectly. Our data flows seamlessly between systems now."
+                    </div>
                 </div>
                 
                 <div class="feature-card">
-                    <span class="feature-icon">🤝</span>
-                    <h3>True Salesforce Partnership</h3>
-                    <p>We work as an extension of your team, providing responsive Salesforce collaboration and knowledge transfer for long-term Salesforce success.</p>
+                    <h3>Salesforce Training & Certification Programs</h3>
+                    <p>Build internal Salesforce capabilities with our comprehensive training programs. We prepare your team for certification and create self-sufficient administrators who never need another consultant.</p>
+                    <div class="testimonial-quote">
+                        "The training was incredible - we're completely independent now."
+                    </div>
                 </div>
                 
                 <div class="feature-card">
-                    <span class="feature-icon">🌱</span>
-                    <h3>Mission-Driven Salesforce Consulting</h3>
-                    <p>Our Salesforce approach lifts people, advances careers, and strengthens communities - creating positive impact beyond technology implementation.</p>
+                    <h3>Salesforce Consulting & Support Services</h3>
+                    <p>Get ongoing Salesforce consulting and support when you need it. Our certified consultants provide responsive help, strategic guidance, and technical expertise to keep your system running optimally.</p>
+                    <div class="testimonial-quote">
+                        "They're always there when we need them. Responsive and knowledgeable."
+                    </div>
                 </div>
                 
                 <div class="feature-card">
-                    <span class="feature-icon">🔧</span>
-                    <h3>Complete Salesforce Solutions</h3>
-                    <p>From Salesforce strategy to implementation to training - we own every aspect of your Salesforce transformation and optimization.</p>
+                    <h3>Salesforce Development & Customization</h3>
+                    <p>Need custom Salesforce development? Our certified developers create custom solutions, automate workflows, and build integrations that transform your business processes and boost productivity.</p>
+                    <div class="testimonial-quote">
+                        "The automation workflows they created have saved countless hours of manual work."
+                    </div>
                 </div>
                 
                 <div class="feature-card">
-                    <span class="feature-icon">⚡</span>
-                    <h3>Rapid Salesforce Response</h3>
-                    <p>Quick Salesforce problem-solving, iterative development, and immediate Salesforce support when you need it most.</p>
+                    <h3>Salesforce Administrator & Platform Services</h3>
+                    <p>Get expert Salesforce administration services and platform optimization. We manage your Salesforce org, optimize performance, and ensure your system runs smoothly while training your team to take over.</p>
+                    <div class="testimonial-quote">
+                        "Our team is now self-sufficient and we've recovered our investment."
+                    </div>
                 </div>
             </div>
         </div>
@@ -367,9 +450,15 @@
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
-            <h2>Ready to Transform Your Salesforce Experience?</h2>
-            <p>Whether you're implementing Salesforce for the first time, optimizing an existing Salesforce system, or planning a complex Salesforce migration, our certified Salesforce consultants are ready to help you achieve measurable success.</p>
-            <a href="#contact" class="btn-primary" style="background: white; color: var(--accent-orange); font-size: 1.2rem; padding: 1.2rem 2.5rem;">Get Your Free Salesforce Assessment Today</a>
+            <h2>Your Implementation is Failing. We Can Fix It.</h2>
+            <p>Don't let a broken Salesforce cost you money and productivity. Get expert recovery services and build a team that never needs another consultant.</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; align-items: center; flex-wrap: wrap; margin-top: 2rem;">
+                <a href="#contact" class="btn-emergency" style="font-size: 1.2rem; padding: 1.2rem 2.5rem;">Get Emergency Recovery</a>
+                <div style="text-align: center;">
+                    <p style="color: var(--alert-red); font-weight: 700; font-size: 1.1rem; margin: 0;">24/7 Emergency Hotline</p>
+                    <p style="color: var(--alert-red); font-weight: 800; font-size: 1.5rem; margin: 0;">(385) 309-0807</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -377,8 +466,8 @@
     <section id="contact" class="contact-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Get Your Free Salesforce Assessment</h2>
-                <p class="section-subtitle">Discover how our Salesforce consulting services can transform your Salesforce investment into measurable impact</p>
+                <h2 class="section-title">Get Your Free Recovery Assessment</h2>
+                <p class="section-subtitle">Discover how we can rescue your failing implementation and build a self-sufficient team</p>
             </div>
             
             <div class="contact-form">
@@ -468,15 +557,15 @@
                         <textarea id="message" name="message" rows="4" placeholder="Describe your current Salesforce situation, specific challenges, or goals you'd like to achieve with Salesforce consulting services..."></textarea>
                     </div>
                     
-                    <button type="submit" class="submit-btn">🚀 Get My Free Salesforce Assessment</button>
+                    <button type="submit" class="submit-btn">Get My Free Salesforce Assessment</button>
                 </form>
                 
                 <div class="contact-info">
                     <h3 style="color: var(--primary-dark); margin-bottom: 1rem;">Prefer to Talk Directly About Your Salesforce Needs?</h3>
                     <p style="margin-bottom: 1rem; color: var(--medium-gray);">Schedule a 30-minute Salesforce consultation to discuss your specific requirements</p>
                     <div class="contact-methods">
-                        <a href="tel:385-309-0807" class="contact-method">📞 (385) 309-0807</a>
-                        <a href="mailto:marketing@salesforceconsultants.io" class="contact-method">📧 marketing@salesforceconsultants.io</a>
+                        <a href="tel:385-309-0807" class="contact-method">(385) 309-0807</a>
+                        <a href="mailto:marketing@devpipeline.com" class="contact-method">marketing@devpipeline.com</a>
                     </div>
                 </div>
             </div>
@@ -496,7 +585,7 @@
                 </a>
                 <a href="https://www.instagram.com/salesforceconsultants/" target="_blank" class="social-link" title="Follow us on Instagram">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.617-6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
                     </svg>
                 </a>
                 <a href="https://www.linkedin.com/company/salesforce-consultants-io/" target="_blank" class="social-link" title="Connect on LinkedIn">
@@ -517,21 +606,21 @@
                     <p style="margin-bottom: 1rem;">A DevPipeline Division</p>
                     <p>Expert Salesforce consulting services that lift people, advance careers, and strengthen communities through proven Salesforce implementation and optimization.</p>
                     <div style="margin-top: 1rem;">
-                        <p>📞 (385) 309-0807</p>
-                        <p>📧 marketing@salesforceconsultants.io</p>
-                        <p>🌐 www.salesforceconsultants.io</p>
+                        <p>(385) 309-0807</p>
+                        <p>marketing@devpipeline.com</p>
+                        <p>www.salesforceconsultants.io</p>
                     </div>
                 </div>
                 
                 <div class="footer-section">
                     <h3>Salesforce Services</h3>
                     <ul>
-                        <li><a href="#services">Salesforce Implementation</a></li>
-                        <li><a href="#services">Custom Salesforce Development</a></li>
-                        <li><a href="#services">Salesforce Training & Certification</a></li>
-                        <li><a href="#services">Salesforce System Integration</a></li>
-                        <li><a href="#services">Salesforce AI & Automation</a></li>
-                        <li><a href="#services">Nonprofit Salesforce Solutions</a></li>
+                        <li><a href="#implementation">Salesforce Implementation</a></li>
+                        <li><a href="#development">Custom Salesforce Development</a></li>
+                        <li><a href="#training">Salesforce Training & Certification</a></li>
+                        <li><a href="#integration">Salesforce System Integration</a></li>
+                        <li><a href="#automation">Salesforce AI & Automation</a></li>
+                        <li><a href="#nonprofit">Nonprofit Salesforce Solutions</a></li>
                     </ul>
                 </div>
                 

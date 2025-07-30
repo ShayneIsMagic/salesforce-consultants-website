@@ -1,23 +1,45 @@
 // SalesforceConsultants.io - Main JavaScript
 
+// Read More functionality
+function toggleReadMore() {
+    const shortDesc = document.querySelector('.hero-description');
+    const expandedDesc = document.querySelector('.hero-description-expanded');
+    const readMoreBtn = document.querySelector('.read-more-btn');
+    
+    if (expandedDesc.style.display === 'none') {
+        shortDesc.style.display = 'none';
+        expandedDesc.style.display = 'block';
+        readMoreBtn.textContent = 'Read Less';
+    } else {
+        shortDesc.style.display = 'block';
+        expandedDesc.style.display = 'none';
+        readMoreBtn.textContent = 'Read More';
+    }
+}
+
 // Mobile Menu Toggle
 function toggleMobileMenu() {
-    const navMenu = document.getElementById('nav-menu');
+    const navDropdown = document.getElementById('nav-dropdown');
+    const navOverlay = document.getElementById('nav-overlay');
     const mobileBtn = document.querySelector('.mobile-menu-btn');
     
-    if (navMenu.style.display === 'flex') {
-        navMenu.style.display = 'none';
+    if (navDropdown.classList.contains('active')) {
+        navDropdown.classList.remove('active');
+        navOverlay.classList.remove('active');
         mobileBtn.classList.remove('active');
+        document.body.style.overflow = 'auto';
     } else {
-        navMenu.style.display = 'flex';
+        navDropdown.classList.add('active');
+        navOverlay.classList.add('active');
         mobileBtn.classList.add('active');
+        document.body.style.overflow = 'hidden';
     }
 }
 
 // Smooth Scrolling for Navigation Links
 document.addEventListener('DOMContentLoaded', function() {
-    // Get all navigation links
-    const navLinks = document.querySelectorAll('nav a[href^="#"], .cta-header[href^="#"]');
+    // Get all navigation links and footer service links
+    const navLinks = document.querySelectorAll('nav a[href^="#"], .cta-header[href^="#"], .footer-section a[href^="#"]');
     
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
@@ -36,18 +58,21 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
                 
                 // Close mobile menu if open
-                const navMenu = document.getElementById('nav-menu');
+                const navDropdown = document.getElementById('nav-dropdown');
+                const navOverlay = document.getElementById('nav-overlay');
                 const mobileBtn = document.querySelector('.mobile-menu-btn');
-                if (navMenu.style.display === 'flex') {
-                    navMenu.style.display = 'none';
+                if (navDropdown.classList.contains('active')) {
+                    navDropdown.classList.remove('active');
+                    navOverlay.classList.remove('active');
                     mobileBtn.classList.remove('active');
+                    document.body.style.overflow = 'auto';
                 }
             }
         });
     });
     
     // CTA button smooth scrolling
-    const ctaButtons = document.querySelectorAll('.btn-primary[href^="#"], .btn-secondary[href^="#"]');
+    const ctaButtons = document.querySelectorAll('.btn-primary[href^="#"], .btn-secondary[href^="#"], .btn-emergency[href^="#"]');
     ctaButtons.forEach(button => {
         button.addEventListener('click', function(e) {
             e.preventDefault();
@@ -131,7 +156,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Simulate form submission (replace with actual Formspree handling)
             setTimeout(() => {
                 // Show success message
-                showNotification('Thank you! Your Salesforce assessment request has been sent. We\'ll contact you within 24 hours.', 'success');
+                showNotification('Thank you! Your Salesforce assessment request has been sent. We\'ll contact you soon.', 'success');
                 
                 // Reset form
                 this.reset();
@@ -407,13 +432,13 @@ window.addEventListener('scroll', debouncedScrollHandler);
 
 // Console welcome message
 console.log(`
-🚀 Welcome to SalesforceConsultants.io!
+        Welcome to SalesforceConsultants.io!
     
 Transform your Salesforce investment with our certified consultants.
 15+ certifications, proven results, mission-driven approach.
     
 Get started: https://salesforceconsultants.io
-Contact: marketing@salesforceconsultants.io
+        Contact: marketing@devpipeline.com
 Phone: (385) 309-0807
 `);
 

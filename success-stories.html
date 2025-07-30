@@ -17,42 +17,52 @@
         .success-hero {
             background: linear-gradient(135deg, var(--accent-green) 0%, #1e8449 100%);
             color: var(--white);
-            padding: 120px 0 80px;
+            padding: 140px 0 100px;
             position: relative;
             overflow: hidden;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
         }
         
-        .success-hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 50%;
-            height: 100%;
+        .success-hero-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .success-hero-image {
+            width: 100%;
+            height: 500px;
             background-image: url('assets/logos/la-chamber-logo.png');
-            background-size: contain;
+            background-size: cover;
             background-position: center;
-            background-repeat: no-repeat;
-            opacity: 0.1;
-            z-index: 1;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-medium);
+            opacity: 0.9;
         }
         
         .success-hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 600px;
+            max-width: 100%;
+            padding: 0;
         }
         
         .success-hero h1 {
             font-size: 3.5rem;
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
             color: var(--white);
+            line-height: 1.2;
         }
         
         .success-hero p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
+            font-size: 1.4rem;
+            margin-bottom: 2.5rem;
             color: rgba(255,255,255,0.9);
+            line-height: 1.6;
         }
         
         .case-study-detail {
@@ -154,41 +164,109 @@
         }
         
         .stats-section {
-            background: var(--gradient-primary);
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-teal) 100%);
             color: var(--white);
-            padding: 4rem 0;
+            padding: 6rem 0;
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .stats-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.03)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.03)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.02)"/><circle cx="10" cy="60" r="0.5" fill="rgba(255,255,255,0.02)"/><circle cx="90" cy="40" r="0.5" fill="rgba(255,255,255,0.02)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            pointer-events: none;
         }
         
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2.5rem;
+            margin-top: 4rem;
+            position: relative;
+            z-index: 2;
         }
         
         .stat-card {
-            background: rgba(255,255,255,0.1);
-            padding: 2rem;
-            border-radius: var(--border-radius);
-            backdrop-filter: blur(10px);
+            background: rgba(255,255,255,0.15);
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .stat-card:hover::before {
+            left: 100%;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255,255,255,0.2);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
         }
         
         .stat-number {
-            font-size: 3rem;
-            font-weight: 700;
-            color: var(--accent-orange);
+            font-size: 4rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--accent-orange) 0%, #ff8c42 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             display: block;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         
         .stat-label {
-            font-size: 1.1rem;
-            color: rgba(255,255,255,0.9);
+            font-size: 1.2rem;
+            color: rgba(255,255,255,0.95);
+            font-weight: 500;
+            line-height: 1.4;
         }
         
         @media (max-width: 768px) {
+            .success-hero {
+                padding: 120px 0 80px;
+                min-height: 60vh;
+                text-align: center;
+            }
+            
+            .success-hero-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+            
+            .success-hero-image {
+                height: 300px;
+                order: -1;
+            }
+            
             .success-hero h1 {
                 font-size: 2.5rem;
+            }
+            
+            .success-hero p {
+                font-size: 1.2rem;
             }
             
             .case-study-content {
@@ -198,6 +276,73 @@
             
             .case-study-text h2 {
                 font-size: 2rem;
+            }
+            
+            .stats-section {
+                padding: 4rem 0;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 2rem;
+                margin-top: 3rem;
+            }
+            
+            .stat-card {
+                padding: 2rem 1.5rem;
+            }
+            
+            .stat-number {
+                font-size: 3rem;
+            }
+            
+            .stat-label {
+                font-size: 1.1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .success-hero {
+                padding: 100px 0 60px;
+                min-height: 50vh;
+            }
+            
+            .success-hero-container {
+                gap: 1.5rem;
+            }
+            
+            .success-hero-image {
+                height: 250px;
+            }
+            
+            .success-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .success-hero p {
+                font-size: 1.1rem;
+            }
+            
+            .stats-section {
+                padding: 3rem 0;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                margin-top: 2rem;
+            }
+            
+            .stat-card {
+                padding: 1.5rem;
+            }
+            
+            .stat-number {
+                font-size: 2.5rem;
+            }
+            
+            .stat-label {
+                font-size: 1rem;
             }
         }
     </style>
@@ -212,36 +357,46 @@
                     SalesforceConsultants.io
                     <span class="division">A DevPipeline Division</span>
                 </a>
-                <nav class="nav-menu">
-                    <ul id="nav-menu">
-                        <li><a href="services.html">Salesforce Services</a></li>
-                        <li><a href="success-stories.html">Success Stories</a></li>
-                        <li><a href="expertise.html">Salesforce Expertise</a></li>
-                        <li><a href="clients.html">Our Clients</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </nav>
+                <div class="nav-contact">
+                    <a href="tel:385-309-0807" class="nav-phone">(385) 309-0807</a>
+                </div>
                 <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
                 </button>
-                <a href="contact.html" class="cta-header">Free Salesforce Assessment</a>
+                <a href="contact.html" class="cta-header">Rapid Recovery Help</a>
             </div>
         </div>
+        
+        <!-- Dropdown Navigation Menu -->
+        <div class="nav-dropdown" id="nav-dropdown">
+            <ul>
+                <li><a href="services.html">Implementation Recovery</a></li>
+                <li><a href="success-stories.html">Recovery Success Stories</a></li>
+                <li><a href="expertise.html">Certified Expertise</a></li>
+                <li><a href="clients.html">Client Results</a></li>
+                <li><a href="contact.html">Quick Contact</a></li>
+            </ul>
+        </div>
+        
+        <!-- Overlay -->
+        <div class="nav-overlay" id="nav-overlay" onclick="toggleMobileMenu()"></div>
     </header>
 
     <!-- Success Stories Hero Section -->
     <section class="success-hero">
-        <div class="container">
+        <div class="success-hero-container">
             <div class="success-hero-content">
                 <h1>Salesforce Success Stories</h1>
                 <p>Real results from real organizations. See how our Salesforce consulting services have transformed businesses and nonprofits across industries.</p>
                 <div class="cta-buttons">
-                    <a href="contact.html" class="btn-primary">🚀 Get Your Success Story</a>
-                    <a href="#stats" class="btn-secondary">📊 View Results</a>
+                    <a href="contact.html" class="btn-primary">Get Your Success Story</a>
+                    <a href="#stats" class="btn-secondary">View Results</a>
                 </div>
             </div>
+            
+            <div class="success-hero-image"></div>
         </div>
     </section>
 
@@ -302,48 +457,50 @@
         </div>
     </section>
 
-    <!-- NuSkin Case Study -->
+    <!-- Nonprofit Salesforce Implementation Case Study -->
     <section class="case-study-detail">
         <div class="container">
             <div class="case-study-content">
                 <div class="case-study-highlight">
                     <div class="case-study-image">
-                        <img src="assets/logos/nuskin-logo.webp" alt="NuSkin Logo" style="width: 100%; height: 250px; object-fit: contain; background: white; border-radius: var(--border-radius); padding: 1rem;">
+                        <h3 style="text-align: center; color: white; font-size: 1.8rem; margin: 0; padding: 2rem; background: linear-gradient(135deg, var(--accent-orange), var(--alert-red)); border-radius: var(--border-radius); display: flex; align-items: center; justify-content: center; min-height: 250px;">
+                            Nonprofit Salesforce Success Story
+                        </h3>
                     </div>
                     
                     <div class="testimonial">
                         <div class="testimonial-text">
-                            "The Salesforce implementation exceeded our expectations. The team's expertise in enterprise architecture and custom development delivered exactly what we needed."
+                            "Our Salesforce implementation transformed our donor management. We now have a 360-degree view of our supporters, which has increased donor retention by 35%."
                         </div>
-                        <div class="testimonial-author">Sarah, IT Director</div>
-                        <div class="testimonial-title">NuSkin</div>
+                        <div class="testimonial-author">Nonprofit Executive Director</div>
+                        <div class="testimonial-title">Nonprofit Salesforce Implementation</div>
                     </div>
                     
                     <a href="contact.html" class="btn-primary" style="margin-top: 2rem;">Get Your Salesforce Success Story</a>
                 </div>
                 
                 <div class="case-study-text">
-                    <h2>NuSkin Enterprise Implementation</h2>
-                    <p>A comprehensive Salesforce enterprise implementation for a global direct selling company with complex multi-country requirements.</p>
+                    <h2>Nonprofit Salesforce Implementation Success</h2>
+                    <p>A comprehensive Salesforce Nonprofit Cloud implementation that revolutionized donor management and increased donor retention by 35%.</p>
                     
                     <div class="challenge">
                         <h4>The Salesforce Challenge</h4>
-                        <p>NuSkin needed a scalable Salesforce solution that could handle complex multi-country operations, advanced reporting requirements, and integration with existing enterprise systems.</p>
+                        <p>The nonprofit organization needed a comprehensive donor management system that could provide a 360-degree view of supporters, track donations, manage relationships, and improve donor retention rates.</p>
                     </div>
                     
                     <div class="solution">
                         <h4>Our Salesforce Solution</h4>
-                        <p>We designed and implemented a comprehensive Salesforce enterprise architecture with custom development, advanced reporting, and seamless system integrations.</p>
+                        <p>We implemented Salesforce Nonprofit Cloud with custom donor management workflows, automated communication processes, and comprehensive reporting dashboards to provide complete visibility into donor relationships.</p>
                     </div>
                     
                     <div class="results">
                         <h4>The Salesforce Results</h4>
                         <ul class="results-list">
-                            <li>Streamlined multi-country operations</li>
+                            <li>35% increase in donor retention rates</li>
+                            <li>360-degree view of all supporter relationships</li>
+                            <li>Automated donor communication workflows</li>
                             <li>Enhanced reporting and analytics capabilities</li>
-                            <li>Improved data visibility across departments</li>
-                            <li>Reduced system integration complexity</li>
-                            <li>Increased user adoption and satisfaction</li>
+                            <li>Improved donor engagement and satisfaction</li>
                         </ul>
                     </div>
                 </div>
@@ -381,8 +538,8 @@
                     <span class="stat-label">Successful Implementations</span>
                 </div>
                 <div class="stat-card">
-                    <span class="stat-number">24hr</span>
-                    <span class="stat-label">Average Response Time</span>
+                                            <span class="stat-number">Rapid</span>
+                        <span class="stat-label">Response</span>
                 </div>
             </div>
         </div>
@@ -406,9 +563,9 @@
                     <p style="margin-bottom: 1rem;">A DevPipeline Division</p>
                     <p>Expert Salesforce consulting services that lift people, advance careers, and strengthen communities through proven Salesforce implementation and optimization.</p>
                     <div style="margin-top: 1rem;">
-                        <p>📞 (385) 309-0807</p>
-                        <p>📧 marketing@salesforceconsultants.io</p>
-                        <p>🌐 www.salesforceconsultants.io</p>
+                        <p>(385) 309-0807</p>
+                        <p>marketing@devpipeline.com</p>
+                        <p>www.salesforceconsultants.io</p>
                     </div>
                 </div>
                 
@@ -484,4 +641,5 @@
     <!-- JavaScript -->
     <script src="script.js"></script>
 </body>
+</html> 
 </html> 

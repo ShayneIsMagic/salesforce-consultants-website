@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Salesforce Expertise | 15+ Certifications | SalesforceConsultants.io</title>
-    <meta name="description" content="Our team holds 15+ unique Salesforce certifications covering administration, development, architecture, and cloud consulting. Expert Salesforce knowledge across all platforms.">
+    <title>Salesforce Implementation Recovery | Fix Broken Salesforce | Expert Consultant Salt Lake City | SalesforceConsultants.io</title>
+    <meta name="description" content="When your Salesforce implementation failed, we fix broken Salesforce implementations. Expert Salesforce consultant Salt Lake City and Burbank with certified Salesforce application architect services. Emergency Salesforce support and build internal Salesforce capabilities.">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -17,42 +17,52 @@
         .expertise-hero {
             background: linear-gradient(135deg, var(--primary-dark) 0%, #1a5f5a 100%);
             color: var(--white);
-            padding: 120px 0 80px;
+            padding: 140px 0 100px;
             position: relative;
             overflow: hidden;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
         }
         
-        .expertise-hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 50%;
-            height: 100%;
+        .expertise-hero-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .expertise-hero-image {
+            width: 100%;
+            height: 500px;
             background-image: url('assets/Salesforce.com_logo.svg_-2048x1433.png');
-            background-size: contain;
+            background-size: cover;
             background-position: center;
-            background-repeat: no-repeat;
-            opacity: 0.1;
-            z-index: 1;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-medium);
+            opacity: 0.9;
         }
         
         .expertise-hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 600px;
+            max-width: 100%;
+            padding: 0;
         }
         
         .expertise-hero h1 {
             font-size: 3.5rem;
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
             color: var(--white);
+            line-height: 1.2;
         }
         
         .expertise-hero p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
+            font-size: 1.4rem;
+            margin-bottom: 2.5rem;
             color: rgba(255,255,255,0.9);
+            line-height: 1.6;
         }
         
         .certifications-section {
@@ -212,8 +222,29 @@
         }
         
         @media (max-width: 768px) {
+            .expertise-hero {
+                padding: 120px 0 80px;
+                min-height: 60vh;
+                text-align: center;
+            }
+            
+            .expertise-hero-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+            
+            .expertise-hero-image {
+                height: 300px;
+                order: -1;
+            }
+            
             .expertise-hero h1 {
                 font-size: 2.5rem;
+            }
+            
+            .expertise-hero p {
+                font-size: 1.2rem;
             }
             
             .cert-grid {
@@ -228,6 +259,29 @@
                 grid-template-columns: 1fr;
             }
         }
+        
+        @media (max-width: 480px) {
+            .expertise-hero {
+                padding: 100px 0 60px;
+                min-height: 50vh;
+            }
+            
+            .expertise-hero-container {
+                gap: 1.5rem;
+            }
+            
+            .expertise-hero-image {
+                height: 250px;
+            }
+            
+            .expertise-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .expertise-hero p {
+                font-size: 1.1rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -240,36 +294,46 @@
                     SalesforceConsultants.io
                     <span class="division">A DevPipeline Division</span>
                 </a>
-                <nav class="nav-menu">
-                    <ul id="nav-menu">
-                        <li><a href="services.html">Salesforce Services</a></li>
-                        <li><a href="success-stories.html">Success Stories</a></li>
-                        <li><a href="expertise.html">Salesforce Expertise</a></li>
-                        <li><a href="clients.html">Our Clients</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </nav>
+                <div class="nav-contact">
+                    <a href="tel:385-309-0807" class="nav-phone">(385) 309-0807</a>
+                </div>
                 <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
                 </button>
-                <a href="contact.html" class="cta-header">Free Salesforce Assessment</a>
+                <a href="contact.html" class="cta-header">Rapid Recovery Help</a>
             </div>
         </div>
+        
+        <!-- Dropdown Navigation Menu -->
+        <div class="nav-dropdown" id="nav-dropdown">
+            <ul>
+                <li><a href="services.html">Implementation Recovery</a></li>
+                <li><a href="success-stories.html">Recovery Success Stories</a></li>
+                <li><a href="expertise.html">Certified Expertise</a></li>
+                <li><a href="clients.html">Client Results</a></li>
+                <li><a href="contact.html">Quick Contact</a></li>
+            </ul>
+        </div>
+        
+        <!-- Overlay -->
+        <div class="nav-overlay" id="nav-overlay" onclick="toggleMobileMenu()"></div>
     </header>
 
     <!-- Expertise Hero Section -->
     <section class="expertise-hero">
-        <div class="container">
+        <div class="expertise-hero-container">
             <div class="expertise-hero-content">
-                <h1>15+ Unique Salesforce Certifications</h1>
-                <p>Our certified Salesforce consultants hold the industry's most comprehensive Salesforce certification portfolio, covering every aspect of the Salesforce ecosystem.</p>
+                <h1>Salesforce Implementation Recovery & Self-Sufficiency Building</h1>
+                <p>When your Salesforce implementation failed, we fix broken Salesforce implementations and build internal Salesforce capabilities. Expert Salesforce consultant Salt Lake City and Burbank services with certified Salesforce application architect expertise.</p>
                 <div class="cta-buttons">
-                    <a href="contact.html" class="btn-primary">🚀 Work With Experts</a>
-                    <a href="#certifications" class="btn-secondary">📋 View Certifications</a>
+                    <a href="contact.html" class="btn-primary">Work With Experts</a>
+                    <a href="#certifications" class="btn-secondary">View Capabilities</a>
                 </div>
             </div>
+            
+            <div class="expertise-hero-image"></div>
         </div>
     </section>
 
@@ -277,8 +341,8 @@
     <section id="certifications" class="certifications-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title" style="color: white;">Comprehensive Salesforce Expertise</h2>
-                <p class="section-subtitle" style="color: rgba(255,255,255,0.9);">From basic administration to enterprise architecture - we cover every aspect of Salesforce</p>
+                <h2 class="section-title" style="color: white;">Emergency Salesforce Support & Recovery Services</h2>
+                <p class="section-subtitle" style="color: rgba(255,255,255,0.9);">From inherited broken Salesforce org recovery to Salesforce team self sufficiency training</p>
             </div>
             
             <div class="cert-grid">
@@ -286,17 +350,15 @@
                     <h3>Salesforce Administration & Platform</h3>
                     <ul class="cert-list">
                         <li>Salesforce Certified Administrator</li>
-                        <li>Salesforce Certified Advanced Administrator</li>
                         <li>Salesforce Certified Platform App Builder</li>
-                        <li>Salesforce Certified Business Analyst</li>
                     </ul>
                 </div>
                 
                 <div class="cert-category">
                     <h3>Salesforce Development & Architecture</h3>
                     <ul class="cert-list">
-                        <li>Salesforce Platform Developer I & II</li>
-                        <li>Salesforce JavaScript Developer I</li>
+                        <li>Salesforce Platform Developer I</li>
+                        <li>Salesforce Platform Developer II</li>
                         <li>Salesforce Application Architect</li>
                         <li>Salesforce Data Architect</li>
                         <li>Salesforce Sharing and Visibility Architect</li>
@@ -307,20 +369,12 @@
                 <div class="cert-category">
                     <h3>Salesforce Cloud Consulting</h3>
                     <ul class="cert-list">
-                        <li>Salesforce Sales Cloud Consultant</li>
                         <li>Salesforce Service Cloud Consultant</li>
                         <li>Salesforce Community Cloud Consultant</li>
                     </ul>
                 </div>
                 
-                <div class="cert-category">
-                    <h3>Salesforce Marketing & Analytics</h3>
-                    <ul class="cert-list">
-                        <li>Salesforce Marketing Cloud Email Specialist</li>
-                        <li>Salesforce Marketing Cloud Administrator</li>
-                        <li>Certified Tableau Desktop Specialist</li>
-                    </ul>
-                </div>
+
             </div>
         </div>
     </section>
@@ -329,16 +383,16 @@
     <section class="team-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Meet Our Expert Team</h2>
-                <p class="section-subtitle">Certified Salesforce professionals with proven track records of success</p>
+                <h2 class="section-title">Certified Salesforce Application Architect Team</h2>
+                <p class="section-subtitle">Expert Salesforce consultant Salt Lake City and Burbank professionals with proven recovery success</p>
             </div>
             
             <div class="team-grid">
                 <div class="team-member">
-                    <img src="assets/Shayne Roy Profile.HEIC" alt="Shayne Roy" class="team-photo">
+                    <img src="assets/Shayne Roy Profile.png" alt="Shayne Roy" class="team-photo">
                     <h3>Shayne Roy</h3>
                     <div class="title">Lead Salesforce Consultant</div>
-                    <p>15+ years of Salesforce experience with expertise in enterprise architecture, custom development, and nonprofit solutions. Holds 12+ Salesforce certifications.</p>
+                    <p>15+ years of Salesforce experience with expertise in enterprise architecture, custom development, and nonprofit solutions. Holds 8+ Salesforce certifications.</p>
                 </div>
                 
                 <div class="team-member">
@@ -355,43 +409,37 @@
     <section class="experience-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Why Our Expertise Matters</h2>
-                <p class="section-subtitle">Deep Salesforce knowledge translates to better solutions and faster results</p>
+                <h2 class="section-title">Why Choose Our Salesforce Implementation Recovery Services</h2>
+                <p class="section-subtitle">When your Salesforce implementation failed, we provide emergency Salesforce support and build internal Salesforce capabilities</p>
             </div>
             
             <div class="experience-grid">
                 <div class="experience-card">
-                    <span class="experience-icon">🎯</span>
-                    <h3>Proven Methodologies</h3>
-                    <p>15+ years of refined Salesforce implementation processes that ensure success every time</p>
+                    <h3>Fix Broken Salesforce Implementation</h3>
+                    <p>Proven methodologies to rescue failed Salesforce implementations and turn disasters into success stories</p>
                 </div>
                 
                 <div class="experience-card">
-                    <span class="experience-icon">⚡</span>
-                    <h3>Faster Implementation</h3>
-                    <p>Deep platform knowledge means quicker problem-solving and accelerated project delivery</p>
+                    <h3>Emergency Salesforce Support</h3>
+                    <p>Dedicated team for inherited broken Salesforce org recovery and critical system issues</p>
                 </div>
                 
                 <div class="experience-card">
-                    <span class="experience-icon">🔧</span>
-                    <h3>Advanced Solutions</h3>
+                    <h3>Certified Salesforce Application Architect</h3>
                     <p>Architecture-level expertise enables complex customizations and enterprise-grade solutions</p>
                 </div>
                 
-                <div class="experience-card">
-                    <span class="experience-icon">📚</span>
-                    <h3>Continuous Learning</h3>
-                    <p>Regular certification updates ensure we stay current with the latest Salesforce features</p>
+                <div class="feature-card">
+                    <h3>Salesforce Team Self Sufficiency</h3>
+                    <p>Build internal Salesforce capabilities so your team never needs another consultant</p>
                 </div>
                 
                 <div class="experience-card">
-                    <span class="experience-icon">🤝</span>
-                    <h3>Knowledge Transfer</h3>
-                    <p>We don't just implement - we train your team to become Salesforce experts</p>
+                    <h3>Expert Salesforce Consultant Salt Lake City</h3>
+                    <p>Local expertise with global capabilities - serving Utah and California with proven results</p>
                 </div>
                 
                 <div class="experience-card">
-                    <span class="experience-icon">📈</span>
                     <h3>Measurable Results</h3>
                     <p>Expert implementation leads to measurable business improvements and ROI</p>
                 </div>
@@ -402,9 +450,15 @@
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
-            <h2>Ready to Work With Salesforce Experts?</h2>
-            <p>Leverage our comprehensive Salesforce expertise to transform your business</p>
-            <a href="contact.html" class="btn-primary" style="background: white; color: var(--accent-orange); font-size: 1.2rem; padding: 1.2rem 2.5rem;">Get Your Free Salesforce Assessment</a>
+            <h2>Emergency Salesforce Implementation Recovery</h2>
+            <p>When your Salesforce implementation failed, get expert help to fix broken Salesforce implementations and build internal Salesforce capabilities</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; align-items: center; flex-wrap: wrap; margin-top: 2rem;">
+                <a href="contact.html" class="btn-emergency" style="font-size: 1.2rem; padding: 1.2rem 2.5rem;">Get Rapid Help Now</a>
+                <div style="text-align: center;">
+                    <p style="color: var(--alert-red); font-weight: 700; font-size: 1.1rem; margin: 0;">Emergency Hotline</p>
+                    <p style="color: var(--alert-red); font-weight: 800; font-size: 1.5rem; margin: 0;">(385) 309-0807</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -417,9 +471,9 @@
                     <p style="margin-bottom: 1rem;">A DevPipeline Division</p>
                     <p>Expert Salesforce consulting services that lift people, advance careers, and strengthen communities through proven Salesforce implementation and optimization.</p>
                     <div style="margin-top: 1rem;">
-                        <p>📞 (385) 309-0807</p>
-                        <p>📧 marketing@salesforceconsultants.io</p>
-                        <p>🌐 www.salesforceconsultants.io</p>
+                        <p>(385) 309-0807</p>
+                        <p>marketing@devpipeline.com</p>
+                        <p>www.salesforceconsultants.io</p>
                     </div>
                 </div>
                 
@@ -495,4 +549,5 @@
     <!-- JavaScript -->
     <script src="script.js"></script>
 </body>
+</html> 
 </html> 

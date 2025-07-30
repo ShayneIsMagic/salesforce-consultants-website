@@ -17,47 +17,113 @@
         .contact-hero {
             background: linear-gradient(135deg, var(--accent-orange) 0%, #ff8c42 100%);
             color: var(--white);
-            padding: 120px 0 80px;
+            padding: 140px 0 100px;
             position: relative;
             overflow: hidden;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
         }
         
-        .contact-hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 50%;
-            height: 100%;
+        .contact-hero-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .contact-hero-image {
+            width: 100%;
+            height: 500px;
             background-image: url('assets/SalesforceConsultants-Graphic.png');
-            background-size: contain;
+            background-size: cover;
             background-position: center;
-            background-repeat: no-repeat;
-            opacity: 0.1;
-            z-index: 1;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-medium);
+            opacity: 0.9;
         }
         
         .contact-hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 600px;
+            max-width: 100%;
+            padding: 0;
         }
         
         .contact-hero h1 {
             font-size: 3.5rem;
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
             color: var(--white);
+            line-height: 1.2;
         }
         
         .contact-hero p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
+            font-size: 1.4rem;
+            margin-bottom: 2.5rem;
             color: rgba(255,255,255,0.9);
+            line-height: 1.6;
         }
         
         .contact-section {
             padding: 4rem 0;
             background: var(--light-gray);
+        }
+        
+        /* Mobile responsiveness for contact hero */
+        @media (max-width: 768px) {
+            .contact-hero {
+                padding: 120px 0 80px;
+                min-height: 60vh;
+                text-align: center;
+            }
+            
+            .contact-hero-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+            
+            .contact-hero-image {
+                height: 300px;
+                order: -1;
+            }
+            
+            .contact-hero-content {
+                max-width: 100%;
+                padding: 0 15px;
+            }
+            
+            .contact-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .contact-hero p {
+                font-size: 1.2rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .contact-hero {
+                padding: 100px 0 60px;
+                min-height: 50vh;
+            }
+            
+            .contact-hero-container {
+                gap: 1.5rem;
+            }
+            
+            .contact-hero-image {
+                height: 250px;
+            }
+            
+            .contact-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .contact-hero p {
+                font-size: 1.1rem;
+            }
         }
         
         .contact-form {
@@ -272,36 +338,46 @@
                     SalesforceConsultants.io
                     <span class="division">A DevPipeline Division</span>
                 </a>
-                <nav class="nav-menu">
-                    <ul id="nav-menu">
-                        <li><a href="services.html">Salesforce Services</a></li>
-                        <li><a href="success-stories.html">Success Stories</a></li>
-                        <li><a href="expertise.html">Salesforce Expertise</a></li>
-                        <li><a href="clients.html">Our Clients</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </nav>
+                <div class="nav-contact">
+                    <a href="tel:385-309-0807" class="nav-phone">(385) 309-0807</a>
+                </div>
                 <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
                 </button>
-                <a href="contact.html" class="cta-header">Free Salesforce Assessment</a>
+                <a href="contact.html" class="cta-header">Rapid Recovery Help</a>
             </div>
         </div>
+        
+        <!-- Dropdown Navigation Menu -->
+        <div class="nav-dropdown" id="nav-dropdown">
+            <ul>
+                <li><a href="services.html">Implementation Recovery</a></li>
+                <li><a href="success-stories.html">Recovery Success Stories</a></li>
+                <li><a href="expertise.html">Certified Expertise</a></li>
+                <li><a href="clients.html">Client Results</a></li>
+                <li><a href="contact.html">Quick Contact</a></li>
+            </ul>
+        </div>
+        
+        <!-- Overlay -->
+        <div class="nav-overlay" id="nav-overlay" onclick="toggleMobileMenu()"></div>
     </header>
 
     <!-- Contact Hero Section -->
     <section class="contact-hero">
-        <div class="container">
+        <div class="contact-hero-container">
             <div class="contact-hero-content">
                 <h1>Get Your Free Salesforce Assessment</h1>
                 <p>Discover how our Salesforce consulting services can transform your business. Get expert insights and a customized roadmap for your Salesforce success.</p>
                 <div class="cta-buttons">
-                    <a href="#contact-form" class="btn-primary">🚀 Start Your Assessment</a>
-                    <a href="#contact-info" class="btn-secondary">📞 Contact Directly</a>
+                    <a href="#contact-form" class="btn-primary">Start Your Assessment</a>
+                    <a href="#contact-info" class="btn-secondary">Contact Directly</a>
                 </div>
             </div>
+            
+            <div class="contact-hero-image"></div>
         </div>
     </section>
 
@@ -400,15 +476,15 @@
                         <textarea id="message" name="message" rows="4" placeholder="Describe your current Salesforce situation, specific challenges, or goals you'd like to achieve with Salesforce consulting services..."></textarea>
                     </div>
                     
-                    <button type="submit" class="submit-btn">🚀 Get My Free Salesforce Assessment</button>
+                    <button type="submit" class="submit-btn">Get My Free Salesforce Assessment</button>
                 </form>
                 
                 <div class="contact-info">
                     <h3 style="color: var(--primary-dark); margin-bottom: 1rem;">Prefer to Talk Directly About Your Salesforce Needs?</h3>
                     <p style="margin-bottom: 1rem; color: var(--medium-gray);">Schedule a 30-minute Salesforce consultation to discuss your specific requirements</p>
                     <div class="contact-methods">
-                        <a href="tel:385-309-0807" class="contact-method">📞 (385) 309-0807</a>
-                        <a href="mailto:marketing@salesforceconsultants.io" class="contact-method">📧 marketing@salesforceconsultants.io</a>
+                                        <a href="tel:385-309-0807" class="contact-method">(385) 309-0807</a>
+                                        <a href="mailto:marketing@devpipeline.com" class="contact-method">marketing@devpipeline.com</a>
                     </div>
                 </div>
             </div>
@@ -425,21 +501,21 @@
             
             <div class="contact-grid">
                 <div class="contact-card">
-                    <span class="contact-icon">📞</span>
+                                            <span class="contact-icon">Phone</span>
                     <h3>Phone Consultation</h3>
                     <p>Speak directly with our Salesforce experts</p>
                     <a href="tel:385-309-0807">(385) 309-0807</a>
                 </div>
                 
                 <div class="contact-card">
-                    <span class="contact-icon">📧</span>
+                                            <span class="contact-icon">Email</span>
                     <h3>Email Inquiry</h3>
                     <p>Send us a detailed message about your needs</p>
-                    <a href="mailto:marketing@salesforceconsultants.io">marketing@salesforceconsultants.io</a>
+                                            <a href="mailto:marketing@devpipeline.com">marketing@devpipeline.com</a>
                 </div>
                 
                 <div class="contact-card">
-                    <span class="contact-icon">💼</span>
+                                            <span class="contact-icon">Phone</span>
                     <h3>LinkedIn</h3>
                     <p>Connect with us on LinkedIn for updates and insights</p>
                     <a href="https://www.linkedin.com/company/salesforce-consultants-io/" target="_blank">Connect on LinkedIn</a>
@@ -508,9 +584,9 @@
                     <p style="margin-bottom: 1rem;">A DevPipeline Division</p>
                     <p>Expert Salesforce consulting services that lift people, advance careers, and strengthen communities through proven Salesforce implementation and optimization.</p>
                     <div style="margin-top: 1rem;">
-                        <p>📞 (385) 309-0807</p>
-                        <p>📧 marketing@salesforceconsultants.io</p>
-                        <p>🌐 www.salesforceconsultants.io</p>
+                        <p>(385) 309-0807</p>
+                        <p>marketing@devpipeline.com</p>
+                        <p>www.salesforceconsultants.io</p>
                     </div>
                 </div>
                 
@@ -586,4 +662,5 @@
     <!-- JavaScript -->
     <script src="script.js"></script>
 </body>
+</html> 
 </html> 
