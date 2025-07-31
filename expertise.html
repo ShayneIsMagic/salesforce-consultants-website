@@ -15,35 +15,52 @@
     <!-- Additional styles for expertise page -->
     <style>
         .expertise-hero {
-            background: linear-gradient(135deg, var(--primary-dark) 0%, #1a5f5a 100%);
+            background: var(--dark);
             color: var(--white);
-            padding: 140px 0 100px;
+            padding: 120px 0 80px;
             position: relative;
             overflow: hidden;
-            min-height: 70vh;
+            min-height: 80vh;
             display: flex;
             align-items: center;
+        }
+        
+        .expertise-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(58, 175, 170, 0.1) 0%, rgba(23, 37, 43, 0.95) 100%);
+            z-index: 1;
         }
         
         .expertise-hero-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            gap: 6rem;
             align-items: center;
-            max-width: 1200px;
+            max-width: 100%;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 5vw;
+            position: relative;
+            z-index: 2;
         }
         
         .expertise-hero-image {
             width: 100%;
-            height: 500px;
+            height: 600px;
             background-image: url('assets/Salesforce.com_logo.svg_-2048x1433.png');
             background-size: cover;
             background-position: center;
             border-radius: var(--border-radius);
-            box-shadow: var(--shadow-medium);
-            opacity: 0.9;
+            animation: heroZoom 20s ease-in-out infinite;
+        }
+        
+        @keyframes heroZoom {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
         }
         
         .expertise-hero-content {
@@ -52,21 +69,27 @@
         }
         
         .expertise-hero h1 {
-            font-size: 3.5rem;
+            font-size: clamp(3rem, 8vw, 6rem);
             margin-bottom: 2rem;
             color: var(--white);
-            line-height: 1.2;
+            line-height: 0.9;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: -0.03em;
+            animation: fadeInUp 1s ease-out;
         }
         
         .expertise-hero p {
-            font-size: 1.4rem;
-            margin-bottom: 2.5rem;
+            font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+            margin-bottom: 3rem;
             color: rgba(255,255,255,0.9);
-            line-height: 1.6;
+            line-height: 1.4;
+            font-weight: 400;
+            animation: fadeInUp 1s ease-out 0.2s both;
         }
         
         .certifications-section {
-            padding: 4rem 0;
+            padding: 6rem 0;
             background: var(--gradient-primary);
             color: var(--white);
         }
@@ -118,7 +141,7 @@
         }
         
         .cert-list li::before {
-            content: "🏆";
+                            content: "";
             position: absolute;
             left: 0;
             font-size: 1.2rem;
@@ -221,65 +244,33 @@
             color: var(--text-light);
         }
         
-        @media (max-width: 768px) {
-            .expertise-hero {
-                padding: 120px 0 80px;
-                min-height: 60vh;
-                text-align: center;
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
             }
-            
-            .expertise-hero-container {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-                text-align: center;
-            }
-            
-            .expertise-hero-image {
-                height: 300px;
-                order: -1;
-            }
-            
-            .expertise-hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .expertise-hero p {
-                font-size: 1.2rem;
-            }
-            
-            .cert-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .team-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .experience-grid {
-                grid-template-columns: 1fr;
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
         
-        @media (max-width: 480px) {
+        /* Mobile responsiveness for expertise hero */
+        @media (max-width: 768px) {
             .expertise-hero {
                 padding: 100px 0 60px;
-                min-height: 50vh;
+                min-height: 70vh;
             }
             
             .expertise-hero-container {
-                gap: 1.5rem;
+                grid-template-columns: 1fr;
+                gap: 3rem;
+                padding: 0 3vw;
             }
             
             .expertise-hero-image {
-                height: 250px;
-            }
-            
-            .expertise-hero h1 {
-                font-size: 2rem;
-            }
-            
-            .expertise-hero p {
-                font-size: 1.1rem;
+                height: 400px;
+                order: -1;
             }
         }
     </style>
@@ -414,32 +405,32 @@
             </div>
             
             <div class="experience-grid">
-                <div class="experience-card">
+                <div class="benefit-item">
                     <h3>Fix Broken Salesforce Implementation</h3>
                     <p>Proven methodologies to rescue failed Salesforce implementations and turn disasters into success stories</p>
                 </div>
                 
-                <div class="experience-card">
+                <div class="benefit-item">
                     <h3>Emergency Salesforce Support</h3>
                     <p>Dedicated team for inherited broken Salesforce org recovery and critical system issues</p>
                 </div>
                 
-                <div class="experience-card">
+                <div class="benefit-item">
                     <h3>Certified Salesforce Application Architect</h3>
                     <p>Architecture-level expertise enables complex customizations and enterprise-grade solutions</p>
                 </div>
                 
-                <div class="feature-card">
+                <div class="benefit-item">
                     <h3>Salesforce Team Self Sufficiency</h3>
                     <p>Build internal Salesforce capabilities so your team never needs another consultant</p>
                 </div>
                 
-                <div class="experience-card">
+                <div class="benefit-item">
                     <h3>Expert Salesforce Consultant Salt Lake City</h3>
                     <p>Local expertise with global capabilities - serving Utah and California with proven results</p>
                 </div>
                 
-                <div class="experience-card">
+                <div class="benefit-item">
                     <h3>Measurable Results</h3>
                     <p>Expert implementation leads to measurable business improvements and ROI</p>
                 </div>
@@ -537,8 +528,8 @@
             
             <div class="footer-bottom">
                 <p>&copy; 2025 DevPipeline | SalesforceConsultants.io. All rights reserved. | 
-                <a href="#" style="color: var(--accent-orange);">Privacy Policy</a> | 
-                <a href="#" style="color: var(--accent-orange);">Terms of Service</a></p>
+                            <a href="#" style="color: var(--accent-gold);">Privacy Policy</a> |
+            <a href="#" style="color: var(--accent-gold);">Terms of Service</a></p>
                 <p style="margin-top: 1rem; font-size: 0.9rem;">
                     Salesforce, Sales Cloud, Service Cloud, Marketing Cloud, and other Salesforce products are trademarks of Salesforce.com, Inc. SalesforceConsultants.io is an independent Salesforce consulting firm.
                 </p>
@@ -549,5 +540,4 @@
     <!-- JavaScript -->
     <script src="script.js"></script>
 </body>
-</html> 
 </html> 
