@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Salesforce Implementation Recovery | Fix Broken Salesforce | Expert Consultant Salt Lake City | SalesforceConsultants.io</title>
-    <meta name="description" content="When your Salesforce implementation failed, we fix broken Salesforce implementations. Expert Salesforce consultant Salt Lake City and Burbank with certified Salesforce application architect services. Emergency Salesforce support and build internal Salesforce capabilities.">
+    <title>Salesforce Expertise & Certifications | Client Testimonials | SalesforceConsultants.io</title>
+    <meta name="description" content="Discover our comprehensive Salesforce expertise with 15+ certifications and real client testimonials. Expert Salesforce consultants with proven success in implementation recovery and optimization.">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -52,8 +52,9 @@
             width: 100%;
             height: 600px;
             background-image: url('assets/Salesforce.com_logo.svg_-2048x1433.png');
-            background-size: cover;
+            background-size: contain;
             background-position: center;
+            background-repeat: no-repeat;
             border-radius: var(--border-radius);
             animation: heroZoom 20s ease-in-out infinite;
         }
@@ -161,14 +162,18 @@
         
         .team-member {
             text-align: center;
-            padding: 2rem;
+            padding: 2.5rem;
             border-radius: var(--border-radius);
             transition: var(--transition);
+            background: var(--white);
+            box-shadow: var(--shadow-light);
+            border-left: 4px solid var(--primary-teal);
         }
         
         .team-member:hover {
             transform: translateY(-10px);
             box-shadow: var(--shadow-medium);
+            border-left-color: var(--accent-orange);
         }
         
         .team-photo {
@@ -278,46 +283,74 @@
 <body>
     <!-- Header -->
     <header>
-        <div class="container">
-            <div class="header-content">
-                <a href="index.html" class="logo">
-                    <img src="assets/Salesforce Consultants Logo.png" alt="SalesforceConsultants.io" style="height: 40px; margin-right: 10px;">
-                    SalesforceConsultants.io
-                    <span class="division">A DevPipeline Division</span>
-                </a>
-                <div class="nav-contact">
-                    <a href="tel:385-309-0807" class="nav-phone">(385) 309-0807</a>
-                </div>
-                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
+        <div class="header-content">
+            <a href="index.html" class="logo">
+                <img src="assets/logos/Salesforce_Consulting_Logo.svg" alt="Salesforce Consultants" style="height: 35px; margin-right: 8px;">
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="success-stories.html">Success Stories</a></li>
+                    <li><a href="expertise.html">Expertise</a></li>
+                    <li><a href="clients.html">Clients</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-icons">
+                <button class="nav-icon search-icon" aria-label="Search" title="Search">
+                    <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
                 </button>
-                <a href="contact.html" class="cta-header">Rapid Recovery Help</a>
+                <div class="share-dropdown">
+                    <button class="nav-icon share-icon" aria-label="Share" title="Share" onclick="toggleShareDropdown()">
+                        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+                    </button>
+                    <div class="share-menu" id="shareMenu">
+                        <div class="share-header">
+                            <span>Share this page</span>
+                            <button class="close-share" onclick="toggleShareDropdown()">×</button>
+                        </div>
+                        <div class="share-options">
+                            <button class="share-option" onclick="copyToClipboard()">
+                                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                Copy Link
+                            </button>
+                            <a href="https://www.linkedin.com/company/salesforce-consultants-io/" class="share-option" target="_blank">
+                                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                                LinkedIn
+                            </a>
+                            <a href="https://www.facebook.com/profile.php?id=61566535995457" class="share-option" target="_blank">
+                                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                                Facebook
+                            </a>
+                            <a href="https://www.instagram.com/salesforceconsultants/" class="share-option" target="_blank">
+                                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                                Instagram
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+            </button>
         </div>
-        
-        <!-- Dropdown Navigation Menu -->
         <div class="nav-dropdown" id="nav-dropdown">
-            <ul>
-                <li><a href="services.html">Implementation Recovery</a></li>
-                <li><a href="success-stories.html">Recovery Success Stories</a></li>
-                <li><a href="expertise.html">Certified Expertise</a></li>
-                <li><a href="clients.html">Client Results</a></li>
-                <li><a href="contact.html">Quick Contact</a></li>
-            </ul>
+            <a href="services.html">Services</a>
+            <a href="success-stories.html">Success Stories</a>
+            <a href="expertise.html">Expertise</a>
+            <a href="clients.html">Clients</a>
+            <a href="contact.html">Contact</a>
         </div>
-        
-        <!-- Overlay -->
-        <div class="nav-overlay" id="nav-overlay" onclick="toggleMobileMenu()"></div>
     </header>
 
     <!-- Expertise Hero Section -->
     <section class="expertise-hero">
         <div class="expertise-hero-container">
             <div class="expertise-hero-content">
-                <h1>Salesforce Implementation Recovery & Self-Sufficiency Building</h1>
-                <p>When your Salesforce implementation failed, we fix broken Salesforce implementations and build internal Salesforce capabilities. Expert Salesforce consultant Salt Lake City and Burbank services with certified Salesforce application architect expertise.</p>
+                <h1>Salesforce Expertise & Client Success Stories</h1>
+                <p>Discover our comprehensive Salesforce expertise with 15+ certifications and real client testimonials. Expert Salesforce consultants with proven success in implementation recovery and optimization.</p>
                 <div class="cta-buttons">
                     <a href="contact.html" class="btn-primary">Work With Experts</a>
                     <a href="#certifications" class="btn-secondary">View Capabilities</a>
@@ -370,27 +403,67 @@
         </div>
     </section>
 
-    <!-- Team Section -->
+    <!-- Client Testimonials Section -->
     <section class="team-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Certified Salesforce Application Architect Team</h2>
-                <p class="section-subtitle">Expert Salesforce consultant Salt Lake City and Burbank professionals with proven recovery success</p>
+                <h2 class="section-title">What Our Clients Say About Our Expertise</h2>
+                <p class="section-subtitle">Real feedback from organizations we've helped with Salesforce implementation recovery and optimization</p>
             </div>
             
             <div class="team-grid">
                 <div class="team-member">
-                    <img src="assets/Shayne Roy Profile.png" alt="Shayne Roy" class="team-photo">
-                    <h3>Shayne Roy</h3>
-                    <div class="title">Lead Salesforce Consultant</div>
-                    <p>15+ years of Salesforce experience with expertise in enterprise architecture, custom development, and nonprofit solutions. Holds 8+ Salesforce certifications.</p>
+                    <div class="testimonial-quote" style="font-size: 1.1rem; font-style: italic; color: var(--text-dark); margin-bottom: 1.5rem; line-height: 1.6;">
+                        "Our Salesforce consultants provided an amazing experience and quality customer service. We're now achieving our goal of optimizing Salesforce for our unique needs."
+                    </div>
+                    <h3>Pat</h3>
+                    <div class="title">Non-Profit Executive</div>
+                    <p>Salesforce Optimization Services</p>
                 </div>
                 
                 <div class="team-member">
-                    <img src="assets/Jason Fletcher Profile.JPG" alt="Jason Fletcher" class="team-photo">
-                    <h3>Jason Fletcher</h3>
-                    <div class="title">Senior Salesforce Developer</div>
-                    <p>Expert in Apex development, Lightning Components, and Salesforce integrations. Specializes in complex enterprise implementations and custom solutions.</p>
+                    <div class="testimonial-quote" style="font-size: 1.1rem; font-style: italic; color: var(--text-dark); margin-bottom: 1.5rem; line-height: 1.6;">
+                        "DevPipeline was highly responsive & worked closely with various members of the Chamber Team to get a holistic look at what we were missing and implement fixes that work for all departments."
+                    </div>
+                    <h3>Brian Barry</h3>
+                    <div class="title">Kollab Board of Directors</div>
+                    <p>Salesforce Consulting Partnership</p>
+                </div>
+                
+                <div class="team-member">
+                    <div class="testimonial-quote" style="font-size: 1.1rem; font-style: italic; color: var(--text-dark); margin-bottom: 1.5rem; line-height: 1.6;">
+                        "Ridiculously Awesome is what comes to mind when I think about our Salesforce consultant. I'm always impressed when they set out to solve problems as they always seem to solve them quickly and better than I first imagined."
+                    </div>
+                    <h3>Matt</h3>
+                    <div class="title">Salesforce Architect</div>
+                    <p>Salesforce Problem Solving</p>
+                </div>
+                
+                <div class="team-member">
+                    <div class="testimonial-quote" style="font-size: 1.1rem; font-style: italic; color: var(--text-dark); margin-bottom: 1.5rem; line-height: 1.6;">
+                        "Our Salesforce consultants integrated Salesforce with our accounting system and event platform, giving us complete visibility of our member relationships and dramatically improving efficiency."
+                    </div>
+                    <h3>Brian</h3>
+                    <div class="title">Membership Director</div>
+                    <p>Salesforce Integration Solutions</p>
+                </div>
+                
+                <div class="team-member">
+                    <div class="testimonial-quote" style="font-size: 1.1rem; font-style: italic; color: var(--text-dark); margin-bottom: 1.5rem; line-height: 1.6;">
+                        "The automation workflows our Salesforce consultants created have saved countless hours of manual work. Our team now focuses on strategic activities instead of repetitive tasks."
+                    </div>
+                    <h3>Non-profit IT Manager</h3>
+                    <div class="title">IT Manager</div>
+                    <p>Salesforce Workflow Automation</p>
+                </div>
+                
+                <div class="team-member">
+                    <div class="testimonial-quote" style="font-size: 1.1rem; font-style: italic; color: var(--text-dark); margin-bottom: 1.5rem; line-height: 1.6;">
+                        "Our Salesforce consultants managed our complex migration from our outdated CRM with remarkable skill. We experienced zero data loss and minimal disruption."
+                    </div>
+                    <h3>Martin</h3>
+                    <div class="title">Chief Operating Officer</div>
+                    <p>Salesforce Data Migration Services</p>
                 </div>
             </div>
         </div>
@@ -506,23 +579,8 @@
                 
                 <div class="footer-section">
                     <h3>Connect With Us</h3>
-                    <div class="social-links" style="margin-top: 1rem;">
-                        <a href="https://www.facebook.com/profile.php?id=61566535995457" target="_blank" class="social-link" title="Follow us on Facebook">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                            </svg>
-                        </a>
-                        <a href="https://www.instagram.com/salesforceconsultants/" target="_blank" class="social-link" title="Follow us on Instagram">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.617-6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                            </svg>
-                        </a>
-                        <a href="https://www.linkedin.com/company/salesforce-consultants-io/" target="_blank" class="social-link" title="Connect on LinkedIn">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                            </svg>
-                        </a>
-                    </div>
+                    <p>Ready to transform your business with Salesforce?</p>
+                    <p>Contact us today for a free consultation and assessment.</p>
                 </div>
             </div>
             
