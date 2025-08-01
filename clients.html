@@ -754,15 +754,54 @@
                 </div>
             </div>
             
-            <div class="service-portfolio-highlights" style="margin-top: 3rem; padding: 2rem; background: var(--light-gray); border-radius: var(--border-radius);">
-                                    <h3 style="color: var(--text-dark); margin-bottom: 1.5rem;">Service Portfolio Highlights</h3>
-                <ul style="list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem;">
-                    <li style="padding: 0.5rem 0; color: var(--text-light);">• Discovery meetings & solution architecture</li>
-                    <li style="padding: 0.5rem 0; color: var(--text-light);">• Salesforce integration services</li>
-                    <li style="padding: 0.5rem 0; color: var(--text-light);">• Ongoing email and phone support from senior certified consultants</li>
-                    <li style="padding: 0.5rem 0; color: var(--text-light);">• Comprehensive Salesforce training and "Train the Trainer" programs</li>
-                    <li style="padding: 0.5rem 0; color: var(--text-light);">• Web conference and phone-based training sessions</li>
-                </ul>
+            <div class="service-portfolio-highlights" style="margin-top: 4rem; padding: 3rem; background: linear-gradient(135deg, rgba(58, 175, 170, 0.08) 0%, rgba(23, 43, 59, 0.05) 100%); border-radius: 20px; border: 1px solid rgba(58, 175, 170, 0.1); backdrop-filter: blur(10px);">
+                <h3 style="color: var(--dark); margin-bottom: 2rem; font-size: 1.8rem; font-weight: 700; text-align: center;">Service Portfolio Highlights</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+                    <div style="background: rgba(255,255,255,0.7); padding: 1.5rem; border-radius: 12px; border-left: 4px solid var(--teal); transition: all 0.3s ease; backdrop-filter: blur(5px);">
+                        <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+                            <svg width="20" height="20" fill="none" stroke="var(--teal)" stroke-width="2" viewBox="0 0 24 24" style="margin-right: 0.8rem;">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <span style="font-weight: 600; color: var(--dark);">Discovery meetings & solution architecture</span>
+                        </div>
+                    </div>
+                    
+                    <div style="background: rgba(255,255,255,0.7); padding: 1.5rem; border-radius: 12px; border-left: 4px solid var(--teal); transition: all 0.3s ease; backdrop-filter: blur(5px);">
+                        <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+                            <svg width="20" height="20" fill="none" stroke="var(--teal)" stroke-width="2" viewBox="0 0 24 24" style="margin-right: 0.8rem;">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <span style="font-weight: 600; color: var(--dark);">Salesforce integration services</span>
+                        </div>
+                    </div>
+                    
+                    <div style="background: rgba(255,255,255,0.7); padding: 1.5rem; border-radius: 12px; border-left: 4px solid var(--teal); transition: all 0.3s ease; backdrop-filter: blur(5px);">
+                        <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+                            <svg width="20" height="20" fill="none" stroke="var(--teal)" stroke-width="2" viewBox="0 0 24 24" style="margin-right: 0.8rem;">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <span style="font-weight: 600; color: var(--dark);">Ongoing email and phone support from senior certified consultants</span>
+                        </div>
+                    </div>
+                    
+                    <div style="background: rgba(255,255,255,0.7); padding: 1.5rem; border-radius: 12px; border-left: 4px solid var(--teal); transition: all 0.3s ease; backdrop-filter: blur(5px);">
+                        <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+                            <svg width="20" height="20" fill="none" stroke="var(--teal)" stroke-width="2" viewBox="0 0 24 24" style="margin-right: 0.8rem;">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <span style="font-weight: 600; color: var(--dark);">Comprehensive Salesforce training and "Train the Trainer" programs</span>
+                        </div>
+                    </div>
+                    
+                    <div style="background: rgba(255,255,255,0.7); padding: 1.5rem; border-radius: 12px; border-left: 4px solid var(--teal); transition: all 0.3s ease; backdrop-filter: blur(5px);">
+                        <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+                            <svg width="20" height="20" fill="none" stroke="var(--teal)" stroke-width="2" viewBox="0 0 24 24" style="margin-right: 0.8rem;">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <span style="font-weight: 600; color: var(--dark);">Web conference and phone-based training sessions</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -847,5 +886,24 @@
 
     <!-- JavaScript -->
     <script src="script.js"></script>
+    
+    <style>
+        .service-portfolio-highlights div[style*="background: rgba(255,255,255,0.7)"]:hover {
+            transform: translateY(-5px);
+            background: rgba(255,255,255,0.9) !important;
+            box-shadow: 0 10px 25px rgba(58, 175, 170, 0.2);
+            border-left-color: var(--teal) !important;
+        }
+        
+        .service-portfolio-highlights div[style*="background: rgba(255,255,255,0.7)"] {
+            animation: fadeInUp 0.6s ease-out;
+        }
+        
+        .service-portfolio-highlights div[style*="background: rgba(255,255,255,0.7)"]:nth-child(1) { animation-delay: 0.1s; }
+        .service-portfolio-highlights div[style*="background: rgba(255,255,255,0.7)"]:nth-child(2) { animation-delay: 0.2s; }
+        .service-portfolio-highlights div[style*="background: rgba(255,255,255,0.7)"]:nth-child(3) { animation-delay: 0.3s; }
+        .service-portfolio-highlights div[style*="background: rgba(255,255,255,0.7)"]:nth-child(4) { animation-delay: 0.4s; }
+        .service-portfolio-highlights div[style*="background: rgba(255,255,255,0.7)"]:nth-child(5) { animation-delay: 0.5s; }
+    </style>
 </body>
 </html> 
