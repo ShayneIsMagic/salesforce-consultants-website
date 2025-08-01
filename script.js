@@ -24,6 +24,387 @@ if ('serviceWorker' in navigator) {
     });
 }
 
+// Universal Search System
+let searchData = [];
+let searchModal = null;
+let searchInput = null;
+let searchResults = null;
+let currentSearchIndex = -1;
+
+// Initialize search system
+function initializeSearch() {
+    // Create search modal
+    createSearchModal();
+    
+    // Add click handlers to search icons
+    const searchIcons = document.querySelectorAll('.search-icon');
+    searchIcons.forEach(icon => {
+        icon.addEventListener('click', openSearchModal);
+    });
+    
+    // Add keyboard shortcut (Ctrl/Cmd + K)
+    document.addEventListener('keydown', function(e) {
+        if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+            e.preventDefault();
+            openSearchModal();
+        }
+    });
+    
+    // Load search data
+    loadSearchData();
+}
+
+// Create search modal
+function createSearchModal() {
+    const modalHTML = `
+        <div id="searchModal" class="search-modal" style="display: none;">
+            <div class="search-overlay"></div>
+            <div class="search-container">
+                <div class="search-header">
+                    <div class="search-input-wrapper">
+                        <svg class="search-icon-svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <circle cx="11" cy="11" r="8"/>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        </svg>
+                        <input type="text" id="searchInput" placeholder="Search for Salesforce implementation, services, expertise..." autocomplete="off">
+                        <button class="search-close" onclick="closeSearchModal()">×</button>
+                    </div>
+                </div>
+                <div class="search-results" id="searchResults">
+                    <div class="search-placeholder">
+                        <p>Type to search across all content...</p>
+                        <div class="search-shortcuts">
+                            <span>⌘K to open search</span>
+                            <span>↑↓ to navigate</span>
+                            <span>Enter to select</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    document.body.insertAdjacentHTML('beforeend', modalHTML);
+    
+    searchModal = document.getElementById('searchModal');
+    searchInput = document.getElementById('searchInput');
+    searchResults = document.getElementById('searchResults');
+    
+    // Add event listeners
+    searchInput.addEventListener('input', debounce(performSearch, 300));
+    searchInput.addEventListener('keydown', handleSearchKeydown);
+    
+    // Close modal when clicking overlay
+    searchModal.querySelector('.search-overlay').addEventListener('click', closeSearchModal);
+}
+
+// Open search modal
+function openSearchModal() {
+    if (searchModal) {
+        searchModal.style.display = 'block';
+        searchInput.focus();
+        searchInput.select();
+        
+        // Add body scroll lock
+        document.body.style.overflow = 'hidden';
+        
+        // Show placeholder
+        searchResults.innerHTML = `
+            <div class="search-placeholder">
+                <p>Type to search across all content...</p>
+                <div class="search-shortcuts">
+                    <span>⌘K to open search</span>
+                    <span>↑↓ to navigate</span>
+                    <span>Enter to select</span>
+                </div>
+            </div>
+        `;
+    }
+}
+
+// Close search modal
+function closeSearchModal() {
+    if (searchModal) {
+        searchModal.style.display = 'none';
+        searchInput.value = '';
+        currentSearchIndex = -1;
+        
+        // Remove body scroll lock
+        document.body.style.overflow = '';
+    }
+}
+
+// Handle search keyboard navigation
+function handleSearchKeydown(e) {
+    const results = searchResults.querySelectorAll('.search-result-item');
+    
+    switch(e.key) {
+        case 'Escape':
+            closeSearchModal();
+            break;
+        case 'ArrowDown':
+            e.preventDefault();
+            currentSearchIndex = Math.min(currentSearchIndex + 1, results.length - 1);
+            updateSearchSelection(results);
+            break;
+        case 'ArrowUp':
+            e.preventDefault();
+            currentSearchIndex = Math.max(currentSearchIndex - 1, -1);
+            updateSearchSelection(results);
+            break;
+        case 'Enter':
+            e.preventDefault();
+            if (currentSearchIndex >= 0 && results[currentSearchIndex]) {
+                results[currentSearchIndex].click();
+            }
+            break;
+    }
+}
+
+// Update search selection
+function updateSearchSelection(results) {
+    results.forEach((item, index) => {
+        item.classList.toggle('selected', index === currentSearchIndex);
+    });
+}
+
+// Load search data from all pages
+function loadSearchData() {
+    searchData = [
+        // Home page content
+        {
+            title: 'Salesforce Implementation Services',
+            content: 'Comprehensive Salesforce implementation and adoption services for businesses and nonprofits',
+            url: 'index.html',
+            category: 'Services',
+            tags: ['implementation', 'adoption', 'salesforce']
+        },
+        {
+            title: 'Custom Salesforce Development',
+            content: 'Custom Salesforce development solutions tailored to your specific business needs',
+            url: 'index.html#services',
+            category: 'Services',
+            tags: ['custom', 'development', 'salesforce']
+        },
+        {
+            title: 'Salesforce Training & Certification',
+            content: 'Salesforce training programs and certification preparation for your team',
+            url: 'index.html#services',
+            category: 'Services',
+            tags: ['training', 'certification', 'salesforce']
+        },
+        {
+            title: 'Salesforce Integrations',
+            content: 'Seamless Salesforce integrations with your existing systems and applications',
+            url: 'index.html#services',
+            category: 'Services',
+            tags: ['integrations', 'salesforce', 'systems']
+        },
+        {
+            title: 'Salesforce Automation',
+            content: 'Advanced Salesforce automation solutions to streamline your business processes',
+            url: 'index.html#services',
+            category: 'Services',
+            tags: ['automation', 'salesforce', 'processes']
+        },
+        {
+            title: 'Salesforce Migrations',
+            content: 'Expert Salesforce migration services to upgrade and optimize your platform',
+            url: 'index.html#services',
+            category: 'Services',
+            tags: ['migration', 'salesforce', 'upgrade']
+        },
+        
+        // Services page content
+        {
+            title: 'Salesforce Implementation & Adoption',
+            content: 'Complete Salesforce implementation and adoption services with proven methodologies',
+            url: 'services.html',
+            category: 'Services',
+            tags: ['implementation', 'adoption', 'methodologies']
+        },
+        {
+            title: 'Custom Salesforce Development',
+            content: 'Custom Salesforce development with advanced features and integrations',
+            url: 'services.html',
+            category: 'Services',
+            tags: ['custom', 'development', 'features']
+        },
+        {
+            title: 'Salesforce Training Programs',
+            content: 'Comprehensive Salesforce training programs for administrators and users',
+            url: 'services.html',
+            category: 'Services',
+            tags: ['training', 'programs', 'administrators']
+        },
+        {
+            title: 'Salesforce System Integration',
+            content: 'Seamless Salesforce system integration with third-party applications',
+            url: 'services.html',
+            category: 'Services',
+            tags: ['integration', 'third-party', 'applications']
+        },
+        {
+            title: 'Salesforce AI & Automation',
+            content: 'Advanced Salesforce AI and automation solutions for business efficiency',
+            url: 'services.html',
+            category: 'Services',
+            tags: ['ai', 'automation', 'efficiency']
+        },
+        {
+            title: 'Salesforce Migration Services',
+            content: 'Expert Salesforce migration services for platform upgrades and optimization',
+            url: 'services.html',
+            category: 'Services',
+            tags: ['migration', 'upgrades', 'optimization']
+        },
+        
+        // Success Stories content
+        {
+            title: 'LA Chamber of Commerce Success Story',
+            content: 'How we transformed LA Chamber with comprehensive Salesforce solutions and training',
+            url: 'success-stories.html',
+            category: 'Success Stories',
+            tags: ['chamber', 'commerce', 'training', 'success']
+        },
+        {
+            title: 'Nonprofit Salesforce Implementation',
+            content: 'Nonprofit Salesforce implementation that increased donor retention by 35%',
+            url: 'success-stories.html',
+            category: 'Success Stories',
+            tags: ['nonprofit', 'donor', 'retention', 'implementation']
+        },
+        
+        // Expertise content
+        {
+            title: 'Salesforce for Nonprofits',
+            content: 'Specialized Salesforce solutions for nonprofit organizations and NPSP',
+            url: 'expertise.html',
+            category: 'Expertise',
+            tags: ['nonprofit', 'npsp', 'organizations']
+        },
+        {
+            title: 'Salesforce for Businesses',
+            content: 'Comprehensive Salesforce solutions for businesses of all sizes',
+            url: 'expertise.html',
+            category: 'Expertise',
+            tags: ['businesses', 'solutions', 'enterprise']
+        },
+        {
+            title: 'Salesforce Certifications',
+            content: '15+ Salesforce certifications across all major Salesforce products',
+            url: 'expertise.html',
+            category: 'Expertise',
+            tags: ['certifications', 'salesforce', 'products']
+        },
+        
+        // Contact content
+        {
+            title: 'Contact Salesforce Consultants',
+            content: 'Get in touch for free Salesforce consultation and assessment',
+            url: 'contact.html',
+            category: 'Contact',
+            tags: ['contact', 'consultation', 'assessment']
+        },
+        
+        // Implementation Recovery content
+        {
+            title: 'Salesforce Implementation Recovery',
+            content: 'Expert Salesforce implementation recovery services for failed or stalled projects',
+            url: 'services/implementation-recovery.html',
+            category: 'Services',
+            tags: ['recovery', 'failed', 'stalled', 'projects']
+        }
+    ];
+}
+
+// Perform search
+function performSearch() {
+    const query = searchInput.value.trim().toLowerCase();
+    
+    if (query.length < 2) {
+        searchResults.innerHTML = `
+            <div class="search-placeholder">
+                <p>Type to search across all content...</p>
+                <div class="search-shortcuts">
+                    <span>⌘K to open search</span>
+                    <span>↑↓ to navigate</span>
+                    <span>Enter to select</span>
+                </div>
+            </div>
+        `;
+        return;
+    }
+    
+    const results = searchData.filter(item => {
+        const searchText = `${item.title} ${item.content} ${item.tags.join(' ')}`.toLowerCase();
+        return searchText.includes(query);
+    });
+    
+    displaySearchResults(results, query);
+}
+
+// Display search results
+function displaySearchResults(results, query) {
+    if (results.length === 0) {
+        searchResults.innerHTML = `
+            <div class="search-no-results">
+                <p>No results found for "${query}"</p>
+                <p>Try different keywords or check spelling</p>
+            </div>
+        `;
+        return;
+    }
+    
+    // Group results by category
+    const groupedResults = results.reduce((acc, item) => {
+        if (!acc[item.category]) {
+            acc[item.category] = [];
+        }
+        acc[item.category].push(item);
+        return acc;
+    }, {});
+    
+    let resultsHTML = '';
+    
+    Object.entries(groupedResults).forEach(([category, items]) => {
+        resultsHTML += `
+            <div class="search-category">
+                <h3>${category}</h3>
+                <div class="search-category-results">
+        `;
+        
+        items.forEach(item => {
+            const highlightedTitle = highlightText(item.title, query);
+            const highlightedContent = highlightText(item.content, query);
+            
+            resultsHTML += `
+                <a href="${item.url}" class="search-result-item" onclick="closeSearchModal()">
+                    <div class="search-result-title">${highlightedTitle}</div>
+                    <div class="search-result-content">${highlightedContent}</div>
+                    <div class="search-result-url">${item.url}</div>
+                </a>
+            `;
+        });
+        
+        resultsHTML += `
+                </div>
+            </div>
+        `;
+    });
+    
+    searchResults.innerHTML = resultsHTML;
+    currentSearchIndex = -1;
+}
+
+// Highlight search terms in text
+function highlightText(text, query) {
+    if (!query) return text;
+    
+    const regex = new RegExp(`(${query})`, 'gi');
+    return text.replace(regex, '<mark>$1</mark>');
+}
+
 // Mobile menu toggle
 function toggleMobileMenu() {
     const mobileMenu = document.querySelector('.nav-dropdown');
@@ -85,6 +466,9 @@ function toggleReadMore() {
 
 // Smooth scrolling for anchor links
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize search system
+    initializeSearch();
+    
     const links = document.querySelectorAll('a[href^="#"]');
     
     links.forEach(link => {
