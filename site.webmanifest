@@ -1,0 +1,85 @@
+{
+    "name": "DevPipeline Salesforce Consulting",
+    "short_name": "DevPipeline",
+    "description": "Expert Salesforce consulting services including implementation, training, custom development, and integrations.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#172B2B",
+    "theme_color": "#3AAEAA",
+    "orientation": "portrait-primary",
+    "scope": "/",
+    "lang": "en",
+    "categories": ["business", "productivity", "education"],
+    "icons": [
+        {
+            "src": "/assets/logos/Salesforce_Consulting_Logo.svg",
+            "sizes": "any",
+            "type": "image/svg+xml",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/apple-touch-icon.png",
+            "sizes": "180x180",
+            "type": "image/png"
+        },
+        {
+            "src": "/favicon-32x32.png",
+            "sizes": "32x32",
+            "type": "image/png"
+        },
+        {
+            "src": "/favicon-16x16.png",
+            "sizes": "16x16",
+            "type": "image/png"
+        }
+    ],
+    "shortcuts": [
+        {
+            "name": "Contact Us",
+            "short_name": "Contact",
+            "description": "Get in touch with our Salesforce experts",
+            "url": "/contact.html",
+            "icons": [
+                {
+                    "src": "/assets/logos/Salesforce_Consulting_Logo.svg",
+                    "sizes": "96x96"
+                }
+            ]
+        },
+        {
+            "name": "Our Services",
+            "short_name": "Services",
+            "description": "View our Salesforce consulting services",
+            "url": "/services.html",
+            "icons": [
+                {
+                    "src": "/assets/logos/Salesforce_Consulting_Logo.svg",
+                    "sizes": "96x96"
+                }
+            ]
+        },
+        {
+            "name": "Success Stories",
+            "short_name": "Success",
+            "description": "See our client success stories",
+            "url": "/success-stories.html",
+            "icons": [
+                {
+                    "src": "/assets/logos/Salesforce_Consulting_Logo.svg",
+                    "sizes": "96x96"
+                }
+            ]
+        }
+    ],
+    "screenshots": [
+        {
+            "src": "/assets/SalesforceConsultants-Graphic.png",
+            "sizes": "1280x720",
+            "type": "image/png",
+            "form_factor": "wide",
+            "label": "DevPipeline Salesforce Consulting Homepage"
+        }
+    ],
+    "related_applications": [],
+    "prefer_related_applications": false
+} 
