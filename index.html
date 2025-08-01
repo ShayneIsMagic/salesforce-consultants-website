@@ -532,162 +532,145 @@
             </style>
         </section>
 
-        <!-- Interactive Process Timeline Section -->
+        <!-- Our Proven Salesforce Process Section -->
         <section class="process-section" style="padding: 8rem 0; background: linear-gradient(135deg, #172B2B 0%, #3AAEAA 100%); color: var(--white); position: relative; overflow: hidden;">
             <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(255,255,255,0.02); pointer-events: none;"></div>
             <div class="container" style="position: relative; z-index: 2;">
                 <div class="section-header" style="text-align: center; margin-bottom: 6rem;">
-                    <h2 class="section-title" style="color: var(--white); font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 2rem; text-shadow: 0 4px 8px rgba(0,0,0,0.3);">Your Journey from Frustration to Elation</h2>
-                    <p class="section-subtitle" style="color: rgba(255,255,255,0.95); font-size: clamp(1.2rem, 2.5vw, 1.6rem); max-width: 800px; margin: 0 auto;">Our proven process transforms your Salesforce challenges into measurable success</p>
+                    <h2 class="section-title" style="color: var(--white); font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 2rem; text-shadow: 0 4px 8px rgba(0,0,0,0.3);">Our Proven Salesforce Process</h2>
+                    <p class="section-subtitle" style="color: rgba(255,255,255,0.95); font-size: clamp(1.2rem, 2.5vw, 1.6rem); max-width: 800px; margin: 0 auto;">A systematic approach to Salesforce success that ensures measurable results</p>
                 </div>
                 
-                <!-- Timeline Container -->
-                <div class="timeline-container" style="position: relative; max-width: 1200px; margin: 0 auto;">
-                    <!-- Timeline Line -->
-                    <div class="timeline-line" style="position: absolute; top: 50%; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #E74C3C, #FF6B35, #FFD700, #27AE60, #3AAEAA); transform: translateY(-50%); border-radius: 2px; z-index: 1;"></div>
+                <!-- Process Steps Grid -->
+                <div class="process-grid" style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 2rem; max-width: 1200px; margin: 0 auto;">
                     
-                    <!-- Timeline Steps -->
-                    <div class="timeline-steps" style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 2rem; position: relative; z-index: 2;">
-                        
-                        <!-- Step 1: Frustration -->
-                        <div class="timeline-step" onclick="activateStep(1)" style="text-align: center; cursor: pointer; transition: all 0.4s ease;">
-                            <div class="step-circle" id="step-1" style="width: 80px; height: 80px; background: #E74C3C; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 2rem; font-weight: 900; color: white; border: 4px solid rgba(255,255,255,0.3); transition: all 0.4s ease; box-shadow: 0 8px 25px rgba(231, 76, 60, 0.4);">😤</div>
-                            <h4 style="color: var(--white); font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem;">Frustration</h4>
-                            <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem;">Current challenges</p>
-                        </div>
-                        
-                        <!-- Step 2: Assessment -->
-                        <div class="timeline-step" onclick="activateStep(2)" style="text-align: center; cursor: pointer; transition: all 0.4s ease;">
-                            <div class="step-circle" id="step-2" style="width: 80px; height: 80px; background: #FF6B35; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 2rem; font-weight: 900; color: white; border: 4px solid rgba(255,255,255,0.3); transition: all 0.4s ease; box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);">🔍</div>
-                            <h4 style="color: var(--white); font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem;">Assessment</h4>
-                            <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem;">Deep analysis</p>
-                        </div>
-                        
-                        <!-- Step 3: Planning -->
-                        <div class="timeline-step" onclick="activateStep(3)" style="text-align: center; cursor: pointer; transition: all 0.4s ease;">
-                            <div class="step-circle" id="step-3" style="width: 80px; height: 80px; background: #FFD700; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 2rem; font-weight: 900; color: white; border: 4px solid rgba(255,255,255,0.3); transition: all 0.4s ease; box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);">📋</div>
-                            <h4 style="color: var(--white); font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem;">Planning</h4>
-                            <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem;">Strategic roadmap</p>
-                        </div>
-                        
-                        <!-- Step 4: Implementation -->
-                        <div class="timeline-step" onclick="activateStep(4)" style="text-align: center; cursor: pointer; transition: all 0.4s ease;">
-                            <div class="step-circle" id="step-4" style="width: 80px; height: 80px; background: #27AE60; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 2rem; font-weight: 900; color: white; border: 4px solid rgba(255,255,255,0.3); transition: all 0.4s ease; box-shadow: 0 8px 25px rgba(39, 174, 96, 0.4);">⚡</div>
-                            <h4 style="color: var(--white); font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem;">Implementation</h4>
-                            <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem;">Expert execution</p>
-                        </div>
-                        
-                        <!-- Step 5: Elation -->
-                        <div class="timeline-step" onclick="activateStep(5)" style="text-align: center; cursor: pointer; transition: all 0.4s ease;">
-                            <div class="step-circle" id="step-5" style="width: 80px; height: 80px; background: #3AAEAA; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 2rem; font-weight: 900; color: white; border: 4px solid rgba(255,255,255,0.3); transition: all 0.4s ease; box-shadow: 0 8px 25px rgba(58, 175, 170, 0.4);">🎉</div>
-                            <h4 style="color: var(--white); font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem;">Elation</h4>
-                            <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem;">Success achieved</p>
-                        </div>
+                    <!-- Step 1: Assessment & Strategy -->
+                    <div class="process-step" style="text-align: center; padding: 3rem 2rem; background: rgba(255,255,255,0.1); border-radius: 16px; backdrop-filter: blur(15px); border: 1px solid rgba(255,255,255,0.2); transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275); animation: fadeInUp 0.8s ease-out both; position: relative; overflow: hidden;">
+                        <div class="process-step-number" style="width: 70px; height: 70px; background: var(--teal); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 2rem; font-size: 1.8rem; font-weight: 900; color: var(--white); animation: pulse 2s infinite; box-shadow: 0 0 0 0 rgba(58, 175, 170, 0.7);">1</div>
+                        <h3 style="color: var(--white); margin-bottom: 1.5rem; font-size: 1.4rem; font-weight: 700;">Assessment & Strategy</h3>
+                        <p style="color: rgba(255,255,255,0.9); line-height: 1.7; font-size: 1.1rem;">Comprehensive analysis of your current systems and Salesforce strategy development</p>
+                        <div style="position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, transparent, var(--teal), transparent); transform: translateX(-100%); transition: transform 0.6s ease;"></div>
                     </div>
                     
-                    <!-- Dynamic Content Area -->
-                    <div class="timeline-content" style="margin-top: 4rem; min-height: 300px;">
-                        <div id="content-1" class="content-card" style="background: rgba(255,255,255,0.1); padding: 3rem; border-radius: 20px; backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.2); text-align: center; display: block;">
-                            <h3 style="color: var(--white); font-size: 2rem; margin-bottom: 1.5rem;">Current Frustrations</h3>
-                            <p style="color: rgba(255,255,255,0.9); font-size: 1.2rem; line-height: 1.7; margin-bottom: 2rem;">Complex Salesforce setup, poor user adoption, inefficient processes, and lack of ROI visibility</p>
-                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 2rem;">
-                                <div style="background: rgba(231, 76, 60, 0.2); padding: 1rem; border-radius: 10px;">
-                                    <p style="color: var(--white); font-weight: 600;">Poor Adoption</p>
-                                </div>
-                                <div style="background: rgba(231, 76, 60, 0.2); padding: 1rem; border-radius: 10px;">
-                                    <p style="color: var(--white); font-weight: 600;">Complex Setup</p>
-                                </div>
-                                <div style="background: rgba(231, 76, 60, 0.2); padding: 1rem; border-radius: 10px;">
-                                    <p style="color: var(--white); font-weight: 600;">No ROI</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div id="content-2" class="content-card" style="background: rgba(255,255,255,0.1); padding: 3rem; border-radius: 20px; backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.2); text-align: center; display: none;">
-                            <h3 style="color: var(--white); font-size: 2rem; margin-bottom: 1.5rem;">Comprehensive Assessment</h3>
-                            <p style="color: rgba(255,255,255,0.9); font-size: 1.2rem; line-height: 1.7; margin-bottom: 2rem;">We analyze your current systems, identify pain points, and develop a strategic roadmap for success</p>
-                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 2rem;">
-                                <div style="background: rgba(255, 107, 53, 0.2); padding: 1rem; border-radius: 10px;">
-                                    <p style="color: var(--white); font-weight: 600;">System Audit</p>
-                                </div>
-                                <div style="background: rgba(255, 107, 53, 0.2); padding: 1rem; border-radius: 10px;">
-                                    <p style="color: var(--white); font-weight: 600;">Pain Point Analysis</p>
-                                </div>
-                                <div style="background: rgba(255, 107, 53, 0.2); padding: 1rem; border-radius: 10px;">
-                                    <p style="color: var(--white); font-weight: 600;">ROI Assessment</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div id="content-3" class="content-card" style="background: rgba(255,255,255,0.1); padding: 3rem; border-radius: 20px; backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.2); text-align: center; display: none;">
-                            <h3 style="color: var(--white); font-size: 2rem; margin-bottom: 1.5rem;">Strategic Planning</h3>
-                            <p style="color: rgba(255,255,255,0.9); font-size: 1.2rem; line-height: 1.7; margin-bottom: 2rem;">Detailed roadmap with clear milestones, timelines, and success metrics tailored to your business</p>
-                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 2rem;">
-                                <div style="background: rgba(255, 215, 0, 0.2); padding: 1rem; border-radius: 10px;">
-                                    <p style="color: var(--white); font-weight: 600;">Custom Roadmap</p>
-                                </div>
-                                <div style="background: rgba(255, 215, 0, 0.2); padding: 1rem; border-radius: 10px;">
-                                    <p style="color: var(--white); font-weight: 600;">Milestone Planning</p>
-                                </div>
-                                <div style="background: rgba(255, 215, 0, 0.2); padding: 1rem; border-radius: 10px;">
-                                    <p style="color: var(--white); font-weight: 600;">Success Metrics</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div id="content-4" class="content-card" style="background: rgba(255,255,255,0.1); padding: 3rem; border-radius: 20px; backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.2); text-align: center; display: none;">
-                            <h3 style="color: var(--white); font-size: 2rem; margin-bottom: 1.5rem;">Expert Implementation</h3>
-                            <p style="color: rgba(255,255,255,0.9); font-size: 1.2rem; line-height: 1.7; margin-bottom: 2rem;">Seamless execution with certified experts, comprehensive training, and ongoing support</p>
-                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 2rem;">
-                                <div style="background: rgba(39, 174, 96, 0.2); padding: 1rem; border-radius: 10px;">
-                                    <p style="color: var(--white); font-weight: 600;">Expert Setup</p>
-                                </div>
-                                <div style="background: rgba(39, 174, 96, 0.2); padding: 1rem; border-radius: 10px;">
-                                    <p style="color: var(--white); font-weight: 600;">Team Training</p>
-                                </div>
-                                <div style="background: rgba(39, 174, 96, 0.2); padding: 1rem; border-radius: 10px;">
-                                    <p style="color: var(--white); font-weight: 600;">Ongoing Support</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div id="content-5" class="content-card" style="background: rgba(255,255,255,0.1); padding: 3rem; border-radius: 20px; backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.2); text-align: center; display: none;">
-                            <h3 style="color: var(--white); font-size: 2rem; margin-bottom: 1.5rem;">Success & Elation</h3>
-                            <p style="color: rgba(255,255,255,0.9); font-size: 1.2rem; line-height: 1.7; margin-bottom: 2rem;">Achieve measurable results: 40% efficiency improvement, increased adoption, and clear ROI</p>
-                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 2rem;">
-                                <div style="background: rgba(58, 175, 170, 0.2); padding: 1rem; border-radius: 10px;">
-                                    <p style="color: var(--white); font-weight: 600;">40% Efficiency</p>
-                                </div>
-                                <div style="background: rgba(58, 175, 170, 0.2); padding: 1rem; border-radius: 10px;">
-                                    <p style="color: var(--white); font-weight: 600;">High Adoption</p>
-                                </div>
-                                <div style="background: rgba(58, 175, 170, 0.2); padding: 1rem; border-radius: 10px;">
-                                    <p style="color: var(--white); font-weight: 600;">Clear ROI</p>
-                                </div>
-                            </div>
-                        </div>
+                    <!-- Step 2: Design & Planning -->
+                    <div class="process-step" style="text-align: center; padding: 3rem 2rem; background: rgba(255,255,255,0.1); border-radius: 16px; backdrop-filter: blur(15px); border: 1px solid rgba(255,255,255,0.2); transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275); animation: fadeInUp 0.8s ease-out 0.2s both; position: relative; overflow: hidden;">
+                        <div class="process-step-number" style="width: 70px; height: 70px; background: var(--teal); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 2rem; font-size: 1.8rem; font-weight: 900; color: var(--white); animation: pulse 2s infinite 0.4s; box-shadow: 0 0 0 0 rgba(58, 175, 170, 0.7);">2</div>
+                        <h3 style="color: var(--white); margin-bottom: 1.5rem; font-size: 1.4rem; font-weight: 700;">Design & Planning</h3>
+                        <p style="color: rgba(255,255,255,0.9); line-height: 1.7; font-size: 1.1rem;">Detailed Salesforce architecture design and implementation planning</p>
+                        <div style="position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, transparent, var(--teal), transparent); transform: translateX(-100%); transition: transform 0.6s ease;"></div>
+                    </div>
+                    
+                    <!-- Step 3: Implementation -->
+                    <div class="process-step" style="text-align: center; padding: 3rem 2rem; background: rgba(255,255,255,0.1); border-radius: 16px; backdrop-filter: blur(15px); border: 1px solid rgba(255,255,255,0.2); transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275); animation: fadeInUp 0.8s ease-out 0.4s both; position: relative; overflow: hidden;">
+                        <div class="process-step-number" style="width: 70px; height: 70px; background: var(--teal); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 2rem; font-size: 1.8rem; font-weight: 900; color: var(--white); animation: pulse 2s infinite 0.8s; box-shadow: 0 0 0 0 rgba(58, 175, 170, 0.7);">3</div>
+                        <h3 style="color: var(--white); margin-bottom: 1.5rem; font-size: 1.4rem; font-weight: 700;">Implementation</h3>
+                        <p style="color: rgba(255,255,255,0.9); line-height: 1.7; font-size: 1.1rem;">Expert Salesforce configuration, development, and system integration</p>
+                        <div style="position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, transparent, var(--teal), transparent); transform: translateX(-100%); transition: transform 0.6s ease;"></div>
+                    </div>
+                    
+                    <!-- Step 4: Training & Adoption -->
+                    <div class="process-step" style="text-align: center; padding: 3rem 2rem; background: rgba(255,255,255,0.1); border-radius: 16px; backdrop-filter: blur(15px); border: 1px solid rgba(255,255,255,0.2); transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275); animation: fadeInUp 0.8s ease-out 0.6s both; position: relative; overflow: hidden;">
+                        <div class="process-step-number" style="width: 70px; height: 70px; background: var(--teal); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 2rem; font-size: 1.8rem; font-weight: 900; color: var(--white); animation: pulse 2s infinite 1.2s; box-shadow: 0 0 0 0 rgba(58, 175, 170, 0.7);">4</div>
+                        <h3 style="color: var(--white); margin-bottom: 1.5rem; font-size: 1.4rem; font-weight: 700;">Training & Adoption</h3>
+                        <p style="color: rgba(255,255,255,0.9); line-height: 1.7; font-size: 1.1rem;">Comprehensive user training and change management support</p>
+                        <div style="position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, transparent, var(--teal), transparent); transform: translateX(-100%); transition: transform 0.6s ease;"></div>
+                    </div>
+                    
+                    <!-- Step 5: Optimization -->
+                    <div class="process-step" style="text-align: center; padding: 3rem 2rem; background: rgba(255,255,255,0.1); border-radius: 16px; backdrop-filter: blur(15px); border: 1px solid rgba(255,255,255,0.2); transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275); animation: fadeInUp 0.8s ease-out 0.8s both; position: relative; overflow: hidden;">
+                        <div class="process-step-number" style="width: 70px; height: 70px; background: var(--teal); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 2rem; font-size: 1.8rem; font-weight: 900; color: var(--white); animation: pulse 2s infinite 1.6s; box-shadow: 0 0 0 0 rgba(58, 175, 170, 0.7);">5</div>
+                        <h3 style="color: var(--white); margin-bottom: 1.5rem; font-size: 1.4rem; font-weight: 700;">Optimization</h3>
+                        <p style="color: rgba(255,255,255,0.9); line-height: 1.7; font-size: 1.1rem;">Ongoing Salesforce optimization and performance monitoring</p>
+                        <div style="position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, transparent, var(--teal), transparent); transform: translateX(-100%); transition: transform 0.6s ease;"></div>
                     </div>
                 </div>
                 
                 <div style="text-align: center; margin-top: 4rem;">
-                    <a href="contact.html" class="btn-modern" style="font-size: 1.3rem; padding: 1.5rem 3rem; background: var(--white); color: var(--dark); border: none; border-radius: 12px; font-weight: 700; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">Start Your Journey</a>
+                    <a href="contact.html" class="btn-modern" style="font-size: 1.3rem; padding: 1.5rem 3rem; background: var(--white); color: var(--dark); border: none; border-radius: 12px; font-weight: 700; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">Start Your Salesforce Journey</a>
                 </div>
             </div>
             
             <style>
-                .timeline-step:hover .step-circle {
-                    transform: scale(1.1);
-                    box-shadow: 0 12px 35px rgba(255,255,255,0.3);
+                @keyframes fadeInUp {
+                    from {
+                        opacity: 0;
+                        transform: translateY(40px);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
                 }
                 
-                .step-circle.active {
-                    transform: scale(1.2);
-                    border-color: rgba(255,255,255,0.8);
-                    box-shadow: 0 15px 40px rgba(255,255,255,0.4);
+                .process-step:hover {
+                    transform: translateY(-15px) scale(1.05);
+                    background: rgba(255,255,255,0.2);
+                    box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+                    border-color: var(--teal);
                 }
                 
-                .content-card {
-                    animation: fadeInUp 0.6s ease-out;
+                .process-step:hover .process-step-number {
+                    transform: scale(1.2) rotate(10deg);
+                    box-shadow: 0 0 0 8px rgba(58, 175, 170, 0.3);
+                }
+                
+                .process-step:hover div[style*="linear-gradient"] {
+                    transform: translateX(100%);
+                }
+                
+                .process-step-number {
+                    animation: pulse 2s infinite;
+                    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                }
+                
+                @keyframes pulse {
+                    0% { 
+                        transform: scale(1);
+                        box-shadow: 0 0 0 0 rgba(58, 175, 170, 0.7);
+                    }
+                    70% { 
+                        transform: scale(1.05);
+                        box-shadow: 0 0 0 10px rgba(58, 175, 170, 0);
+                    }
+                    100% { 
+                        transform: scale(1);
+                        box-shadow: 0 0 0 0 rgba(58, 175, 170, 0);
+                    }
+                }
+                
+                /* Mobile responsiveness for process grid */
+                @media (max-width: 1024px) {
+                    .process-grid {
+                        grid-template-columns: repeat(2, 1fr);
+                        gap: 1.5rem;
+                    }
+                }
+                
+                @media (max-width: 768px) {
+                    .process-grid {
+                        grid-template-columns: 1fr;
+                        gap: 1.5rem;
+                    }
+                    
+                    .process-step {
+                        padding: 2rem 1.5rem;
+                    }
+                    
+                    .process-step-number {
+                        width: 60px;
+                        height: 60px;
+                        font-size: 1.5rem;
+                        margin-bottom: 1.5rem;
+                    }
+                    
+                    .process-step h3 {
+                        font-size: 1.2rem;
+                        margin-bottom: 1rem;
+                    }
+                    
+                    .process-step p {
+                        font-size: 1rem;
+                    }
                 }
             </style>
         </section>
