@@ -473,4 +473,43 @@ Phone: (385) 309-0807
 
 // Export functions for global access (if needed)
 window.toggleMobileMenu = toggleMobileMenu;
-window.showNotification = showNotification; 
+window.showNotification = showNotification;
+
+// Interactive Timeline Functions
+function activateStep(stepNumber) {
+    // Remove active class from all steps
+    const allSteps = document.querySelectorAll('.step-circle');
+    allSteps.forEach(step => step.classList.remove('active'));
+    
+    // Add active class to clicked step
+    const activeStep = document.getElementById(`step-${stepNumber}`);
+    if (activeStep) {
+        activeStep.classList.add('active');
+    }
+    
+    // Hide all content cards
+    const allContent = document.querySelectorAll('.content-card');
+    allContent.forEach(content => content.style.display = 'none');
+    
+    // Show the corresponding content card
+    const activeContent = document.getElementById(`content-${stepNumber}`);
+    if (activeContent) {
+        activeContent.style.display = 'block';
+    }
+}
+
+// Auto-advance timeline on page load
+document.addEventListener('DOMContentLoaded', function() {
+    // Start with step 1 active
+    setTimeout(() => activateStep(1), 1000);
+    
+    // Auto-advance every 4 seconds
+    let currentStep = 1;
+    setInterval(() => {
+        currentStep = currentStep >= 5 ? 1 : currentStep + 1;
+        activateStep(currentStep);
+    }, 4000);
+});
+
+// Export timeline function
+window.activateStep = activateStep; 
