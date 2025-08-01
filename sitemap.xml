@@ -63,6 +63,14 @@
         <priority>0.1</priority>
     </url>
     
+    <!-- FAQ Page -->
+    <url>
+        <loc>https://salesforceconsultants.io/faq.html</loc>
+        <lastmod>2025-01-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
     <!-- Future Blog/Content Pages (for SEO planning) -->
     <!-- 
     <url>
